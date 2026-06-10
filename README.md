@@ -2,6 +2,9 @@
 
 Access your local LLM from any phone or tablet on the same WiFi. No cloud, no third-party services, no setup wizard.
 
+> Now you can enjoy your local LLM from bed. 😄
+> 现在你可以在床上享受你的本地大模型了，哈哈。
+
 ![screenshot](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-brightgreen)
 ![node](https://img.shields.io/badge/node-18%2B-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
