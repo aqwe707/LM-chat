@@ -1,0 +1,12 @@
+{
+  "name": "lm-chat",
+  "version": "1.0.0",
+  "description": "LM Studio 网页聊天 — 手机/电脑远程访问本地大模型",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
