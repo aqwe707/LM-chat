@@ -82,9 +82,8 @@ The Node.js server proxies chat requests to LM Studio's OpenAI-compatible API. T
 ```
 ├── 启动.bat          # Windows launcher
 ├── server.js         # Express backend
-├── 聊天界面.html      # Chat UI (mobile-first)
-├── 配置.json         # Configuration
-├── 说明.md           # Chinese docs
+├── chat.html         # Chat UI (mobile-first)
+├── config.json       # Configuration
 ├── package.json
 └── LICENSE
 ```
