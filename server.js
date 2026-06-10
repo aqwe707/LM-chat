@@ -115,6 +115,37 @@ function createPNG(w, h, r, g, b) {
 app.get('/icon.png', (req, res) => { res.type('png'); res.send(createPNG(192, 192, 0, 113, 227)); });
 app.get('/manifest.json', (req, res) => { res.json({ name: 'LM Chat', short_name: 'LM Chat', start_url: '/', display: 'standalone', background_color: '#f5f5f7', theme_color: '#f5f5f7', icons: [{ src: '/icon.png', sizes: '192x192', type: 'image/png' }] }); });
 
+// ── 文件共享 ──
+const multer = require('multer');
+const fs = require('fs');
+const shareDir = path.join(__dirname, '共享文件');
+if (!fs.existsSync(shareDir)) fs.mkdirSync(shareDir, { recursive: true });
+const upload = multer({ dest: shareDir, limits: { fileSize: 500 * 1024 * 1024 } });
+
+app.get('/share', (req, res) => { res.sendFile(path.join(__dirname, 'share.html')); });
+
+app.get('/api/files', (req, res) => {
+  const files = fs.readdirSync(shareDir).map(name => { const s = fs.statSync(path.join(shareDir, name)); return { name, size: s.size, time: s.mtime }; });
+  res.json(files);
+});
+
+app.post('/api/upload', upload.array('files', 10), (req, res) => {
+  const saved = (req.files || []).map(f => { const ext = path.extname(f.originalname); const newName = f.filename + ext; fs.renameSync(f.path, path.join(shareDir, newName)); return newName; });
+  res.json({ ok: true, files: saved });
+});
+
+app.get('/api/download/:name', (req, res) => {
+  const filePath = path.join(shareDir, req.params.name);
+  if (fs.existsSync(filePath)) res.download(filePath);
+  else res.status(404).end();
+});
+
+app.delete('/api/files/:name', (req, res) => {
+  const filePath = path.join(shareDir, req.params.name);
+  if (fs.existsSync(filePath)) { fs.unlinkSync(filePath); res.json({ ok: true }); }
+  else res.status(404).json({ ok: false });
+});
+
 // Chat page
 app.get('/', (req, res) => { res.sendFile(path.join(__dirname, 'chat.html')); });
 
