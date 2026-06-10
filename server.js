@@ -120,7 +120,7 @@ const multer = require('multer');
 const fs = require('fs');
 const shareDir = path.join(__dirname, '共享文件');
 if (!fs.existsSync(shareDir)) fs.mkdirSync(shareDir, { recursive: true });
-const upload = multer({ dest: shareDir, limits: { fileSize: 500 * 1024 * 1024 } });
+const upload = multer({ dest: shareDir, limits: { fileSize: 10 * 1024 * 1024 * 1024 } });
 
 app.get('/share', (req, res) => { res.sendFile(path.join(__dirname, 'share.html')); });
 
