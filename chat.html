@@ -21,7 +21,6 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
 #lock .err{color:#ff3b30;font-size:14px;display:none}
 
 #bar{display:none;background:rgba(245,245,247,.9);backdrop-filter:blur(20px);border-bottom:1px solid #e5e5ea;padding:10px 14px;align-items:center;gap:8px;flex-wrap:wrap}
-#bar select{flex:1;padding:9px;border-radius:10px;border:1px solid #d1d1d6;background:#fff;font-size:13px;max-width:55%;min-width:0}
 #bar button,#bar a{padding:9px 14px;border-radius:20px;border:none;background:#0071e3;color:#fff;font-size:13px;font-weight:600;white-space:nowrap;text-decoration:none;cursor:pointer}
 #bar a{background:#e8e8ed;color:#0071e3}
 
@@ -90,7 +89,6 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
 </div>
 
 <div id="bar">
-  <select id="modelSelect" onchange="saveModel()"><option value="">默认模型</option></select>
   <button onclick="toggleSidebar()">☰ 对话</button>
   <button onclick="newChat()" style="background:none;color:#0071e3;border:1px solid #0071e3">＋</button>
   <button onclick="showSettings()" style="background:#e8e8ed;color:#1d1d1f">⚙</button>
@@ -108,7 +106,8 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
 <div id="settings-overlay" onclick="if(event.target===this)hideSettings()">
   <div id="settings-box">
     <h3>系统提示词</h3>
-    <label>每个设备独立设置，影响该设备所有新对话</label>
+    <label id="sidDisplay" style="font-size:11px;color:#86868b;margin-bottom:8px;display:block">对话ID: —</label>
+    <label>每个对话独立设置，不影响其他对话</label>
     <textarea id="sysPrompt"></textarea>
     <button class="btn-save" onclick="saveSettings()">保存</button>
     <button class="btn-cancel" onclick="hideSettings()">取消</button>
@@ -124,7 +123,7 @@ body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;backgr
       <label>📷<input type="file" accept="image/*" capture="environment" onchange="addFiles(this)"></label>
       <label>📁<input type="file" accept="*/*" onchange="addFiles(this)"></label>
     </div>
-    <textarea id="input" rows="1" placeholder="输入消息…"></textarea>
+    <textarea id="input" rows="1" placeholder="输入消息…（Ctrl+回车发送）" onkeydown="onInputKey(event)"></textarea>
     <button type="submit">↑</button>
   </form>
 </div>
@@ -167,22 +166,11 @@ async function doUnlock(){
       document.getElementById('lock').style.display='none';
       document.getElementById('bar').style.display='flex';
       document.getElementById('foot').style.display='block';
-      loadModels();if(!currentMsgs.length)addMsg('system','新对话');
+      if(!currentMsgs.length)addMsg('system','新对话');
     }else{document.getElementById('err').style.display='block'}
   }catch(e){document.getElementById('err').style.display='block'}
 }
 (function(){const sp=localStorage.getItem('lm_pass');if(sp){document.getElementById('pwd').value=sp;doUnlock()}})();
-
-async function loadModels(){
-  try{
-    const r=await fetch('/api/models');const j=await r.json();
-    const sel=document.getElementById('modelSelect');
-    sel.innerHTML='<option value="">默认模型</option>';
-    (j.data||[]).forEach(m=>{const o=document.createElement('option');o.value=m.id;o.textContent=m.id;sel.appendChild(o)});
-    const sm=localStorage.getItem('lm_model');if(sm&&[...sel.options].some(o=>o.value===sm))sel.value=sm;
-  }catch(e){}
-}
-function saveModel(){localStorage.setItem('lm_model',document.getElementById('modelSelect').value)}
 
 // ── Messages ──
 function addMsg(role,content,imgs){
@@ -232,7 +220,7 @@ async function deleteSession(sid){
 }
 function newChat(){
   SID=genId();saveSid();
-  currentMsgs=[];saveMsgs(SID,currentMsgs);
+  currentMsgs=[];
   document.getElementById('msgs').innerHTML='';
   addMsg('system','新对话');
   fetch('/api/reset',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:SID,passcode:PASS})}).catch(()=>{});
@@ -248,14 +236,13 @@ async function doSend(){
   const loadEl=document.createElement('div');loadEl.className='msg bot';
   loadEl.innerHTML='<div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div>';
   document.getElementById('msgs').appendChild(loadEl);
-  const model=document.getElementById('modelSelect').value;
   try{
-    const body={sessionId:SID,passcode:PASS,model,systemPrompt:getPrompt()};
+    const body={sessionId:SID,passcode:PASS,systemPrompt:getPrompt(SID)};
     if(msg)body.message=msg;if(imgs.length)body.images=imgs;
     const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
     const reply=(await r.json()).reply||'[空]';
     loadEl.innerHTML='<div class="bubble">'+fmt(reply)+'</div>';
-    addMsg('bot',reply);
+    currentMsgs.push({role:'bot',content:reply});
     loadSessions();
   }catch(e){loadEl.innerHTML='<div class="bubble" style="color:#ff3b30">网络错误</div>'}
 }
@@ -268,19 +255,27 @@ function clearImages(){images=[];document.getElementById('preview').innerHTML=''
 
 // ── Settings ──
 const DEFAULT_PROMPT='你是一个有用的AI助手，请用中文回答。回答简洁准确。';
-function getPrompt(){return localStorage.getItem('lm_prompt')||DEFAULT_PROMPT}
+let settingsSid='';
+function getPrompt(sid){return localStorage.getItem('lm_prompt_'+sid)||DEFAULT_PROMPT}
 
 function showSettings(){
+  settingsSid=SID;
   document.getElementById('settings-overlay').classList.add('show');
-  document.getElementById('sysPrompt').value=getPrompt();
+  document.getElementById('sysPrompt').value=getPrompt(settingsSid);
+  document.getElementById('sidDisplay').textContent='对话ID: '+settingsSid.slice(-8);
 }
 function hideSettings(){document.getElementById('settings-overlay').classList.remove('show')}
 function saveSettings(){
-  localStorage.setItem('lm_prompt',document.getElementById('sysPrompt').value);
+  localStorage.setItem('lm_prompt_'+settingsSid,document.getElementById('sysPrompt').value);
   hideSettings();
 }
 
 document.getElementById('input').addEventListener('input',function(){this.style.height='auto';this.style.height=Math.min(this.scrollHeight,100)+'px'});
+
+// 快捷键：右Ctrl+回车发送，回车换行
+function onInputKey(e){
+  if(e.key==='Enter'&&e.ctrlKey){e.preventDefault();doSend()}
+}
 </script>
 </body>
 </html>

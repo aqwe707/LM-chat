@@ -179,11 +179,18 @@ async fn chat(
             let body: serde_json::Value = resp.json().await.unwrap_or_default();
             let reply = body["choices"][0]["message"]["content"].as_str().unwrap_or("[parse error]").to_string();
             session.history.push(serde_json::json!({"role": "assistant", "content": reply}));
-            // 保存到磁盘
+            // 保存到磁盘（图片只存标记，不存base64）
             let msgs: Vec<SavedMsg> = session.history.iter().filter_map(|m| {
                 let role = m["role"].as_str().unwrap_or("").to_string();
                 let content = if let Some(s) = m["content"].as_str() { s.to_string() }
-                    else { serde_json::to_string(&m["content"]).unwrap_or_default() };
+                    else if m["content"].is_array() {
+                        // 多模态消息：提取文本部分
+                        let text = m["content"].as_array().unwrap().iter()
+                            .find(|c| c["type"] == "text")
+                            .and_then(|c| c["text"].as_str())
+                            .unwrap_or("[图片]");
+                        text.to_string()
+                    } else { serde_json::to_string(&m["content"]).unwrap_or_default() };
                 Some(SavedMsg { role, content, images: None })
             }).collect();
             let first_user = msgs.iter().find(|m| m.role == "user").map(|m| m.content.chars().take(20).collect::<String>()).unwrap_or_else(|| "新对话".to_string());

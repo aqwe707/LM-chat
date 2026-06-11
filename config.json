@@ -1,6 +1,6 @@
 {
   "port": 8080,
-  "passcode": "6232363",
+  "passcode": "your-password-here",
   "lmstudio": {
     "host": "localhost",
     "port": 1234
