@@ -22,49 +22,30 @@ header a{color:#0071e3;text-decoration:none;font-size:14px}
 .file button{background:none;border:none;font-size:18px;padding:6px;cursor:pointer;flex-shrink:0}
 .file .dl{color:#0071e3}.file .rm{color:#ff3b30}
 #empty{text-align:center;padding:40px;color:#86868b;font-size:14px}
-.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#333;color:#fff;padding:10px 24px;border-radius:20px;font-size:13px;opacity:0;transition:opacity .3s;pointer-events:none;z-index:99}
-.toast.show{opacity:1}
 </style>
 </head>
 <body>
-<header>
-  <h1>文件共享</h1>
-  <a href="/">← 聊天</a>
-</header>
-
+<header><h1>文件共享</h1><a href="/">← 聊天</a></header>
 <div id="upload-area">
   <label>📤 点击上传文件（最大 10GB）<input type="file" id="fileInput" multiple onchange="doUpload()"></label>
 </div>
-
-<div id="files">
-  <div id="empty">暂无文件</div>
-</div>
-
-<div class="toast" id="toast"></div>
-
+<div id="files"><div id="empty">暂无文件</div></div>
 <script>
 async function loadFiles(){
   const r=await fetch('/api/files');const files=await r.json();
   const d=document.getElementById('files');
   if(!files.length){d.innerHTML='<div id="empty">暂无文件</div>';return}
-  d.innerHTML=files.map(f=>`<div class="file">
-    <span class="icon">${iconFor(f.name)}</span>
-    <div class="info"><div class="name">${f.name}</div><div class="meta">${fmtSize(f.size)} · ${new Date(f.time).toLocaleString('zh-CN')}</div></div>
-    <button class="dl" onclick="downloadFile('${f.name}')">⬇</button>
-    <button class="rm" onclick="deleteFile('${f.name}')">🗑</button>
-  </div>`).join('');
+  d.innerHTML=files.map(f=>{
+    const ext=f.name.split('.').pop().toLowerCase();
+    const iconmap={jpg:'🖼',jpeg:'🖼',png:'🖼',gif:'🖼',mp4:'🎬',mp3:'🎵',pdf:'📄',zip:'📦',rar:'📦',doc:'📝',docx:'📝',txt:'📄'};
+    const icon=iconmap[ext]||'📁';
+    const size=f.size<1024?f.size+'B':f.size<1048576?(f.size/1024).toFixed(1)+'KB':(f.size/1048576).toFixed(1)+'MB';
+    return '<div class="file"><span class="icon">'+icon+'</span><div class="info"><div class="name">'+f.name+'</div><div class="meta">'+size+' · '+new Date(f.time).toLocaleString('zh-CN')+'</div></div><button class="dl" onclick="downloadFile(\''+f.name+'\')">⬇</button><button class="rm" onclick="deleteFile(\''+f.name+'\')">🗑</button></div>';
+  }).join('');
 }
-function iconFor(n){const e=n.split('.').pop().toLowerCase();return({jpg:'🖼',jpeg:'🖼',png:'🖼',gif:'🖼',webp:'🖼',mp4:'🎬',mp3:'🎵',pdf:'📄',zip:'📦',rar:'📦',doc:'📝',docx:'📝',txt:'📄'})[e]||'📁'}
-function fmtSize(s){return s<1024?s+'B':s<1048576?(s/1024).toFixed(1)+'KB':(s/1048576).toFixed(1)+'MB'}
-async function doUpload(){
-  const inp=document.getElementById('fileInput');if(!inp.files.length)return;
-  const fd=new FormData();for(const f of inp.files)fd.append('files',f);
-  const r=await fetch('/api/upload',{method:'POST',body:fd});const j=await r.json();
-  if(j.ok){inp.value='';loadFiles();toast('上传成功')}else{toast('上传失败')}
-}
+async function doUpload(){const inp=document.getElementById('fileInput');if(!inp.files.length)return;const fd=new FormData();for(const f of inp.files)fd.append('files',f);await fetch('/api/upload',{method:'POST',body:fd});inp.value='';loadFiles()}
 function downloadFile(name){window.open('/api/download/'+encodeURIComponent(name))}
-async function deleteFile(name){if(!confirm('删除 '+name+' ?'))return;await fetch('/api/files/'+encodeURIComponent(name),{method:'DELETE'});loadFiles();toast('已删除')}
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.className='toast show';setTimeout(()=>t.className='toast',2000)}
+async function deleteFile(name){if(!confirm('删除?'))return;await fetch('/api/files/'+encodeURIComponent(name),{method:'DELETE'});loadFiles()}
 loadFiles();
 </script>
 </body>

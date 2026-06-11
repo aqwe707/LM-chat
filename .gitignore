@@ -1,5 +1,12 @@
 node_modules/
 共享文件/
+target/
 *.log
 .DS_Store
 Thumbs.db
+*.pdb
+
+
+# Added by cargo
+
+/target
