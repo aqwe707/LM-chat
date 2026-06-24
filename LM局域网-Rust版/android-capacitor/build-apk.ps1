@@ -1,5 +1,5 @@
 # LM Chat Android APK Build Script
-# 用法: 在 android-capacitor 目录下运行此脚本
+# Usage: Run in the android-capacitor directory
 
 $ErrorActionPreference = "Stop"
 $ProjectRoot = $PSScriptRoot
@@ -14,21 +14,19 @@ Write-Host "[1/6] Checking prerequisites..." -ForegroundColor Yellow
 
 $javaExe = Get-Command java -ErrorAction SilentlyContinue
 if (-not $javaExe) {
-    Write-Host "  ERROR: Java not found. Please install JDK 17+" -ForegroundColor Red
-    Write-Host "  Download from: https://adoptium.net/" -ForegroundColor Yellow
+    Write-Host "  ERROR: Java not found" -ForegroundColor Red
     exit 1
 }
-Write-Host "  Java: $($javaExe.Source)" -ForegroundColor Green
+$javaPath = $javaExe.Source
+Write-Host "  Java: $javaPath" -ForegroundColor Green
 
-# Auto-detect ANDROID_HOME
+# Auto-detect Android SDK
 $androidSdk = "$env:LOCALAPPDATA\Android\Sdk"
 if (-not (Test-Path $androidSdk)) {
     $androidSdk = $env:ANDROID_HOME
 }
 if (-not (Test-Path $androidSdk)) {
-    Write-Host "  WARNING: Android SDK not found." -ForegroundColor Yellow
-    Write-Host "  Expected: C:\Users\YourName\AppData\Local\Android\Sdk" -ForegroundColor Yellow
-    Write-Host "  Set ANDROID_HOME environment variable." -ForegroundColor Yellow
+    Write-Host "  WARNING: Android SDK not found" -ForegroundColor Yellow
 } else {
     Write-Host "  Android SDK: $androidSdk" -ForegroundColor Green
 }
@@ -37,29 +35,22 @@ if (-not (Test-Path $androidSdk)) {
 Write-Host ""
 Write-Host "[2/6] Installing Capacitor dependencies..." -ForegroundColor Yellow
 Set-Location $ProjectRoot
-npm install
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "  ERROR: npm install failed" -ForegroundColor Red
-    exit 1
-}
+npm install --silent
+if ($LASTEXITCODE -ne 0) { Write-Host "  ERROR: npm install failed" -ForegroundColor Red; exit 1 }
 Write-Host "  Dependencies installed" -ForegroundColor Green
 
-# Step 3: Sync web assets to Android
+# Step 3: Sync web assets
 Write-Host ""
 Write-Host "[3/6] Syncing web assets..." -ForegroundColor Yellow
-npx cap sync android
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "  ERROR: cap sync failed" -ForegroundColor Red
-    exit 1
-}
+npx cap sync android 
+if ($LASTEXITCODE -ne 0) { Write-Host "  ERROR: cap sync failed" -ForegroundColor Red; exit 1 }
 Write-Host "  Web assets synced" -ForegroundColor Green
 
-# Step 4: Configure local.properties for Android SDK
+# Step 4: Configure local.properties
 Write-Host ""
 Write-Host "[4/6] Configuring Android SDK path..." -ForegroundColor Yellow
 if (Test-Path $androidSdk) {
-    $localProps = "sdk.dir=$androidSdk"
-    [System.IO.File]::WriteAllText("$ProjectRoot\android\local.properties", $localProps, [System.Text.UTF8Encoding]::new($false))
+    "sdk.dir=$androidSdk" | Set-Content -Encoding UTF8 "$ProjectRoot\android\local.properties"
     Write-Host "  local.properties created" -ForegroundColor Green
 } else {
     Write-Host "  SKIPPED: Android SDK not found" -ForegroundColor Yellow
@@ -71,20 +62,19 @@ Write-Host "[5/6] Building APK..." -ForegroundColor Yellow
 $env:ANDROID_HOME = $androidSdk
 Set-Location "$ProjectRoot\android"
 
-# Use cmd to ensure env vars propagate
-$batContent = @"
-@echo off
-set ANDROID_HOME=$androidSdk
-set JAVA_HOME=%JAVA_HOME%
-gradlew.bat assembleDebug --no-daemon
-"@
-$batPath = "$ProjectRoot\build-temp.bat"
-[System.IO.File]::WriteAllText($batPath, $batContent, [System.Text.Encoding]::UTF8)
-cmd /c $batPath
-$exitCode = $LASTEXITCODE
-Remove-Item $batPath -Force -ErrorAction SilentlyContinue
+if ($env:JAVA_HOME) {
+    $javaBin = Join-Path $env:JAVA_HOME "bin\java.exe"
+} else {
+    $javaBin = $javaPath
+}
 
-if ($exitCode -ne 0) {
+$gradlewPath = Join-Path $PWD "gradlew.bat"
+$jarPath = Join-Path $PWD "gradle\wrapper\gradle-wrapper.jar"
+
+Write-Host "  Running Gradle build..." -ForegroundColor Yellow
+
+& $javaBin -classpath "$jarPath" org.gradle.wrapper.GradleWrapperMain assembleDebug --no-daemon
+if ($LASTEXITCODE -ne 0) {
     Write-Host "  ERROR: Gradle build failed" -ForegroundColor Red
     exit 1
 }
