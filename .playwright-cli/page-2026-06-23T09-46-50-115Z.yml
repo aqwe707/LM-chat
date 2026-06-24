@@ -1,0 +1,249 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]:
+          - link "DuckDuckGo home" [ref=e7] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e9]: DuckDuckGo
+          - generic [ref=e15]:
+            - combobox "私密搜索" [ref=e17]: agnes-image-21-flash model
+            - button "search" [ref=e19] [cursor=pointer]:
+              - img [ref=e20]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - generic [ref=e25]:
+              - banner [ref=e26]:
+                - img [ref=e27]
+                - paragraph [ref=e28]: 升级到我们的浏览器。
+              - generic [ref=e29]:
+                - generic [ref=e30]:
+                  - img [ref=e31]
+                  - generic [ref=e32]:
+                    - img [ref=e33]
+                    - img [ref=e34]
+                - paragraph [ref=e35]:
+                  - generic [ref=e36]:
+                    - text: 试用
+                    - strong [ref=e37]: DuckDuckGo 浏览器。
+                    - text: 快速。免费。私密。
+                - link "下载浏览器" [ref=e38] [cursor=pointer]:
+                  - /url: https://duckduckgo.com/windows?origin=funnel_browser_searchresults__popover
+                  - img [ref=e39]
+                  - generic [ref=e41]: 下载浏览器
+              - paragraph [ref=e44]:
+                - generic [ref=e45]: 免费
+            - button [ref=e47] [cursor=pointer]:
+              - img [ref=e48]
+          - button "打开菜单" [ref=e50] [cursor=pointer]:
+            - generic [ref=e51]: 打开菜单
+            - img [ref=e52]
+      - navigation [ref=e58]:
+        - list [ref=e59]:
+          - listitem [ref=e60]:
+            - link "全部" [ref=e61] [cursor=pointer]:
+              - /url: /?q=agnes-image-21-flash+model&ia=web
+              - img [ref=e62]
+              - text: 全部
+          - listitem [ref=e64]:
+            - link "图片" [ref=e65] [cursor=pointer]:
+              - /url: /?q=agnes-image-21-flash+model&ia=images&iax=images
+          - listitem [ref=e66]:
+            - link "视频" [ref=e67] [cursor=pointer]:
+              - /url: /?q=agnes-image-21-flash+model&ia=videos&iax=videos
+          - listitem [ref=e68]:
+            - link "新闻" [ref=e69] [cursor=pointer]:
+              - /url: /?q=agnes-image-21-flash+model&ia=news&iar=news
+          - listitem [ref=e70]:
+            - link "地图" [ref=e71] [cursor=pointer]:
+              - /url: /?q=agnes-image-21-flash+model&iaxm=maps
+          - listitem [ref=e72]:
+            - link "购物" [ref=e73] [cursor=pointer]:
+              - /url: /?q=agnes-image-21-flash+model&ia=shopping&iax=shopping
+        - list [ref=e74]:
+          - listitem [ref=e75]:
+            - link "Duck.ai" [ref=e77] [cursor=pointer]:
+              - /url: /?q=agnes-image-21-flash+model&ia=chat
+              - img [ref=e78]
+              - text: Duck.ai
+          - listitem [ref=e81]:
+            - button "搜索设置 ✀" [ref=e83] [cursor=pointer]:
+              - img [ref=e84]
+              - generic [ref=e86]: 搜索设置
+              - generic [ref=e89]: ✀
+    - navigation [ref=e96]:
+      - generic [ref=e99] [cursor=pointer]:
+        - generic [ref=e107]: 受保护
+        - img [ref=e108]: ▼
+      - generic [ref=e112] [cursor=pointer]:
+        - generic [ref=e116]: 不限地区
+        - img [ref=e117]: ▼
+      - generic [ref=e121] [cursor=pointer]:
+        - generic [ref=e122]: 安全搜索： 适中
+        - img [ref=e123]: ▼
+      - generic [ref=e127] [cursor=pointer]:
+        - generic [ref=e128]: 不限时间
+        - img [ref=e129]: ▼
+    - list [ref=e132]:
+      - button "关闭菜单" [ref=e133] [cursor=pointer]:
+        - generic [ref=e134]: 关闭菜单
+        - img [ref=e135]
+      - list [ref=e137]:
+        - listitem [ref=e138]: 搜索
+        - listitem [ref=e139]:
+          - link "主页" [ref=e140] [cursor=pointer]:
+            - /url: https://start.duckduckgo.com/
+        - listitem [ref=e141]:
+          - link "配色" [ref=e142] [cursor=pointer]:
+            - /url: /settings#appearance
+        - listitem [ref=e143]:
+          - link "设置" [ref=e144] [cursor=pointer]:
+            - /url: /settings
+      - list [ref=e145]:
+        - listitem [ref=e146]: 意见反馈
+        - listitem [ref=e147]:
+          - generic [ref=e150]:
+            - button "Positive feedback" [ref=e151] [cursor=pointer]:
+              - img [ref=e152]
+            - button "Negative feedback" [ref=e155] [cursor=pointer]:
+              - img [ref=e156]
+      - list [ref=e159]:
+        - listitem [ref=e160]: 下载
+        - listitem [ref=e161]:
+          - link "iOS 浏览器" [ref=e162] [cursor=pointer]:
+            - /url: https://apps.apple.com/app/duckduckgo-private-browser/id663592361?platform=iphone&pt=866401&mt=8&ct=serp-atb-serp
+        - listitem [ref=e163]:
+          - link "Android 浏览器" [ref=e164] [cursor=pointer]:
+            - /url: https://play.google.com/store/apps/details?id=com.duckduckgo.mobile.android&referrer=utm_campaign%3Dserp-atb-serp%26origin%3Dfunnel_playstore_searchresults
+        - listitem [ref=e165]:
+          - link "Mac 浏览器" [ref=e166] [cursor=pointer]:
+            - /url: /mac?origin=funnel_browser_searchresults
+        - listitem [ref=e167]:
+          - link "Windows 浏览器" [ref=e168] [cursor=pointer]:
+            - /url: /windows?origin=funnel_browser_searchresults
+        - listitem [ref=e169]: 浏览器扩展插件
+      - list [ref=e170]:
+        - listitem [ref=e171]: 更多 DuckDuckGo 产品和服务
+        - listitem [ref=e172]:
+          - generic [ref=e175]:
+            - button "关闭促销信息" [ref=e176] [cursor=pointer]:
+              - img [ref=e177]
+            - generic [ref=e179]:
+              - paragraph [ref=e181]:
+                - img [ref=e182]
+                - text: 升级到我们的私密浏览器
+              - paragraph [ref=e193]: 快速。安全。免费。
+            - link "下载浏览器" [ref=e194] [cursor=pointer]:
+              - /url: /windows
+              - img [ref=e195]
+              - text: 下载浏览器
+        - listitem [ref=e197]:
+          - link "DuckDuckGo 订阅" [ref=e198] [cursor=pointer]:
+            - /url: /pro?origin=funnel_pro_searchresults
+        - listitem [ref=e199]:
+          - link "Duck.ai" [ref=e200] [cursor=pointer]:
+            - /url: https://duck.ai
+        - listitem [ref=e201]:
+          - link "Email Protection" [ref=e202] [cursor=pointer]:
+            - /url: /email
+        - listitem [ref=e203]:
+          - link "简讯" [ref=e204] [cursor=pointer]:
+            - /url: /newsletter
+        - listitem [ref=e205]:
+          - link "博客" [ref=e206] [cursor=pointer]:
+            - /url: /blog
+        - listitem [ref=e207]:
+          - link "播客" [ref=e208] [cursor=pointer]:
+            - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+        - listitem [ref=e209]:
+          - link "合作" [ref=e210] [cursor=pointer]:
+            - /url: /collaborations
+      - list [ref=e211]:
+        - listitem [ref=e212]: 详细了解
+        - listitem [ref=e213]:
+          - link "最新功能" [ref=e214] [cursor=pointer]:
+            - /url: /updates
+        - listitem [ref=e215]:
+          - link "隐私保护功能比较" [ref=e216] [cursor=pointer]:
+            - /url: /compare-privacy
+        - listitem [ref=e217]:
+          - link "关于我们的浏览器" [ref=e218] [cursor=pointer]:
+            - /url: /app
+        - listitem [ref=e219]:
+          - link "关于 DuckDuckGo" [ref=e220] [cursor=pointer]:
+            - /url: /about
+      - list [ref=e221]:
+        - listitem [ref=e222]: 其他资源
+        - listitem [ref=e223]:
+          - link "帮助" [ref=e224] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages
+        - listitem [ref=e225]:
+          - link "社群" [ref=e226] [cursor=pointer]:
+            - /url: https://www.reddit.com/r/duckduckgo/
+        - listitem [ref=e227]:
+          - link "工作岗位" [ref=e228] [cursor=pointer]:
+            - /url: /careers
+        - listitem [ref=e229]:
+          - link "隐私协议" [ref=e230] [cursor=pointer]:
+            - /url: /privacy
+        - listitem [ref=e231]:
+          - link "服务条款" [ref=e232] [cursor=pointer]:
+            - /url: /terms
+        - listitem [ref=e233]:
+          - link "媒体资源" [ref=e234] [cursor=pointer]:
+            - /url: /press
+        - listitem [ref=e235]:
+          - link "在搜索时投放广告" [ref=e236] [cursor=pointer]:
+            - /url: /duckduckgo-help-pages/company/advertise-on-duckduckgo-search
+  - generic [ref=e240]:
+    - generic [ref=e242]:
+      - img [ref=e243]
+      - generic [ref=e258]:
+        - heading "下载我们的 Windows 浏览器" [level=3] [ref=e259]
+        - paragraph [ref=e260]: 在搜索、浏览和使用 AI 时保护你的数据。
+      - link "下载" [ref=e261] [cursor=pointer]:
+        - /url: https://duckduckgo.com/windows?origin=funnel_browser_searchresults__footercard
+        - img [ref=e262]
+        - text: 下载
+    - generic [ref=e265]:
+      - generic [ref=e266]:
+        - heading "详细了解" [level=3] [ref=e267]
+        - list [ref=e268]:
+          - listitem [ref=e269]:
+            - link "最新功能" [ref=e270] [cursor=pointer]:
+              - /url: https://duckduckgo.com/updates
+          - listitem [ref=e271]:
+            - link "浏览器简介" [ref=e272] [cursor=pointer]:
+              - /url: https://duckduckgo.com/app
+          - listitem [ref=e273]:
+            - link "隐私保护功能比较" [ref=e274] [cursor=pointer]:
+              - /url: https://duckduckgo.com/compare-privacy
+          - listitem [ref=e275]:
+            - link "帮助页面" [ref=e276] [cursor=pointer]:
+              - /url: https://duckduckgo.com/duckduckgo-help-pages/
+      - generic [ref=e277]:
+        - heading "获取更多信息" [level=3] [ref=e278]
+        - list [ref=e279]:
+          - listitem [ref=e280]:
+            - link "订阅" [ref=e281] [cursor=pointer]:
+              - /url: https://duckduckgo.com/pro
+          - listitem [ref=e282]:
+            - link "Email Protection" [ref=e283] [cursor=pointer]:
+              - /url: https://duckduckgo.com/email
+          - listitem [ref=e284]:
+            - generic [ref=e285]:
+              - link "播客" [ref=e287] [cursor=pointer]:
+                - /url: https://insideduckduckgo.substack.com/?showWelcome=true
+              - generic [ref=e288]:
+                - text: 和
+                - link "简讯" [ref=e289] [cursor=pointer]:
+                  - /url: https://duckduckgo.com/newsletter
+          - listitem [ref=e290]:
+            - link "合作" [ref=e291] [cursor=pointer]:
+              - /url: https://duckduckgo.com/collaborations
+  - generic [ref=e294]:
+    - generic [ref=e295]: 很遗憾，机器人也使用 DuckDuckGo。
+    - generic [ref=e296]: 请完成以下挑战，以确认这项搜索由真人进行。
+    - generic [ref=e297]: 选择所有包含鸭子的正方形：
+    - button "提交" [ref=e319] [cursor=pointer]
+  - button "意见反馈" [ref=e323] [cursor=pointer]

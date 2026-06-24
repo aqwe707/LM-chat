@@ -1,0 +1,2 @@
+[    2755ms] [WARNING] useTranslation: DISMISS is not available @ https://duckduckgo.com/dist/wpm.main.efa590ba7f862a3b709d.js:0
+[    2763ms] [INFO] Slow network is detected. See https://www.chromestatus.com/feature/5636954674692096 for more details. Fallback font will be used while loading: https://duckduckgo.com/font/DuckSansDisplay-Bold.woff2 @ https://duckduckgo.com/?q=agnes-image-21-flash+model:0

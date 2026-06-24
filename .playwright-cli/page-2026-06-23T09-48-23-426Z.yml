@@ -1,0 +1,549 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - link "Skip to content" [ref=e4] [cursor=pointer]:
+      - /url: "#start-of-content"
+    - banner [ref=e6]:
+      - heading "Navigation Menu" [level=2] [ref=e7]
+      - generic [ref=e8]:
+        - link "Homepage" [ref=e10] [cursor=pointer]:
+          - /url: /
+          - img [ref=e11]
+        - generic [ref=e13]:
+          - navigation "Global" [ref=e16]:
+            - list [ref=e17]:
+              - listitem [ref=e18]:
+                - button "Platform" [ref=e20] [cursor=pointer]:
+                  - text: Platform
+                  - img [ref=e21]
+              - listitem [ref=e23]:
+                - button "Solutions" [ref=e25] [cursor=pointer]:
+                  - text: Solutions
+                  - img [ref=e26]
+              - listitem [ref=e28]:
+                - button "Resources" [ref=e30] [cursor=pointer]:
+                  - text: Resources
+                  - img [ref=e31]
+              - listitem [ref=e33]:
+                - button "Open Source" [ref=e35] [cursor=pointer]:
+                  - text: Open Source
+                  - img [ref=e36]
+              - listitem [ref=e38]:
+                - button "Enterprise" [ref=e40] [cursor=pointer]:
+                  - text: Enterprise
+                  - img [ref=e41]
+              - listitem [ref=e43]:
+                - link "Pricing" [ref=e44] [cursor=pointer]:
+                  - /url: https://github.com/pricing
+                  - generic [ref=e45]: Pricing
+          - generic [ref=e46]:
+            - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+              - img [ref=e51]
+            - link "Sign in" [ref=e54] [cursor=pointer]:
+              - /url: /login?return_to=https%3A%2F%2Fgithub.com%2Fsearch%3Fq%3Dagnes-image-21-flash%26type%3Dissues
+            - link "Sign up" [ref=e55] [cursor=pointer]:
+              - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2Fsearch&source=header
+            - button "Appearance settings" [ref=e58] [cursor=pointer]:
+              - img
+  - main [ref=e61]:
+    - generic [ref=e64]:
+      - heading "issues Search Results · agnes-image-21-flash" [level=1] [ref=e65]
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - region "Filter by" [ref=e70]:
+            - heading "Filter by" [level=2] [ref=e71]
+            - list "Filter by" [ref=e76]:
+              - listitem [ref=e77]:
+                - list [ref=e78]:
+                  - listitem [ref=e79]:
+                    - link "Code (...) results" [ref=e80] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash&type=code
+                      - generic:
+                        - img
+                      - generic [ref=e81]:
+                        - generic [ref=e82]: Code
+                        - generic:
+                          - generic: ...
+                          - generic: (...)
+                          - generic: results
+                  - listitem [ref=e83]:
+                    - link "Repositories (0) results" [ref=e84] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash&type=repositories
+                      - generic:
+                        - img
+                      - generic [ref=e85]:
+                        - generic [ref=e86]: Repositories
+                        - generic:
+                          - generic: "0"
+                          - generic: (0)
+                          - generic: results
+                  - listitem [ref=e87]:
+                    - link "Issues (45) results" [ref=e88] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash&type=issues
+                      - generic:
+                        - img
+                      - generic [ref=e89]:
+                        - generic [ref=e90]: Issues
+                        - generic:
+                          - generic: "45"
+                          - generic: (45)
+                          - generic: results
+                  - listitem [ref=e91]:
+                    - link "Pull requests (7) results" [ref=e92] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash&type=pullrequests
+                      - generic:
+                        - img
+                      - generic [ref=e93]:
+                        - generic [ref=e94]: Pull requests
+                        - generic:
+                          - generic: "7"
+                          - generic: (7)
+                          - generic: results
+                  - listitem [ref=e95]:
+                    - link "Discussions (1) results" [ref=e96] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash&type=discussions
+                      - generic:
+                        - img
+                      - generic [ref=e97]:
+                        - generic [ref=e98]: Discussions
+                        - generic:
+                          - generic: "1"
+                          - generic: (1)
+                          - generic: results
+                  - listitem [ref=e99]:
+                    - link "Users (0) results" [ref=e100] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash&type=users
+                      - generic:
+                        - img
+                      - generic [ref=e101]:
+                        - generic [ref=e102]: Users
+                        - generic:
+                          - generic: "0"
+                          - generic: (0)
+                          - generic: results
+                  - listitem [ref=e103]:
+                    - button "More" [ref=e104] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic [ref=e106]: More
+              - listitem [ref=e107]
+              - listitem [ref=e108]:
+                - heading "State" [level=3] [ref=e110]
+                - list "State" [ref=e111]:
+                  - listitem [ref=e112]:
+                    - link "Open" [ref=e113] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash&type=issues&state=open
+                      - generic:
+                        - img
+                      - generic "Open" [ref=e117]
+                  - listitem [ref=e118]:
+                    - link "Closed" [ref=e119] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash&type=issues&state=closed
+                      - generic:
+                        - img
+                      - generic "Closed" [ref=e123]
+                  - listitem [ref=e124]
+              - listitem [ref=e125]:
+                - heading "Advanced" [level=3] [ref=e127]
+                - list "Advanced" [ref=e128]:
+                  - listitem [ref=e129]:
+                    - button "Owner" [ref=e130] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Owner" [ref=e134]
+                  - listitem [ref=e135]:
+                    - button "State" [ref=e136] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "State" [ref=e140]
+                  - listitem [ref=e141]:
+                    - button "Close reason" [ref=e142] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Close reason" [ref=e146]
+                  - listitem [ref=e147]:
+                    - link "Has linked pull request" [ref=e148] [cursor=pointer]:
+                      - /url: https://github.com/search?q=agnes-image-21-flash+linked%3Apr&type=issues
+                      - generic:
+                        - img
+                      - generic "Has linked pull request" [ref=e152]
+                  - listitem [ref=e153]:
+                    - button "Author" [ref=e154] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Author" [ref=e158]
+                  - listitem [ref=e159]:
+                    - button "Assignee" [ref=e160] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Assignee" [ref=e164]
+                  - listitem [ref=e165]:
+                    - button "Mentioned user" [ref=e166] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Mentioned user" [ref=e170]
+                  - listitem [ref=e171]:
+                    - button "Mentioned team" [ref=e172] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Mentioned team" [ref=e176]
+                  - listitem [ref=e177]:
+                    - button "Commenter" [ref=e178] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Commenter" [ref=e182]
+                  - listitem [ref=e183]:
+                    - button "Involved user" [ref=e184] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Involved user" [ref=e188]
+                  - listitem [ref=e189]:
+                    - button "Label" [ref=e190] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Label" [ref=e194]
+                  - listitem [ref=e195]:
+                    - button "Milestone" [ref=e196] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Milestone" [ref=e200]
+                  - listitem [ref=e201]:
+                    - button "Number of comments" [ref=e202] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Number of comments" [ref=e206]
+                  - listitem [ref=e207]:
+                    - button "Number of interactions" [ref=e208] [cursor=pointer]:
+                      - generic:
+                        - img
+                      - generic "Number of interactions" [ref=e212]
+              - listitem [ref=e213]
+              - listitem [ref=e214]:
+                - link "Advanced search" [ref=e215] [cursor=pointer]:
+                  - /url: /search/advanced
+                  - generic:
+                    - img
+                  - generic [ref=e217]: Advanced search
+          - slider "Draggable pane splitter" [ref=e219]
+        - generic [ref=e222]:
+          - generic [ref=e223]:
+            - generic [ref=e225]:
+              - generic [ref=e226]:
+                - generic [ref=e227]:
+                  - generic [ref=e228]: 45 results
+                  - generic [ref=e229]: (222 ms)
+                - heading "45 results" [active] [level=2] [ref=e230]
+              - generic [ref=e231]:
+                - 'button "Sort by: Best match" [ref=e233] [cursor=pointer]':
+                  - generic [ref=e235]: "Sort by: Best match"
+                  - generic:
+                    - img
+                - button "Open column options" [ref=e237] [cursor=pointer]:
+                  - img [ref=e238]
+            - generic [ref=e242]:
+              - generic [ref=e243]:
+                - heading "liliMozi/openhanako [Feature] Add Agnes Image provider to image-gen plugin" [level=3] [ref=e244]:
+                  - link "liliMozi/openhanako" [ref=e246] [cursor=pointer]:
+                    - /url: /liliMozi/openhanako
+                  - generic [ref=e247]:
+                    - img [ref=e249]
+                    - link "[Feature] Add Agnes Image provider to image-gen plugin" [ref=e252] [cursor=pointer]:
+                      - /url: /liliMozi/openhanako/issues/1583
+                      - generic [ref=e253]:
+                        - text: "[Feature] Add"
+                        - emphasis [ref=e254]: Agnes
+                        - emphasis [ref=e255]: Image
+                        - text: provider to
+                        - emphasis [ref=e256]: image
+                        - text: "-gen plugin"
+                - generic [ref=e260]: enhancement
+                - list [ref=e261]:
+                  - listitem [ref=e262]: zwhuang89725-rgb
+                  - generic [ref=e263]: ·
+                  - listitem [ref=e264]:
+                    - text: Opened
+                    - generic "2026年6月8日 GMT+8 23:57" [ref=e265]: 14 days ago
+                  - generic [ref=e266]: ·
+                  - listitem [ref=e267]:
+                    - link "#1583" [ref=e268] [cursor=pointer]:
+                      - /url: /liliMozi/openhanako/issues/1583
+              - generic [ref=e269]:
+                - 'heading "AgnesAI-Labs/Agnes-AI [API]: Image 2.1 Flash以及Agnes-Video-V2.0到哪儿申请API？" [level=3] [ref=e270]':
+                  - link "AgnesAI-Labs/Agnes-AI" [ref=e272] [cursor=pointer]:
+                    - /url: /AgnesAI-Labs/Agnes-AI
+                  - generic [ref=e273]:
+                    - img [ref=e275]
+                    - 'link "[API]: Image 2.1 Flash以及Agnes-Video-V2.0到哪儿申请API？" [ref=e277] [cursor=pointer]':
+                      - /url: /AgnesAI-Labs/Agnes-AI/issues/19
+                      - generic [ref=e278]:
+                        - text: "[API]:"
+                        - emphasis [ref=e279]: Image
+                        - text: "2.1"
+                        - emphasis [ref=e280]: Flash
+                        - text: 以及
+                        - emphasis [ref=e281]: Agnes
+                        - text: "-Video-V2.0到哪儿申请API？"
+                - list [ref=e282]:
+                  - listitem [ref=e283]: 91rinb18
+                  - generic [ref=e284]: ·
+                  - listitem [ref=e285]:
+                    - img [ref=e287]
+                    - text: "1"
+                  - generic [ref=e289]: ·
+                  - listitem [ref=e290]:
+                    - text: Opened
+                    - generic "2026年6月22日 GMT+8 23:36" [ref=e291]: 18 hours ago
+                  - generic [ref=e292]: ·
+                  - listitem [ref=e293]:
+                    - link "#19" [ref=e294] [cursor=pointer]:
+                      - /url: /AgnesAI-Labs/Agnes-AI/issues/19
+              - generic [ref=e295]:
+                - heading "AgnesAI-Labs/Agnes-AI 📘 Document image input formats and watermark policy" [level=3] [ref=e296]:
+                  - link "AgnesAI-Labs/Agnes-AI" [ref=e298] [cursor=pointer]:
+                    - /url: /AgnesAI-Labs/Agnes-AI
+                  - generic [ref=e299]:
+                    - img [ref=e301]
+                    - link "📘 Document image input formats and watermark policy" [ref=e303] [cursor=pointer]:
+                      - /url: /AgnesAI-Labs/Agnes-AI/issues/5
+                      - generic [ref=e304]:
+                        - text: 📘 Document
+                        - emphasis [ref=e305]: image
+                        - text: input formats and watermark policy
+                - generic [ref=e307]:
+                  - text: Summary Users need clearer documentation for
+                  - emphasis [ref=e308]: image
+                  - text: "-to-"
+                  - emphasis [ref=e309]: image
+                  - text: inputs and generated media output behavior. Proposed Coverage -
+                  - emphasis [ref=e310]: Image
+                  - text: "-to-"
+                  - emphasis [ref=e311]: image
+                  - text: supports public
+                  - emphasis [ref=e312]: image
+                  - text: URLs and Base64 input. - Public ...
+                - list [ref=e313]:
+                  - listitem [ref=e314]: AgnesAI-Labs
+                  - generic [ref=e315]: ·
+                  - listitem [ref=e316]:
+                    - img [ref=e318]
+                    - text: "1"
+                  - generic [ref=e320]: ·
+                  - listitem [ref=e321]:
+                    - text: Opened
+                    - generic "2026年6月22日 GMT+8 15:52" [ref=e322]: yesterday
+                  - generic [ref=e323]: ·
+                  - listitem [ref=e324]:
+                    - link "#5" [ref=e325] [cursor=pointer]:
+                      - /url: /AgnesAI-Labs/Agnes-AI/issues/5
+              - generic [ref=e326]:
+                - heading "Railgun19457/astrbot_plugin_image_generation Agnes AI adapter should support reliable response formats and image-to-image payloads" [level=3] [ref=e327]:
+                  - link "Railgun19457/astrbot_plugin_image_generation" [ref=e329] [cursor=pointer]:
+                    - /url: /Railgun19457/astrbot_plugin_image_generation
+                  - generic [ref=e330]:
+                    - img [ref=e332]
+                    - link "Agnes AI adapter should support reliable response formats and image-to-image payloads" [ref=e334] [cursor=pointer]:
+                      - /url: /Railgun19457/astrbot_plugin_image_generation/issues/32
+                      - generic [ref=e335]:
+                        - emphasis [ref=e336]: Agnes
+                        - text: AI adapter should support reliable response formats and
+                        - emphasis [ref=e337]: image
+                        - text: "-to-"
+                        - emphasis [ref=e338]: image
+                        - text: payloads
+                - list [ref=e339]:
+                  - listitem [ref=e340]: starlight02
+                  - generic [ref=e341]: ·
+                  - listitem [ref=e342]:
+                    - text: Opened
+                    - generic "2026年6月6日 GMT+8 15:09" [ref=e343]: 17 days ago
+                  - generic [ref=e344]: ·
+                  - listitem [ref=e345]:
+                    - link "#32" [ref=e346] [cursor=pointer]:
+                      - /url: /Railgun19457/astrbot_plugin_image_generation/issues/32
+              - generic [ref=e347]:
+                - heading "Railgun19457/astrbot_plugin_image_generation Add Agnes AI image provider adapter" [level=3] [ref=e348]:
+                  - link "Railgun19457/astrbot_plugin_image_generation" [ref=e350] [cursor=pointer]:
+                    - /url: /Railgun19457/astrbot_plugin_image_generation
+                  - generic [ref=e351]:
+                    - img [ref=e353]
+                    - link "Add Agnes AI image provider adapter" [ref=e355] [cursor=pointer]:
+                      - /url: /Railgun19457/astrbot_plugin_image_generation/issues/28
+                      - generic [ref=e356]:
+                        - text: Add
+                        - emphasis [ref=e357]: Agnes
+                        - text: AI
+                        - emphasis [ref=e358]: image
+                        - text: provider adapter
+                - list [ref=e359]:
+                  - listitem [ref=e360]: starlight02
+                  - generic [ref=e361]: ·
+                  - listitem [ref=e362]:
+                    - text: Opened
+                    - generic "2026年6月1日 GMT+8 20:30" [ref=e363]: 21 days ago
+                  - generic [ref=e364]: ·
+                  - listitem [ref=e365]:
+                    - link "#28" [ref=e366] [cursor=pointer]:
+                      - /url: /Railgun19457/astrbot_plugin_image_generation/issues/28
+              - generic [ref=e367]:
+                - heading "pollinations/pollinations [Voting Issue] Which models should we add next?" [level=3] [ref=e368]:
+                  - link "pollinations/pollinations" [ref=e370] [cursor=pointer]:
+                    - /url: /pollinations/pollinations
+                  - generic [ref=e371]:
+                    - img [ref=e373]
+                    - link "[Voting Issue] Which models should we add next?" [ref=e376] [cursor=pointer]:
+                      - /url: /pollinations/pollinations/issues/5321
+                - generic [ref=e378]:
+                  - text: ... = Video generation Text-to-video,
+                  - emphasis [ref=e379]: image
+                  - text: "-to-video models 😄 = Embeddings rerankers Better search and semantic understanding ❤️ = Open-source LLMs Kimi k2, GLM 4.6, and similar models 🚀 ="
+                  - emphasis [ref=e380]: Image
+                  - text: models ...
+                - generic [ref=e384]: DEV-VOTING
+                - list [ref=e385]:
+                  - listitem [ref=e386]: voodoohop
+                  - generic [ref=e387]: ·
+                  - listitem [ref=e388]:
+                    - img [ref=e390]
+                    - text: "267"
+                  - generic [ref=e392]: ·
+                  - listitem [ref=e393]:
+                    - text: Opened
+                    - generic "2025年11月16日 GMT+8 12:17" [ref=e394]: on 2025年11月16日
+                  - generic [ref=e395]: ·
+                  - listitem [ref=e396]:
+                    - link "#5321" [ref=e397] [cursor=pointer]:
+                      - /url: /pollinations/pollinations/issues/5321
+              - generic [ref=e398]:
+                - heading "manelsen/agents-radar 🦞 Ecossistema de agentes de IA 2026-06-21" [level=3] [ref=e399]:
+                  - link "manelsen/agents-radar" [ref=e401] [cursor=pointer]:
+                    - /url: /manelsen/agents-radar
+                  - generic [ref=e402]:
+                    - img [ref=e404]
+                    - link "🦞 Ecossistema de agentes de IA 2026-06-21" [ref=e407] [cursor=pointer]:
+                      - /url: /manelsen/agents-radar/issues/971
+                      - generic [ref=e408]:
+                        - text: 🦞 Ecossistema de agentes de IA 2026-06-
+                        - emphasis [ref=e409]: "21"
+                - generic [ref=e411]:
+                  - text: "... (🔗): Erro crítico NoResponseContentno Windows 11 com modelo"
+                  - emphasis [ref=e412]: Agnes
+                  - text: "-2.0-"
+                  - emphasis [ref=e413]: Flash
+                  - text: . Taxa de ocorrência de ** 50%** (12 em
+                  - emphasis [ref=e414]: "21"
+                  - text: conversas). Este é o tema mais urgente no momento. 5. Bugs e Estabilidade 🔴 ...
+                - generic [ref=e418]: agents
+                - list [ref=e419]:
+                  - listitem [ref=e420]: github-actions[bot]
+                  - generic [ref=e421]: ·
+                  - listitem [ref=e422]:
+                    - text: Opened
+                    - generic "2026年6月21日 GMT+8 05:17" [ref=e423]: 2 days ago
+                  - generic [ref=e424]: ·
+                  - listitem [ref=e425]:
+                    - link "#971" [ref=e426] [cursor=pointer]:
+                      - /url: /manelsen/agents-radar/issues/971
+              - generic [ref=e427]:
+                - heading "Chestnuts-0/os-feed 🦞 OpenClaw Ecosystem Digest 2026-06-22" [level=3] [ref=e428]:
+                  - link "Chestnuts-0/os-feed" [ref=e430] [cursor=pointer]:
+                    - /url: /Chestnuts-0/os-feed
+                  - generic [ref=e431]:
+                    - img [ref=e433]
+                    - link "🦞 OpenClaw Ecosystem Digest 2026-06-22" [ref=e436] [cursor=pointer]:
+                      - /url: /Chestnuts-0/os-feed/issues/14
+                - generic [ref=e440]: openclaw-en
+                - list [ref=e441]:
+                  - listitem [ref=e442]: github-actions[bot]
+                  - generic [ref=e443]: ·
+                  - listitem [ref=e444]:
+                    - text: Opened
+                    - generic "2026年6月22日 GMT+8 16:02" [ref=e445]: yesterday
+                  - generic [ref=e446]: ·
+                  - listitem [ref=e447]:
+                    - link "#14" [ref=e448] [cursor=pointer]:
+                      - /url: /Chestnuts-0/os-feed/issues/14
+              - generic [ref=e449]:
+                - heading "chlohal/the-media-list Midsommar" [level=3] [ref=e450]:
+                  - link "chlohal/the-media-list" [ref=e452] [cursor=pointer]:
+                    - /url: /chlohal/the-media-list
+                  - generic [ref=e453]:
+                    - img [ref=e455]
+                    - link "Midsommar" [ref=e458] [cursor=pointer]:
+                      - /url: /chlohal/the-media-list/issues/137
+                - generic [ref=e460]:
+                  - text: ... a cliff, the main character has a dream that is inter cut with
+                  - emphasis [ref=e461]: images
+                  - text: of the dead bodies, and also the face of her sister. The
+                  - emphasis [ref=e462]: images
+                  - emphasis [ref=e463]: flash
+                  - text: on the screen for short amounts of time. It is worth noting ...
+                - generic [ref=e464]:
+                  - generic [ref=e467]: Drama
+                  - generic [ref=e470]: Horror
+                  - generic [ref=e473]: Mystery
+                - list [ref=e474]:
+                  - listitem [ref=e475]: chlohal
+                  - generic [ref=e476]: ·
+                  - listitem [ref=e477]:
+                    - text: Opened
+                    - generic "2022年10月30日 GMT+8 07:49" [ref=e478]: on 2022年10月30日
+                  - generic [ref=e479]: ·
+                  - listitem [ref=e480]:
+                    - link "#137" [ref=e481] [cursor=pointer]:
+                      - /url: /chlohal/the-media-list/issues/137
+              - generic [ref=e482]:
+                - heading "Chestnuts-0/os-feed 🦞 OpenClaw Ecosystem Digest 2026-06-22" [level=3] [ref=e483]:
+                  - link "Chestnuts-0/os-feed" [ref=e485] [cursor=pointer]:
+                    - /url: /Chestnuts-0/os-feed
+                  - generic [ref=e486]:
+                    - img [ref=e488]
+                    - link "🦞 OpenClaw Ecosystem Digest 2026-06-22" [ref=e491] [cursor=pointer]:
+                      - /url: /Chestnuts-0/os-feed/issues/28
+                - generic [ref=e495]: openclaw-en
+                - list [ref=e496]:
+                  - listitem [ref=e497]: github-actions[bot]
+                  - generic [ref=e498]: ·
+                  - listitem [ref=e499]:
+                    - text: Opened
+                    - generic "2026年6月22日 GMT+8 18:34" [ref=e500]: 23 hours ago
+                  - generic [ref=e501]: ·
+                  - listitem [ref=e502]:
+                    - link "#28" [ref=e503] [cursor=pointer]:
+                      - /url: /Chestnuts-0/os-feed/issues/28
+            - navigation "Pagination" [ref=e506]:
+              - generic [ref=e507]:
+                - generic [ref=e508]:
+                  - img [ref=e509]
+                  - text: Previous
+                - link "Page 1" [ref=e511] [cursor=pointer]:
+                  - /url: https://github.com/search?q=agnes-image-21-flash&type=issues&p=1
+                  - text: "1"
+                - link "Page 2" [ref=e512] [cursor=pointer]:
+                  - /url: https://github.com/search?q=agnes-image-21-flash&type=issues&p=2
+                  - text: "2"
+                - link "Page 3" [ref=e513] [cursor=pointer]:
+                  - /url: https://github.com/search?q=agnes-image-21-flash&type=issues&p=3
+                  - text: "3"
+                - link "Page 4" [ref=e514] [cursor=pointer]:
+                  - /url: https://github.com/search?q=agnes-image-21-flash&type=issues&p=4
+                  - text: "4"
+                - link "Page 5" [ref=e515] [cursor=pointer]:
+                  - /url: https://github.com/search?q=agnes-image-21-flash&type=issues&p=5
+                  - text: "5"
+                - link "Next Page" [ref=e516] [cursor=pointer]:
+                  - /url: https://github.com/search?q=agnes-image-21-flash&type=issues&p=2
+                  - text: Next
+                  - img [ref=e517]
+          - generic [ref=e520]:
+            - generic [ref=e521]:
+              - img "Issue origami icon" [ref=e523]
+              - heading "Learn how you can use GitHub Issues to plan and track your work." [level=2] [ref=e524]
+              - generic [ref=e525]: Save views for sprints, backlogs, teams, or releases. Rank, sort, and filter issues to suit the occasion. The possibilities are endless.
+              - link "Learn more about GitHub Issues" [ref=e526] [cursor=pointer]:
+                - /url: https://docs.github.com/issues
+                - text: Learn more about GitHub Issues
+                - img [ref=e527]
+            - generic [ref=e529]:
+              - generic [ref=e530]:
+                - img [ref=e531]
+                - text: ProTip!
+              - text: Restrict your search to the title by using the in:title qualifier.

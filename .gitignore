@@ -1,0 +1,43 @@
+﻿# Node modules
+node_modules/
+package-lock.json
+
+# Playwright CLI artifacts
+.playwright-cli/
+.playwright/
+
+# Temporary files
+*.txt
+*.log
+
+# Images (keep originals if needed, but exclude duplicates)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+
+# Agnes image skill assets
+agnes-image-skill/sunset.jpg
+
+# Baidu search images
+baidu_*.png
+
+# Code generation artifacts
+lm-chat-help.txt
+lm-chat-err.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets and sensitive data
+.env
+*.pem
+*.key
+
+# Build artifacts (if any)
+target/
+*.o
+*.rlib

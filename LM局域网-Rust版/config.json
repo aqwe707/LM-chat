@@ -1,0 +1,15 @@
+{
+  "port": 8080,
+  "passcode": "",
+  "lmstudio": {
+    "host": "localhost",
+    "port": 1234
+  },
+  "chat": {
+    "systemPrompt": "你是一个有用的AI助手，请用中文回答。回答简洁准确。",
+    "temperature": 0.7,
+    "maxTokens": 65536,
+    "maxHistory": 20
+  },
+  "note": "请将 passcode 字段设置为你自己的访问密码，留空则不需要密码"
+}

@@ -1,0 +1,439 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "OpenAI Developers" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "OpenAI Developers" [ref=e5]
+      - navigation [ref=e6]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "API" [ref=e10] [cursor=pointer]:
+          - /url: /api
+          - text: API
+          - img [ref=e11]
+        - link "Codex" [ref=e14] [cursor=pointer]:
+          - /url: /codex
+          - text: Codex
+          - img [ref=e15]
+        - link "ChatGPT" [ref=e18] [cursor=pointer]:
+          - /url: /chatgpt
+          - text: ChatGPT
+          - img [ref=e19]
+        - link "Resources" [ref=e22] [cursor=pointer]:
+          - /url: /learn
+          - text: Resources
+          - img [ref=e23]
+      - generic [ref=e25]:
+        - button "Start searching" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: Start searching
+          - img [ref=e28]
+        - link "API Dashboard" [ref=e33] [cursor=pointer]:
+          - /url: https://platform.openai.com/login
+          - generic [ref=e34]:
+            - generic [ref=e35]: API Dashboard
+            - img [ref=e36]
+        - button "Toggle light and dark theme" [ref=e38] [cursor=pointer]:
+          - img [ref=e39]
+  - generic [ref=e42]:
+    - navigation [ref=e44]:
+      - generic [ref=e45]:
+        - heading "Get started" [level=3] [ref=e46]
+        - list [ref=e47]:
+          - listitem [ref=e48]:
+            - link "Overview" [ref=e49] [cursor=pointer]:
+              - /url: /api/docs
+              - generic [ref=e50]: Overview
+          - listitem [ref=e51]:
+            - link "Quickstart" [ref=e52] [cursor=pointer]:
+              - /url: /api/docs/quickstart
+              - generic [ref=e53]: Quickstart
+          - listitem [ref=e54]:
+            - link "Models" [ref=e55] [cursor=pointer]:
+              - /url: /api/docs/models
+              - generic [ref=e56]: Models
+          - listitem [ref=e57]:
+            - link "Pricing" [ref=e58] [cursor=pointer]:
+              - /url: /api/docs/pricing
+              - generic [ref=e59]: Pricing
+          - listitem [ref=e60]:
+            - group [ref=e61]:
+              - generic "SDKs and CLI" [ref=e62] [cursor=pointer]:
+                - link "SDKs and CLI" [ref=e63]:
+                  - /url: /api/docs/libraries
+                  - generic [ref=e64]: SDKs and CLI
+                - img [ref=e65]
+          - listitem [ref=e67]:
+            - 'link "Latest: GPT-5.5" [ref=e68] [cursor=pointer]':
+              - /url: /api/docs/guides/latest-model
+              - generic [ref=e69]: "Latest: GPT-5.5"
+          - listitem [ref=e70]:
+            - link "Prompt guidance" [ref=e71] [cursor=pointer]:
+              - /url: /api/docs/guides/prompt-guidance
+              - generic [ref=e72]: Prompt guidance
+      - generic [ref=e73]:
+        - heading "Core concepts" [level=3] [ref=e74]
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "Text generation" [ref=e77] [cursor=pointer]:
+              - /url: /api/docs/guides/text
+              - generic [ref=e78]: Text generation
+          - listitem [ref=e79]:
+            - link "Code generation" [ref=e80] [cursor=pointer]:
+              - /url: /api/docs/guides/code-generation
+              - generic [ref=e81]: Code generation
+          - listitem [ref=e82]:
+            - link "Images and vision" [ref=e83] [cursor=pointer]:
+              - /url: /api/docs/guides/images-vision
+              - generic [ref=e84]: Images and vision
+          - listitem [ref=e85]:
+            - link "Audio and speech" [ref=e86] [cursor=pointer]:
+              - /url: /api/docs/guides/audio
+              - generic [ref=e87]: Audio and speech
+          - listitem [ref=e88]:
+            - link "Structured output" [ref=e89] [cursor=pointer]:
+              - /url: /api/docs/guides/structured-outputs
+              - generic [ref=e90]: Structured output
+          - listitem [ref=e91]:
+            - link "Function calling" [ref=e92] [cursor=pointer]:
+              - /url: /api/docs/guides/function-calling
+              - generic [ref=e93]: Function calling
+          - listitem [ref=e94]:
+            - link "Responses API" [ref=e95] [cursor=pointer]:
+              - /url: /api/docs/guides/migrate-to-responses
+              - generic [ref=e96]: Responses API
+          - listitem [ref=e97]:
+            - link "Using tools" [ref=e98] [cursor=pointer]:
+              - /url: /api/docs/guides/tools
+              - generic [ref=e99]: Using tools
+      - generic [ref=e100]:
+        - heading "Agents SDK" [level=3] [ref=e101]
+        - list [ref=e102]:
+          - listitem [ref=e103]:
+            - link "Overview" [ref=e104] [cursor=pointer]:
+              - /url: /api/docs/guides/agents
+              - generic [ref=e105]: Overview
+          - listitem [ref=e106]:
+            - link "Quickstart" [ref=e107] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/quickstart
+              - generic [ref=e108]: Quickstart
+          - listitem [ref=e109]:
+            - link "Agent definitions" [ref=e110] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/define-agents
+              - generic [ref=e111]: Agent definitions
+          - listitem [ref=e112]:
+            - link "Models and providers" [ref=e113] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/models
+              - generic [ref=e114]: Models and providers
+          - listitem [ref=e115]:
+            - link "Running agents" [ref=e116] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/running-agents
+              - generic [ref=e117]: Running agents
+          - listitem [ref=e118]:
+            - link "Sandbox agents" [ref=e119] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/sandboxes
+              - generic [ref=e120]: Sandbox agents
+          - listitem [ref=e121]:
+            - link "Orchestration" [ref=e122] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/orchestration
+              - generic [ref=e123]: Orchestration
+          - listitem [ref=e124]:
+            - link "Guardrails" [ref=e125] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/guardrails-approvals
+              - generic [ref=e126]: Guardrails
+          - listitem [ref=e127]:
+            - link "Results and state" [ref=e128] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/results
+              - generic [ref=e129]: Results and state
+          - listitem [ref=e130]:
+            - link "Integrations and observability" [ref=e131] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/integrations-observability
+              - generic [ref=e132]: Integrations and observability
+          - listitem [ref=e133]:
+            - link "Evaluate agent workflows" [ref=e134] [cursor=pointer]:
+              - /url: /api/docs/guides/agent-evals
+              - generic [ref=e135]: Evaluate agent workflows
+          - listitem [ref=e136]:
+            - link "Voice agents" [ref=e137] [cursor=pointer]:
+              - /url: /api/docs/guides/voice-agents
+              - generic [ref=e138]: Voice agents
+          - listitem [ref=e139]:
+            - group [ref=e140]:
+              - generic "ChatKit" [ref=e141] [cursor=pointer]:
+                - generic [ref=e142]: ChatKit
+                - img [ref=e143]
+      - generic [ref=e145]:
+        - heading "Tools" [level=3] [ref=e146]
+        - list [ref=e147]:
+          - listitem [ref=e148]:
+            - link "Web search" [ref=e149] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-web-search
+              - generic [ref=e150]: Web search
+          - listitem [ref=e151]:
+            - group [ref=e152]:
+              - generic "MCP and Connectors" [ref=e153] [cursor=pointer]:
+                - link "MCP and Connectors" [ref=e154]:
+                  - /url: /api/docs/guides/tools-connectors-mcp
+                  - generic [ref=e155]: MCP and Connectors
+                - img [ref=e156]
+          - listitem [ref=e158]:
+            - link "Skills" [ref=e159] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-skills
+              - generic [ref=e160]: Skills
+          - listitem [ref=e161]:
+            - link "Shell" [ref=e162] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-shell
+              - generic [ref=e163]: Shell
+          - listitem [ref=e164]:
+            - link "Computer use" [ref=e165] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-computer-use
+              - generic [ref=e166]: Computer use
+          - listitem [ref=e167]:
+            - group [ref=e168]:
+              - generic "File search and retrieval" [ref=e169] [cursor=pointer]:
+                - generic [ref=e170]: File search and retrieval
+                - img [ref=e171]
+          - listitem [ref=e173]:
+            - link "Tool search" [ref=e174] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-tool-search
+              - generic [ref=e175]: Tool search
+          - listitem [ref=e176]:
+            - group [ref=e177]:
+              - generic "More tools" [ref=e178] [cursor=pointer]:
+                - generic [ref=e179]: More tools
+                - img [ref=e180]
+      - generic [ref=e182]:
+        - heading "Run and scale" [level=3] [ref=e183]
+        - list [ref=e184]:
+          - listitem [ref=e185]:
+            - link "Conversation state" [ref=e186] [cursor=pointer]:
+              - /url: /api/docs/guides/conversation-state
+              - generic [ref=e187]: Conversation state
+          - listitem [ref=e188]:
+            - link "Background mode" [ref=e189] [cursor=pointer]:
+              - /url: /api/docs/guides/background
+              - generic [ref=e190]: Background mode
+          - listitem [ref=e191]:
+            - link "Streaming" [ref=e192] [cursor=pointer]:
+              - /url: /api/docs/guides/streaming-responses
+              - generic [ref=e193]: Streaming
+          - listitem [ref=e194]:
+            - link "WebSocket mode" [ref=e195] [cursor=pointer]:
+              - /url: /api/docs/guides/websocket-mode
+              - generic [ref=e196]: WebSocket mode
+          - listitem [ref=e197]:
+            - link "Webhooks" [ref=e198] [cursor=pointer]:
+              - /url: /api/docs/guides/webhooks
+              - generic [ref=e199]: Webhooks
+          - listitem [ref=e200]:
+            - link "File inputs" [ref=e201] [cursor=pointer]:
+              - /url: /api/docs/guides/file-inputs
+              - generic [ref=e202]: File inputs
+          - listitem [ref=e203]:
+            - group [ref=e204]:
+              - generic "Context management" [ref=e205] [cursor=pointer]:
+                - generic [ref=e206]: Context management
+                - img [ref=e207]
+          - listitem [ref=e209]:
+            - group [ref=e210]:
+              - generic "Prompting" [ref=e211] [cursor=pointer]:
+                - generic [ref=e212]: Prompting
+                - img [ref=e213]
+          - listitem [ref=e215]:
+            - group [ref=e216]:
+              - generic "Reasoning" [ref=e217] [cursor=pointer]:
+                - generic [ref=e218]: Reasoning
+                - img [ref=e219]
+      - generic [ref=e221]:
+        - heading "Evaluation" [level=3] [ref=e222]
+        - list [ref=e223]:
+          - listitem [ref=e224]:
+            - link "Red teaming" [ref=e225] [cursor=pointer]:
+              - /url: /api/docs/guides/red-teaming
+              - generic [ref=e226]: Red teaming
+      - generic [ref=e227]:
+        - heading "Realtime and audio" [level=3] [ref=e228]
+        - list [ref=e229]:
+          - listitem [ref=e230]:
+            - link "Overview" [ref=e231] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime
+              - generic [ref=e232]: Overview
+          - listitem [ref=e233]:
+            - link "Voice agents" [ref=e234] [cursor=pointer]:
+              - /url: /api/docs/guides/voice-agents
+              - generic [ref=e235]: Voice agents
+          - listitem [ref=e236]:
+            - link "Live translation" [ref=e237] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime-translation
+              - generic [ref=e238]: Live translation
+          - listitem [ref=e239]:
+            - group [ref=e240]:
+              - generic "Transcription" [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]: Transcription
+                - img [ref=e243]
+          - listitem [ref=e245]:
+            - link "Speech generation" [ref=e246] [cursor=pointer]:
+              - /url: /api/docs/guides/text-to-speech
+              - generic [ref=e247]: Speech generation
+          - listitem [ref=e248]:
+            - link "Realtime prompting guide" [ref=e249] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime-models-prompting
+              - generic [ref=e250]: Realtime prompting guide
+          - listitem [ref=e251]:
+            - group [ref=e252]:
+              - generic "Connection methods" [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]: Connection methods
+                - img [ref=e255]
+          - listitem [ref=e257]:
+            - group [ref=e258]:
+              - generic "Realtime sessions" [ref=e259] [cursor=pointer]:
+                - generic [ref=e260]: Realtime sessions
+                - img [ref=e261]
+      - generic [ref=e263]:
+        - heading "Specialized models" [level=3] [ref=e264]
+        - list [ref=e265]:
+          - listitem [ref=e266]:
+            - link "Image generation" [ref=e267] [cursor=pointer]:
+              - /url: /api/docs/guides/image-generation
+              - generic [ref=e268]: Image generation
+          - listitem [ref=e269]:
+            - link "Video generation" [ref=e270] [cursor=pointer]:
+              - /url: /api/docs/guides/video-generation
+              - generic [ref=e271]: Video generation
+          - listitem [ref=e272]:
+            - link "Deep research" [ref=e273] [cursor=pointer]:
+              - /url: /api/docs/guides/deep-research
+              - generic [ref=e274]: Deep research
+          - listitem [ref=e275]:
+            - link "Embeddings" [ref=e276] [cursor=pointer]:
+              - /url: /api/docs/guides/embeddings
+              - generic [ref=e277]: Embeddings
+          - listitem [ref=e278]:
+            - link "Moderation" [ref=e279] [cursor=pointer]:
+              - /url: /api/docs/guides/moderation
+              - generic [ref=e280]: Moderation
+      - generic [ref=e281]:
+        - heading "Going live" [level=3] [ref=e282]
+        - list [ref=e283]:
+          - listitem [ref=e284]:
+            - link "Production best practices" [ref=e285] [cursor=pointer]:
+              - /url: /api/docs/guides/production-best-practices
+              - generic [ref=e286]: Production best practices
+          - listitem [ref=e287]:
+            - group [ref=e288]:
+              - generic "Workload identity federation" [ref=e289] [cursor=pointer]:
+                - link "Workload identity federation" [ref=e290]:
+                  - /url: /api/docs/guides/workload-identity-federation
+                  - generic [ref=e291]: Workload identity federation
+                - img [ref=e292]
+          - listitem [ref=e294]:
+            - link "Deployment checklist" [ref=e295] [cursor=pointer]:
+              - /url: /api/docs/guides/deployment-checklist
+              - generic [ref=e296]: Deployment checklist
+          - listitem [ref=e297]:
+            - link "Amazon Bedrock" [ref=e298] [cursor=pointer]:
+              - /url: /api/docs/guides/amazon-bedrock
+              - generic [ref=e299]: Amazon Bedrock
+          - listitem [ref=e300]:
+            - group [ref=e301]:
+              - generic "Latency optimization" [ref=e302] [cursor=pointer]:
+                - generic [ref=e303]: Latency optimization
+                - img [ref=e304]
+          - listitem [ref=e306]:
+            - group [ref=e307]:
+              - generic "Cost optimization" [ref=e308] [cursor=pointer]:
+                - generic [ref=e309]: Cost optimization
+                - img [ref=e310]
+          - listitem [ref=e312]:
+            - link "Accuracy optimization" [ref=e313] [cursor=pointer]:
+              - /url: /api/docs/guides/optimizing-llm-accuracy
+              - generic [ref=e314]: Accuracy optimization
+          - listitem [ref=e315]:
+            - group [ref=e316]:
+              - generic "Safety" [ref=e317] [cursor=pointer]:
+                - generic [ref=e318]: Safety
+                - img [ref=e319]
+      - generic [ref=e321]:
+        - heading "Legacy APIs" [level=3] [ref=e322]
+        - list [ref=e323]:
+          - listitem [ref=e324]:
+            - group [ref=e325]:
+              - generic "Agent Builder" [ref=e326] [cursor=pointer]:
+                - generic [ref=e327]: Agent Builder
+                - img [ref=e328]
+          - listitem [ref=e330]:
+            - group [ref=e331]:
+              - generic "Evals" [ref=e332] [cursor=pointer]:
+                - generic [ref=e333]: Evals
+                - img [ref=e334]
+          - listitem [ref=e336]:
+            - group [ref=e337]:
+              - generic "Fine-tuning" [ref=e338] [cursor=pointer]:
+                - generic [ref=e339]: Fine-tuning
+                - img [ref=e340]
+          - listitem [ref=e342]:
+            - group [ref=e343]:
+              - generic "Assistants API" [ref=e344] [cursor=pointer]:
+                - generic [ref=e345]: Assistants API
+                - img [ref=e346]
+      - generic [ref=e348]:
+        - heading "Resources" [level=3] [ref=e349]
+        - list [ref=e350]:
+          - listitem [ref=e351]:
+            - link "Terms and policies" [ref=e352] [cursor=pointer]:
+              - /url: https://openai.com/policies
+              - generic [ref=e353]: Terms and policies
+              - img [ref=e354]
+          - listitem [ref=e356]:
+            - link "Changelog" [ref=e357] [cursor=pointer]:
+              - /url: /api/docs/changelog
+              - generic [ref=e358]: Changelog
+          - listitem [ref=e359]:
+            - link "Your data" [ref=e360] [cursor=pointer]:
+              - /url: /api/docs/guides/your-data
+              - generic [ref=e361]: Your data
+          - listitem [ref=e362]:
+            - link "Permissions" [ref=e363] [cursor=pointer]:
+              - /url: /api/docs/guides/rbac
+              - generic [ref=e364]: Permissions
+          - listitem [ref=e365]:
+            - link "Rate limits" [ref=e366] [cursor=pointer]:
+              - /url: /api/docs/guides/rate-limits
+              - generic [ref=e367]: Rate limits
+          - listitem [ref=e368]:
+            - link "IP egress ranges" [ref=e369] [cursor=pointer]:
+              - /url: /api/docs/guides/ip-addresses
+              - generic [ref=e370]: IP egress ranges
+          - listitem [ref=e371]:
+            - link "Admin APIs" [ref=e372] [cursor=pointer]:
+              - /url: /api/docs/guides/admin-apis
+              - generic [ref=e373]: Admin APIs
+          - listitem [ref=e374]:
+            - link "Deprecations" [ref=e375] [cursor=pointer]:
+              - /url: /api/docs/deprecations
+              - generic [ref=e376]: Deprecations
+          - listitem [ref=e377]:
+            - link "MCP for deep research" [ref=e378] [cursor=pointer]:
+              - /url: /api/docs/mcp
+              - generic [ref=e379]: MCP for deep research
+          - listitem [ref=e380]:
+            - link "Developer mode" [ref=e381] [cursor=pointer]:
+              - /url: /api/docs/guides/developer-mode
+              - generic [ref=e382]: Developer mode
+          - listitem [ref=e383]:
+            - group [ref=e384]:
+              - generic "ChatGPT Actions" [ref=e385] [cursor=pointer]:
+                - generic [ref=e386]: ChatGPT Actions
+                - img [ref=e387]
+    - main
+  - generic:
+    - button "Ask AI" [ref=e389] [cursor=pointer]:
+      - generic [ref=e390]: Ask AI
+    - dialog "Docs agent" [ref=e391]:
+      - banner [ref=e392]:
+        - heading "Docs agent" [level=2] [ref=e393]
+        - generic [ref=e394]:
+          - button "Start a new docs agent thread" [ref=e395] [cursor=pointer]:
+            - img [ref=e396]
+          - button "Close docs agent" [ref=e398] [cursor=pointer]:
+            - img [ref=e399]
+      - paragraph [ref=e403]: Loading docs agent...

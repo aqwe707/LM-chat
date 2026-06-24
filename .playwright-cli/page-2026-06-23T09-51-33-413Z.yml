@@ -1,0 +1,1792 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "OpenAI Developers" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "OpenAI Developers" [ref=e5]
+      - navigation [ref=e6]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "API" [ref=e10] [cursor=pointer]:
+          - /url: /api
+          - text: API
+          - img [ref=e11]
+        - link "Codex" [ref=e14] [cursor=pointer]:
+          - /url: /codex
+          - text: Codex
+          - img [ref=e15]
+        - link "ChatGPT" [ref=e18] [cursor=pointer]:
+          - /url: /chatgpt
+          - text: ChatGPT
+          - img [ref=e19]
+        - link "Resources" [ref=e22] [cursor=pointer]:
+          - /url: /learn
+          - text: Resources
+          - img [ref=e23]
+      - generic [ref=e25]:
+        - button "Start searching" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: Start searching
+          - img [ref=e28]
+        - link "API Dashboard" [ref=e33] [cursor=pointer]:
+          - /url: https://platform.openai.com/login
+          - generic [ref=e34]:
+            - generic [ref=e35]: API Dashboard
+            - img [ref=e36]
+        - button "Toggle light and dark theme" [ref=e38] [cursor=pointer]:
+          - img [ref=e39]
+  - generic [ref=e42]:
+    - navigation [ref=e44]:
+      - generic [ref=e45]:
+        - heading "Get started" [level=3] [ref=e46]
+        - list [ref=e47]:
+          - listitem [ref=e48]:
+            - link "Overview" [ref=e49] [cursor=pointer]:
+              - /url: /api/docs
+              - generic [ref=e50]: Overview
+          - listitem [ref=e51]:
+            - link "Quickstart" [ref=e52] [cursor=pointer]:
+              - /url: /api/docs/quickstart
+              - generic [ref=e53]: Quickstart
+          - listitem [ref=e54]:
+            - link "Models" [ref=e55] [cursor=pointer]:
+              - /url: /api/docs/models
+              - generic [ref=e56]: Models
+          - listitem [ref=e57]:
+            - link "Pricing" [ref=e58] [cursor=pointer]:
+              - /url: /api/docs/pricing
+              - generic [ref=e59]: Pricing
+          - listitem [ref=e60]:
+            - group [ref=e61]:
+              - generic "SDKs and CLI" [ref=e62] [cursor=pointer]:
+                - link "SDKs and CLI" [ref=e63]:
+                  - /url: /api/docs/libraries
+                  - generic [ref=e64]: SDKs and CLI
+                - img [ref=e65]
+          - listitem [ref=e67]:
+            - 'link "Latest: GPT-5.5" [ref=e68] [cursor=pointer]':
+              - /url: /api/docs/guides/latest-model
+              - generic [ref=e69]: "Latest: GPT-5.5"
+          - listitem [ref=e70]:
+            - link "Prompt guidance" [ref=e71] [cursor=pointer]:
+              - /url: /api/docs/guides/prompt-guidance
+              - generic [ref=e72]: Prompt guidance
+      - generic [ref=e73]:
+        - heading "Core concepts" [level=3] [ref=e74]
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "Text generation" [ref=e77] [cursor=pointer]:
+              - /url: /api/docs/guides/text
+              - generic [ref=e78]: Text generation
+          - listitem [ref=e79]:
+            - link "Code generation" [ref=e80] [cursor=pointer]:
+              - /url: /api/docs/guides/code-generation
+              - generic [ref=e81]: Code generation
+          - listitem [ref=e82]:
+            - link "Images and vision" [ref=e83] [cursor=pointer]:
+              - /url: /api/docs/guides/images-vision
+              - generic [ref=e84]: Images and vision
+          - listitem [ref=e85]:
+            - link "Audio and speech" [ref=e86] [cursor=pointer]:
+              - /url: /api/docs/guides/audio
+              - generic [ref=e87]: Audio and speech
+          - listitem [ref=e88]:
+            - link "Structured output" [ref=e89] [cursor=pointer]:
+              - /url: /api/docs/guides/structured-outputs
+              - generic [ref=e90]: Structured output
+          - listitem [ref=e91]:
+            - link "Function calling" [ref=e92] [cursor=pointer]:
+              - /url: /api/docs/guides/function-calling
+              - generic [ref=e93]: Function calling
+          - listitem [ref=e94]:
+            - link "Responses API" [ref=e95] [cursor=pointer]:
+              - /url: /api/docs/guides/migrate-to-responses
+              - generic [ref=e96]: Responses API
+          - listitem [ref=e97]:
+            - link "Using tools" [ref=e98] [cursor=pointer]:
+              - /url: /api/docs/guides/tools
+              - generic [ref=e99]: Using tools
+      - generic [ref=e100]:
+        - heading "Agents SDK" [level=3] [ref=e101]
+        - list [ref=e102]:
+          - listitem [ref=e103]:
+            - link "Overview" [ref=e104] [cursor=pointer]:
+              - /url: /api/docs/guides/agents
+              - generic [ref=e105]: Overview
+          - listitem [ref=e106]:
+            - link "Quickstart" [ref=e107] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/quickstart
+              - generic [ref=e108]: Quickstart
+          - listitem [ref=e109]:
+            - link "Agent definitions" [ref=e110] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/define-agents
+              - generic [ref=e111]: Agent definitions
+          - listitem [ref=e112]:
+            - link "Models and providers" [ref=e113] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/models
+              - generic [ref=e114]: Models and providers
+          - listitem [ref=e115]:
+            - link "Running agents" [ref=e116] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/running-agents
+              - generic [ref=e117]: Running agents
+          - listitem [ref=e118]:
+            - link "Sandbox agents" [ref=e119] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/sandboxes
+              - generic [ref=e120]: Sandbox agents
+          - listitem [ref=e121]:
+            - link "Orchestration" [ref=e122] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/orchestration
+              - generic [ref=e123]: Orchestration
+          - listitem [ref=e124]:
+            - link "Guardrails" [ref=e125] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/guardrails-approvals
+              - generic [ref=e126]: Guardrails
+          - listitem [ref=e127]:
+            - link "Results and state" [ref=e128] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/results
+              - generic [ref=e129]: Results and state
+          - listitem [ref=e130]:
+            - link "Integrations and observability" [ref=e131] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/integrations-observability
+              - generic [ref=e132]: Integrations and observability
+          - listitem [ref=e133]:
+            - link "Evaluate agent workflows" [ref=e134] [cursor=pointer]:
+              - /url: /api/docs/guides/agent-evals
+              - generic [ref=e135]: Evaluate agent workflows
+          - listitem [ref=e136]:
+            - link "Voice agents" [ref=e137] [cursor=pointer]:
+              - /url: /api/docs/guides/voice-agents
+              - generic [ref=e138]: Voice agents
+          - listitem [ref=e139]:
+            - group [ref=e140]:
+              - generic "ChatKit" [ref=e141] [cursor=pointer]:
+                - generic [ref=e142]: ChatKit
+                - img [ref=e143]
+      - generic [ref=e145]:
+        - heading "Tools" [level=3] [ref=e146]
+        - list [ref=e147]:
+          - listitem [ref=e148]:
+            - link "Web search" [ref=e149] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-web-search
+              - generic [ref=e150]: Web search
+          - listitem [ref=e151]:
+            - group [ref=e152]:
+              - generic "MCP and Connectors" [ref=e153] [cursor=pointer]:
+                - link "MCP and Connectors" [ref=e154]:
+                  - /url: /api/docs/guides/tools-connectors-mcp
+                  - generic [ref=e155]: MCP and Connectors
+                - img [ref=e156]
+          - listitem [ref=e158]:
+            - link "Skills" [ref=e159] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-skills
+              - generic [ref=e160]: Skills
+          - listitem [ref=e161]:
+            - link "Shell" [ref=e162] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-shell
+              - generic [ref=e163]: Shell
+          - listitem [ref=e164]:
+            - link "Computer use" [ref=e165] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-computer-use
+              - generic [ref=e166]: Computer use
+          - listitem [ref=e167]:
+            - group [ref=e168]:
+              - generic "File search and retrieval" [ref=e169] [cursor=pointer]:
+                - generic [ref=e170]: File search and retrieval
+                - img [ref=e171]
+          - listitem [ref=e173]:
+            - link "Tool search" [ref=e174] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-tool-search
+              - generic [ref=e175]: Tool search
+          - listitem [ref=e176]:
+            - group [ref=e177]:
+              - generic "More tools" [ref=e178] [cursor=pointer]:
+                - generic [ref=e179]: More tools
+                - img [ref=e180]
+      - generic [ref=e182]:
+        - heading "Run and scale" [level=3] [ref=e183]
+        - list [ref=e184]:
+          - listitem [ref=e185]:
+            - link "Conversation state" [ref=e186] [cursor=pointer]:
+              - /url: /api/docs/guides/conversation-state
+              - generic [ref=e187]: Conversation state
+          - listitem [ref=e188]:
+            - link "Background mode" [ref=e189] [cursor=pointer]:
+              - /url: /api/docs/guides/background
+              - generic [ref=e190]: Background mode
+          - listitem [ref=e191]:
+            - link "Streaming" [ref=e192] [cursor=pointer]:
+              - /url: /api/docs/guides/streaming-responses
+              - generic [ref=e193]: Streaming
+          - listitem [ref=e194]:
+            - link "WebSocket mode" [ref=e195] [cursor=pointer]:
+              - /url: /api/docs/guides/websocket-mode
+              - generic [ref=e196]: WebSocket mode
+          - listitem [ref=e197]:
+            - link "Webhooks" [ref=e198] [cursor=pointer]:
+              - /url: /api/docs/guides/webhooks
+              - generic [ref=e199]: Webhooks
+          - listitem [ref=e200]:
+            - link "File inputs" [ref=e201] [cursor=pointer]:
+              - /url: /api/docs/guides/file-inputs
+              - generic [ref=e202]: File inputs
+          - listitem [ref=e203]:
+            - group [ref=e204]:
+              - generic "Context management" [ref=e205] [cursor=pointer]:
+                - generic [ref=e206]: Context management
+                - img [ref=e207]
+          - listitem [ref=e209]:
+            - group [ref=e210]:
+              - generic "Prompting" [ref=e211] [cursor=pointer]:
+                - generic [ref=e212]: Prompting
+                - img [ref=e213]
+          - listitem [ref=e215]:
+            - group [ref=e216]:
+              - generic "Reasoning" [ref=e217] [cursor=pointer]:
+                - generic [ref=e218]: Reasoning
+                - img [ref=e219]
+      - generic [ref=e221]:
+        - heading "Evaluation" [level=3] [ref=e222]
+        - list [ref=e223]:
+          - listitem [ref=e224]:
+            - link "Red teaming" [ref=e225] [cursor=pointer]:
+              - /url: /api/docs/guides/red-teaming
+              - generic [ref=e226]: Red teaming
+      - generic [ref=e227]:
+        - heading "Realtime and audio" [level=3] [ref=e228]
+        - list [ref=e229]:
+          - listitem [ref=e230]:
+            - link "Overview" [ref=e231] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime
+              - generic [ref=e232]: Overview
+          - listitem [ref=e233]:
+            - link "Voice agents" [ref=e234] [cursor=pointer]:
+              - /url: /api/docs/guides/voice-agents
+              - generic [ref=e235]: Voice agents
+          - listitem [ref=e236]:
+            - link "Live translation" [ref=e237] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime-translation
+              - generic [ref=e238]: Live translation
+          - listitem [ref=e239]:
+            - group [ref=e240]:
+              - generic "Transcription" [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]: Transcription
+                - img [ref=e243]
+          - listitem [ref=e245]:
+            - link "Speech generation" [ref=e246] [cursor=pointer]:
+              - /url: /api/docs/guides/text-to-speech
+              - generic [ref=e247]: Speech generation
+          - listitem [ref=e248]:
+            - link "Realtime prompting guide" [ref=e249] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime-models-prompting
+              - generic [ref=e250]: Realtime prompting guide
+          - listitem [ref=e251]:
+            - group [ref=e252]:
+              - generic "Connection methods" [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]: Connection methods
+                - img [ref=e255]
+          - listitem [ref=e257]:
+            - group [ref=e258]:
+              - generic "Realtime sessions" [ref=e259] [cursor=pointer]:
+                - generic [ref=e260]: Realtime sessions
+                - img [ref=e261]
+      - generic [ref=e263]:
+        - heading "Specialized models" [level=3] [ref=e264]
+        - list [ref=e265]:
+          - listitem [ref=e266]:
+            - link "Image generation" [ref=e267] [cursor=pointer]:
+              - /url: /api/docs/guides/image-generation
+              - generic [ref=e268]: Image generation
+          - listitem [ref=e269]:
+            - link "Video generation" [ref=e270] [cursor=pointer]:
+              - /url: /api/docs/guides/video-generation
+              - generic [ref=e271]: Video generation
+          - listitem [ref=e272]:
+            - link "Deep research" [ref=e273] [cursor=pointer]:
+              - /url: /api/docs/guides/deep-research
+              - generic [ref=e274]: Deep research
+          - listitem [ref=e275]:
+            - link "Embeddings" [ref=e276] [cursor=pointer]:
+              - /url: /api/docs/guides/embeddings
+              - generic [ref=e277]: Embeddings
+          - listitem [ref=e278]:
+            - link "Moderation" [ref=e279] [cursor=pointer]:
+              - /url: /api/docs/guides/moderation
+              - generic [ref=e280]: Moderation
+      - generic [ref=e281]:
+        - heading "Going live" [level=3] [ref=e282]
+        - list [ref=e283]:
+          - listitem [ref=e284]:
+            - link "Production best practices" [ref=e285] [cursor=pointer]:
+              - /url: /api/docs/guides/production-best-practices
+              - generic [ref=e286]: Production best practices
+          - listitem [ref=e287]:
+            - group [ref=e288]:
+              - generic "Workload identity federation" [ref=e289] [cursor=pointer]:
+                - link "Workload identity federation" [ref=e290]:
+                  - /url: /api/docs/guides/workload-identity-federation
+                  - generic [ref=e291]: Workload identity federation
+                - img [ref=e292]
+          - listitem [ref=e294]:
+            - link "Deployment checklist" [ref=e295] [cursor=pointer]:
+              - /url: /api/docs/guides/deployment-checklist
+              - generic [ref=e296]: Deployment checklist
+          - listitem [ref=e297]:
+            - link "Amazon Bedrock" [ref=e298] [cursor=pointer]:
+              - /url: /api/docs/guides/amazon-bedrock
+              - generic [ref=e299]: Amazon Bedrock
+          - listitem [ref=e300]:
+            - group [ref=e301]:
+              - generic "Latency optimization" [ref=e302] [cursor=pointer]:
+                - generic [ref=e303]: Latency optimization
+                - img [ref=e304]
+          - listitem [ref=e306]:
+            - group [ref=e307]:
+              - generic "Cost optimization" [ref=e308] [cursor=pointer]:
+                - generic [ref=e309]: Cost optimization
+                - img [ref=e310]
+          - listitem [ref=e312]:
+            - link "Accuracy optimization" [ref=e313] [cursor=pointer]:
+              - /url: /api/docs/guides/optimizing-llm-accuracy
+              - generic [ref=e314]: Accuracy optimization
+          - listitem [ref=e315]:
+            - group [ref=e316]:
+              - generic "Safety" [ref=e317] [cursor=pointer]:
+                - generic [ref=e318]: Safety
+                - img [ref=e319]
+      - generic [ref=e321]:
+        - heading "Legacy APIs" [level=3] [ref=e322]
+        - list [ref=e323]:
+          - listitem [ref=e324]:
+            - group [ref=e325]:
+              - generic "Agent Builder" [ref=e326] [cursor=pointer]:
+                - generic [ref=e327]: Agent Builder
+                - img [ref=e328]
+          - listitem [ref=e330]:
+            - group [ref=e331]:
+              - generic "Evals" [ref=e332] [cursor=pointer]:
+                - generic [ref=e333]: Evals
+                - img [ref=e334]
+          - listitem [ref=e336]:
+            - group [ref=e337]:
+              - generic "Fine-tuning" [ref=e338] [cursor=pointer]:
+                - generic [ref=e339]: Fine-tuning
+                - img [ref=e340]
+          - listitem [ref=e342]:
+            - group [ref=e343]:
+              - generic "Assistants API" [ref=e344] [cursor=pointer]:
+                - generic [ref=e345]: Assistants API
+                - img [ref=e346]
+      - generic [ref=e348]:
+        - heading "Resources" [level=3] [ref=e349]
+        - list [ref=e350]:
+          - listitem [ref=e351]:
+            - link "Terms and policies" [ref=e352] [cursor=pointer]:
+              - /url: https://openai.com/policies
+              - generic [ref=e353]: Terms and policies
+              - img [ref=e354]
+          - listitem [ref=e356]:
+            - link "Changelog" [ref=e357] [cursor=pointer]:
+              - /url: /api/docs/changelog
+              - generic [ref=e358]: Changelog
+          - listitem [ref=e359]:
+            - link "Your data" [ref=e360] [cursor=pointer]:
+              - /url: /api/docs/guides/your-data
+              - generic [ref=e361]: Your data
+          - listitem [ref=e362]:
+            - link "Permissions" [ref=e363] [cursor=pointer]:
+              - /url: /api/docs/guides/rbac
+              - generic [ref=e364]: Permissions
+          - listitem [ref=e365]:
+            - link "Rate limits" [ref=e366] [cursor=pointer]:
+              - /url: /api/docs/guides/rate-limits
+              - generic [ref=e367]: Rate limits
+          - listitem [ref=e368]:
+            - link "IP egress ranges" [ref=e369] [cursor=pointer]:
+              - /url: /api/docs/guides/ip-addresses
+              - generic [ref=e370]: IP egress ranges
+          - listitem [ref=e371]:
+            - link "Admin APIs" [ref=e372] [cursor=pointer]:
+              - /url: /api/docs/guides/admin-apis
+              - generic [ref=e373]: Admin APIs
+          - listitem [ref=e374]:
+            - link "Deprecations" [ref=e375] [cursor=pointer]:
+              - /url: /api/docs/deprecations
+              - generic [ref=e376]: Deprecations
+          - listitem [ref=e377]:
+            - link "MCP for deep research" [ref=e378] [cursor=pointer]:
+              - /url: /api/docs/mcp
+              - generic [ref=e379]: MCP for deep research
+          - listitem [ref=e380]:
+            - link "Developer mode" [ref=e381] [cursor=pointer]:
+              - /url: /api/docs/guides/developer-mode
+              - generic [ref=e382]: Developer mode
+          - listitem [ref=e383]:
+            - group [ref=e384]:
+              - generic "ChatGPT Actions" [ref=e385] [cursor=pointer]:
+                - generic [ref=e386]: ChatGPT Actions
+                - img [ref=e387]
+    - main [ref=e389]:
+      - generic [ref=e391]:
+        - generic [ref=e392]:
+          - navigation [ref=e394]:
+            - list [ref=e398]:
+              - listitem [ref=e399]:
+                - link "Overview" [ref=e400] [cursor=pointer]:
+                  - /url: "#overview"
+              - listitem [ref=e401]:
+                - link "Generate Images" [ref=e402] [cursor=pointer]:
+                  - /url: "#generate-images"
+              - listitem [ref=e403]:
+                - link "Edit Images" [ref=e404] [cursor=pointer]:
+                  - /url: "#edit-images"
+              - listitem [ref=e405]:
+                - link "Customize Image Output" [ref=e406] [cursor=pointer]:
+                  - /url: "#customize-image-output"
+              - listitem [ref=e407]:
+                - link "Limitations" [ref=e408] [cursor=pointer]:
+                  - /url: "#limitations"
+              - listitem [ref=e409]:
+                - link "Cost and latency" [ref=e410] [cursor=pointer]:
+                  - /url: "#cost-and-latency"
+          - generic [ref=e411]:
+            - link "GPT Image prompting guide Prompt GPT Image for reliable results" [ref=e412] [cursor=pointer]:
+              - /url: /cookbook/examples/multimodal/image-gen-models-prompting-guide
+              - generic [ref=e413]:
+                - img [ref=e415]
+                - generic [ref=e417]:
+                  - paragraph [ref=e418]: GPT Image prompting guide
+                  - paragraph [ref=e419]: Prompt GPT Image for reliable results
+            - link "Image generation demo repo Try an image generation and editing demo" [ref=e420] [cursor=pointer]:
+              - /url: https://github.com/openai/openai-imagegen-demo
+              - generic [ref=e421]:
+                - img [ref=e423]
+                - generic [ref=e425]:
+                  - paragraph [ref=e426]: Image generation demo repo
+                  - paragraph [ref=e427]: Try an image generation and editing demo
+          - button "Copy Page" [ref=e429] [cursor=pointer]:
+            - img [ref=e431]
+            - generic [ref=e433]: Copy Page
+        - generic [ref=e434]:
+          - generic [ref=e436]:
+            - heading "Image generation" [level=1] [ref=e437]
+            - paragraph [ref=e438]: Learn how to generate or edit images.
+            - button "Copy Page" [ref=e441] [cursor=pointer]:
+              - img [ref=e443]
+              - generic [ref=e445]: Copy Page
+          - article [ref=e446]:
+            - generic [ref=e449] [cursor=pointer]:
+              - button "Explore" [ref=e450]:
+                - generic [ref=e451]: Explore
+              - generic [ref=e454]:
+                - link [ref=e455]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=sci-fi-hangar
+                - link [ref=e456]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=mechanical-bouquet
+                - link [ref=e457]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=mechanical-watch
+                - link [ref=e458]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=botanical-perfume
+                - link [ref=e459]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=lavender-sunrise
+                - link [ref=e460]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=moon-control-room-1969
+                - link [ref=e461]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=mountain-map
+                - link [ref=e462]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=shipyard-welding-documentary
+                - link [ref=e463]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=coral-reef
+                - link [ref=e464]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=smart-home-dashboard
+                - link [ref=e465]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=abstract-orbit
+                - link [ref=e466]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=airport-departure-kiosk
+                - link [ref=e467]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=icons
+                - link [ref=e468]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=3d-city
+                - link [ref=e469]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=ink-wash-temple
+                - link [ref=e470]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=cliffside-portrait
+                - link [ref=e471]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=chameleon-macro
+                - link [ref=e472]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=clay-garden
+                - link [ref=e473]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=paper-cut-forest
+                - link [ref=e474]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=alien-rock
+                - link [ref=e475]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=clay-figurine
+                - link [ref=e476]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=furniture
+                - link [ref=e477]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=desert-sunrise-portrait
+                - link [ref=e478]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=ceramic-mug
+                - link [ref=e479]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=hiking-poster
+                - link [ref=e480]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=floorplan
+                - link [ref=e481]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=mountain-bike
+                - link [ref=e482]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=kitchen-service-rush
+                - link [ref=e483]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=interior-design
+                - link [ref=e484]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=ecommerce-product-page
+                - link [ref=e485]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=paper-sculpture-city
+                - link [ref=e486]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=colorize
+                - link [ref=e487]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=game-design
+                - link [ref=e488]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=sprites
+                - link [ref=e489]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=cosmic-ballet
+                - link [ref=e490]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=chocolate
+                - link [ref=e491]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=winter-wolf-portrait
+                - link [ref=e492]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=street-cafe
+                - link [ref=e493]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=watercolor-harbor-map
+                - link [ref=e494]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=buildings-sprite
+                - link [ref=e495]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=rooftop-garden
+                - link [ref=e496]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=thunderstorm
+                - link [ref=e497]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=roman-forum-rain
+                - link [ref=e498]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=spacecraft-dashboard
+                - link [ref=e499]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=daytime
+                - link [ref=e500]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=camera-manual
+                - link [ref=e501]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=weeknight-cookbook-layout
+                - link [ref=e502]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=isometric-icons
+                - link [ref=e503]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=patterns
+                - link [ref=e504]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=landscape
+                - link [ref=e505]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=city-heat-infographic
+                - link [ref=e506]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=robot-toy
+                - link [ref=e507]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=bottle
+                - link [ref=e508]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=school-science-fair-iphone
+                - link [ref=e509]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=whales-poster
+                - link [ref=e510]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=neon
+                - link [ref=e511]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=album-cover
+                - link [ref=e512]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=sneakers
+                - link [ref=e513]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=paris-cafe-iphone
+                - link [ref=e514]:
+                  - /url: /api/docs/guides/image-generation?gallery=open&galleryItem=kyoto-poster
+            - heading "Overview Copy link to overview" [level=2] [ref=e515]:
+              - generic [ref=e516]: Overview
+              - button "Copy link to overview" [ref=e517] [cursor=pointer]:
+                - img [ref=e518]
+            - paragraph [ref=e520]:
+              - text: The OpenAI API lets you generate and edit images from text prompts using GPT Image models, including our latest,
+              - code [ref=e521]: gpt-image-2
+              - text: ". You can access image generation capabilities through two APIs:"
+            - heading "Image API Copy link to image api" [level=3] [ref=e522]:
+              - generic [ref=e523]: Image API
+              - button "Copy link to image api" [ref=e524] [cursor=pointer]:
+                - img [ref=e525]
+            - paragraph [ref=e527]:
+              - text: Starting with
+              - code [ref=e528]: gpt-image-1
+              - text: and later models, the
+              - link "Image API" [ref=e529] [cursor=pointer]:
+                - /url: /api/docs/api-reference/images
+              - text: "provides two endpoints, each with distinct capabilities:"
+            - list [ref=e530]:
+              - listitem [ref=e531]:
+                - strong [ref=e532]: Generations
+                - text: ":"
+                - link "Generate images" [ref=e533] [cursor=pointer]:
+                  - /url: "#generate-images"
+                - text: from scratch based on a text prompt
+              - listitem [ref=e534]:
+                - strong [ref=e535]: Edits
+                - text: ":"
+                - link "Modify existing images" [ref=e536] [cursor=pointer]:
+                  - /url: "#edit-images"
+                - text: using a new prompt, either partially or entirely
+            - paragraph [ref=e537]: The Image API also includes a variations endpoint for models that support it, such as DALL·E 2.
+            - heading "Responses API Copy link to responses api" [level=3] [ref=e538]:
+              - generic [ref=e539]: Responses API
+              - button "Copy link to responses api" [ref=e540] [cursor=pointer]:
+                - img [ref=e541]
+            - paragraph [ref=e543]:
+              - text: The
+              - link "Responses API" [ref=e544] [cursor=pointer]:
+                - /url: /api/docs/api-reference/responses/create#responses-create-tools
+              - text: allows you to generate images as part of conversations or multi-step flows. It supports image generation as a
+              - link "built-in tool" [ref=e545] [cursor=pointer]:
+                - /url: /api/docs/guides/tools?api-mode=responses
+              - text: ", and accepts image inputs and outputs within context."
+            - paragraph [ref=e546]: "Compared to the Image API, it adds:"
+            - list [ref=e547]:
+              - listitem [ref=e548]:
+                - strong [ref=e549]: Multi-turn editing
+                - text: ": Iteratively make high fidelity edits to images with prompting"
+              - listitem [ref=e550]:
+                - strong [ref=e551]: Flexible inputs
+                - text: ": Accept image"
+                - link "File" [ref=e552] [cursor=pointer]:
+                  - /url: /api/docs/api-reference/files
+                - text: IDs as input images, not just bytes
+            - paragraph [ref=e553]:
+              - text: The Responses API image generation tool uses its own GPT Image model selection. For details on mainline models that support calling this tool, refer to the
+              - link "supported models" [ref=e554] [cursor=pointer]:
+                - /url: "#supported-models"
+              - text: below.
+            - heading "Choosing the right API Copy link to choosing the right api" [level=3] [ref=e555]:
+              - generic [ref=e556]: Choosing the right API
+              - button "Copy link to choosing the right api" [ref=e557] [cursor=pointer]:
+                - img [ref=e558]
+            - list [ref=e560]:
+              - listitem [ref=e561]: If you only need to generate or edit a single image from one prompt, the Image API is your best choice.
+              - listitem [ref=e562]: If you want to build conversational, editable image experiences with GPT Image, go with the Responses API.
+            - paragraph [ref=e563]: With the Image API, you choose a GPT Image model directly. With the Responses API, you choose a mainline model that supports the image generation tool; the tool handles GPT Image model selection. Responses API requests include the mainline model’s token usage in addition to image generation costs.
+            - paragraph [ref=e564]:
+              - text: Both APIs let you
+              - link "customize output" [ref=e565] [cursor=pointer]:
+                - /url: "#customize-image-output"
+              - text: by adjusting quality, size, format, and compression. Transparent backgrounds depend on model support.
+            - paragraph [ref=e566]: This guide focuses on GPT Image.
+            - generic [ref=e568]:
+              - img [ref=e570]
+              - paragraph [ref=e576]:
+                - text: To ensure these models are used responsibly, you may need to complete the
+                - link "API Organization Verification" [ref=e577] [cursor=pointer]:
+                  - /url: https://help.openai.com/en/articles/10910291-api-organization-verification
+                - text: from your
+                - link "developer console" [ref=e578] [cursor=pointer]:
+                  - /url: https://platform.openai.com/settings/organization/general
+                - text: before using GPT Image models, including
+                - code [ref=e579]: gpt-image-2
+                - text: ","
+                - code [ref=e580]: gpt-image-1.5
+                - text: ","
+                - code [ref=e581]: gpt-image-1
+                - text: ", and"
+                - code [ref=e582]: gpt-image-1-mini
+                - text: .
+            - img "A beige coffee mug on a wooden table" [ref=e584]
+            - heading "Generate Images Copy link to generate images" [level=2] [ref=e585]:
+              - generic [ref=e586]: Generate Images
+              - button "Copy link to generate images" [ref=e587] [cursor=pointer]:
+                - img [ref=e588]
+            - paragraph [ref=e590]:
+              - text: You can use the
+              - link "image generation endpoint" [ref=e591] [cursor=pointer]:
+                - /url: /api/docs/api-reference/images/create
+              - text: to create images based on text prompts, or the
+              - link "image generation tool" [ref=e592] [cursor=pointer]:
+                - /url: /api/docs/guides/tools?api-mode=responses
+              - text: in the Responses API to generate images as part of a conversation.
+            - paragraph [ref=e593]:
+              - text: To learn more about customizing the output (size, quality, format, compression), refer to the
+              - link "customize image output" [ref=e594] [cursor=pointer]:
+                - /url: "#customize-image-output"
+              - text: section below.
+            - paragraph [ref=e595]:
+              - text: You can set the
+              - code [ref=e596]: "n"
+              - text: parameter to generate multiple images at once in a single request (by default, the API returns a single image).
+            - generic [ref=e597]:
+              - group "Content switcher" [ref=e600]:
+                - radio "Image API" [checked] [ref=e601] [cursor=pointer]
+                - radio "Responses API" [ref=e602] [cursor=pointer]
+              - generic [ref=e606]:
+                - generic [ref=e607]:
+                  - generic [ref=e608]: Generate an image
+                  - button "python" [ref=e610] [cursor=pointer]:
+                    - generic [ref=e611]: python
+                    - img [ref=e613]
+                  - button [ref=e615] [cursor=pointer]:
+                    - img [ref=e619]
+                - code [ref=e624]:
+                  - code [ref=e625]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+                  - generic [ref=e626]: from openai import OpenAI
+                  - generic [ref=e627]: import base64
+                  - text: client = OpenAI()
+                  - generic [ref=e628]: prompt = """
+                  - text: A children's book drawing of a veterinarian using a stethoscope to listen to the heartbeat of a baby otter.
+                  - generic [ref=e629]: "\"\"\""
+                  - text: result = client.images.generate(
+                  - generic [ref=e630]: model="gpt-image-2",
+                  - text: prompt=prompt )
+                  - generic [ref=e631]: image_base64 = result.data[0].b64_json
+                  - text: image_bytes = base64.b64decode(image_base64)
+                  - generic [ref=e632]: "# Save the image to a file"
+                  - generic [ref=e633]: "with open(\"otter.png\", \"wb\") as f:"
+                  - text: f.write(image_bytes)
+            - heading "Multi-turn image generation Copy link to multi turn image generation" [level=3] [ref=e634]:
+              - generic [ref=e635]: Multi-turn image generation
+              - button "Copy link to multi turn image generation" [ref=e636] [cursor=pointer]:
+                - img [ref=e637]
+            - paragraph [ref=e639]:
+              - text: With the Responses API, you can build multi-turn conversations involving image generation either by providing image generation calls outputs within context (you can also just use the image ID), or by using the
+              - link "previous_response_id parameter" [ref=e640] [cursor=pointer]:
+                - /url: /api/docs/guides/conversation-state?api-mode=responses#openai-apis-for-conversation-state
+                - code [ref=e641]: previous_response_id
+                - text: parameter
+              - text: . This lets you iterate on images across multiple turns—refining prompts, applying new instructions, and evolving the visual output as the conversation progresses.
+            - paragraph [ref=e642]:
+              - text: With the Responses API image generation tool, supported tool models can choose whether to generate a new image or edit one already in the conversation. The optional
+              - code [ref=e643]: action
+              - text: "parameter controls this behavior: keep"
+              - code [ref=e644]: "action: \"auto\""
+              - text: to let the model decide, set
+              - code [ref=e645]: "action: \"generate\""
+              - text: to always create a new image, or set
+              - code [ref=e646]: "action: \"edit\""
+              - text: to force editing when an image is in context.
+            - generic [ref=e648]:
+              - generic [ref=e649]:
+                - generic [ref=e650]: Force image creation with action
+                - button "python" [ref=e652] [cursor=pointer]:
+                  - generic [ref=e653]: python
+                  - img [ref=e655]
+                - button [ref=e657] [cursor=pointer]:
+                  - img [ref=e661]
+              - code [ref=e666]:
+                - code [ref=e667]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+                - generic [ref=e668]: from openai import OpenAI
+                - generic [ref=e669]: import base64
+                - text: client = OpenAI() response = client.responses.create(
+                - generic [ref=e670]: model="gpt-5.5",
+                - generic [ref=e671]: input="Generate an image of gray tabby cat hugging an otter with an orange scarf",
+                - generic [ref=e672]: "tools=[{\"type\": \"image_generation\", \"action\": \"generate\"}],"
+                - text: )
+                - generic [ref=e673]: "# Save the image to a file"
+                - text: image_data = [ output.result
+                - generic [ref=e674]: for output in response.output
+                - generic [ref=e675]: if output.type == "image_generation_call"
+                - text: "]"
+                - generic [ref=e676]: "if image_data:"
+                - generic [ref=e677]: image_base64 = image_data[0]
+                - generic [ref=e678]: "with open(\"otter.png\", \"wb\") as f:"
+                - text: f.write(base64.b64decode(image_base64))
+            - paragraph [ref=e679]:
+              - text: If you force
+              - code [ref=e680]: edit
+              - text: without providing an image in context, the call will return an error. Leave
+              - code [ref=e681]: action
+              - text: at
+              - code [ref=e682]: auto
+              - text: to have the model decide when to generate or edit.
+            - generic [ref=e683]:
+              - group "Content switcher" [ref=e686]:
+                - radio "Using previous response ID" [checked] [ref=e687] [cursor=pointer]
+                - radio "Using image ID" [ref=e688] [cursor=pointer]
+              - generic [ref=e692]:
+                - generic [ref=e693]:
+                  - generic [ref=e694]: Multi-turn image generation
+                  - button "python" [ref=e696] [cursor=pointer]:
+                    - generic [ref=e697]: python
+                    - img [ref=e699]
+                  - button [ref=e701] [cursor=pointer]:
+                    - img [ref=e705]
+                - code [ref=e710]:
+                  - code [ref=e711]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43
+                  - generic [ref=e712]: from openai import OpenAI
+                  - generic [ref=e713]: import base64
+                  - text: client = OpenAI() response = client.responses.create(
+                  - generic [ref=e714]: model="gpt-5.5",
+                  - generic [ref=e715]: input="Generate an image of gray tabby cat hugging an otter with an orange scarf",
+                  - generic [ref=e716]: "tools=[{\"type\": \"image_generation\"}],"
+                  - text: ) image_data = [ output.result
+                  - generic [ref=e717]: for output in response.output
+                  - generic [ref=e718]: if output.type == "image_generation_call"
+                  - text: "]"
+                  - generic [ref=e719]: "if image_data:"
+                  - generic [ref=e720]: image_base64 = image_data[0]
+                  - generic [ref=e721]: "with open(\"cat_and_otter.png\", \"wb\") as f:"
+                  - text: f.write(base64.b64decode(image_base64))
+                  - generic [ref=e722]: "# Follow up"
+                  - text: response_fwup = client.responses.create(
+                  - generic [ref=e723]: model="gpt-5.5",
+                  - generic [ref=e724]: previous_response_id=response.id,
+                  - generic [ref=e725]: input="Now make it look realistic",
+                  - generic [ref=e726]: "tools=[{\"type\": \"image_generation\"}],"
+                  - text: ) image_data_fwup = [ output.result
+                  - generic [ref=e727]: for output in response_fwup.output
+                  - generic [ref=e728]: if output.type == "image_generation_call"
+                  - text: "]"
+                  - generic [ref=e729]: "if image_data_fwup:"
+                  - generic [ref=e730]: image_base64 = image_data_fwup[0]
+                  - generic [ref=e731]: "with open(\"cat_and_otter_realistic.png\", \"wb\") as f:"
+                  - text: f.write(base64.b64decode(image_base64))
+            - heading "Result Copy link to result" [level=4] [ref=e732]:
+              - generic [ref=e733]: Result
+              - button "Copy link to result" [ref=e734] [cursor=pointer]:
+                - img [ref=e735]
+            - table [ref=e738]:
+              - rowgroup [ref=e739]:
+                - row "“Generate an image of gray tabby cat hugging an otter with an orange scarf” A cat and an otter" [ref=e740]:
+                  - cell "“Generate an image of gray tabby cat hugging an otter with an orange scarf”" [ref=e741]:
+                    - paragraph [ref=e742]: “Generate an image of gray tabby cat hugging an otter with an orange scarf”
+                  - cell "A cat and an otter" [ref=e743]:
+                    - img "A cat and an otter" [ref=e744]
+                - row "“Now make it look realistic” A cat and an otter" [ref=e745]:
+                  - cell "“Now make it look realistic”" [ref=e746]:
+                    - paragraph [ref=e747]: “Now make it look realistic”
+                  - cell "A cat and an otter" [ref=e748]:
+                    - img "A cat and an otter" [ref=e749]
+            - heading "Streaming Copy link to streaming" [level=3] [ref=e750]:
+              - generic [ref=e751]: Streaming
+              - button "Copy link to streaming" [ref=e752] [cursor=pointer]:
+                - img [ref=e753]
+            - paragraph [ref=e755]: The Responses API and Image API support streaming image generation. You can stream partial images as the APIs generate them, providing a more interactive experience.
+            - paragraph [ref=e756]:
+              - text: You can adjust the
+              - code [ref=e757]: partial_images
+              - text: parameter to receive 0-3 partial images.
+            - list [ref=e758]:
+              - listitem [ref=e759]:
+                - text: If you set
+                - code [ref=e760]: partial_images
+                - text: to 0, you will only receive the final image.
+              - listitem [ref=e761]: For values larger than zero, you may not receive the full number of partial images you requested if the full image is generated more quickly.
+            - generic [ref=e762]:
+              - group "Content switcher" [ref=e765]:
+                - radio "Responses API" [checked] [ref=e766] [cursor=pointer]
+                - radio "Image API" [ref=e767] [cursor=pointer]
+              - generic [ref=e771]:
+                - generic [ref=e772]:
+                  - generic [ref=e773]: Stream an image
+                  - button "python" [ref=e775] [cursor=pointer]:
+                    - generic [ref=e776]: python
+                    - img [ref=e778]
+                  - button [ref=e780] [cursor=pointer]:
+                    - img [ref=e784]
+                - code [ref=e789]:
+                  - code [ref=e790]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+                  - generic [ref=e791]: from openai import OpenAI
+                  - generic [ref=e792]: import base64
+                  - text: client = OpenAI()
+                  - generic [ref=e793]: "def save_base64_image(filename, image_base64):"
+                  - text: image_bytes = base64.b64decode(image_base64)
+                  - generic [ref=e794]: "with open(filename, \"wb\") as f:"
+                  - text: f.write(image_bytes) stream = client.responses.create(
+                  - generic [ref=e795]: model="gpt-5.5",
+                  - generic [ref=e796]: input="Draw a gorgeous image of a river made of white owl feathers, snaking its way through a serene winter landscape",
+                  - generic [ref=e797]: stream=True,
+                  - generic [ref=e798]: "tools=[{\"type\": \"image_generation\", \"partial_images\": 2}],"
+                  - text: )
+                  - generic [ref=e799]: "for event in stream:"
+                  - generic [ref=e800]: "if event.type == \"response.image_generation_call.partial_image\":"
+                  - text: idx = event.partial_image_index
+                  - generic [ref=e801]: "save_base64_image(f\"river-partial-{idx}.png\", event.partial_image_b64)"
+                  - generic [ref=e802]: "elif event.type == \"response.completed\":"
+                  - text: image_data = [ output.result
+                  - generic [ref=e803]: for output in event.response.output
+                  - generic [ref=e804]: if output.type == "image_generation_call"
+                  - text: "]"
+                  - generic [ref=e805]: "if image_data:"
+                  - generic [ref=e806]: save_base64_image("river-final.png", image_data[0])
+            - heading "Result Copy link to result 1" [level=4] [ref=e807]:
+              - generic [ref=e808]: Result
+              - button "Copy link to result 1" [ref=e809] [cursor=pointer]:
+                - img [ref=e810]
+            - table [ref=e814]:
+              - rowgroup [ref=e815]:
+                - row "Partial 1 Partial 2 Final image" [ref=e816]:
+                  - columnheader "Partial 1" [ref=e817]
+                  - columnheader "Partial 2" [ref=e818]
+                  - columnheader "Final image" [ref=e819]
+              - rowgroup [ref=e820]:
+                - row "1st partial 2nd partial 3rd partial" [ref=e821]:
+                  - cell "1st partial" [ref=e822]:
+                    - img "1st partial" [ref=e823]
+                  - cell "2nd partial" [ref=e824]:
+                    - img "2nd partial" [ref=e825]
+                  - cell "3rd partial" [ref=e826]:
+                    - img "3rd partial" [ref=e827]
+            - paragraph [ref=e829]: "Prompt: Draw a gorgeous image of a river made of white owl feathers, snaking its way through a serene winter landscape"
+            - heading "Revised prompt Copy link to revised prompt" [level=3] [ref=e830]:
+              - generic [ref=e831]: Revised prompt
+              - button "Copy link to revised prompt" [ref=e832] [cursor=pointer]:
+                - img [ref=e833]
+            - paragraph [ref=e835]:
+              - text: When using the image generation tool in the Responses API, the mainline model (for example,
+              - code [ref=e836]: gpt-5.5
+              - text: ) will automatically revise your prompt for improved performance.
+            - paragraph [ref=e837]:
+              - text: You can access the revised prompt in the
+              - code [ref=e838]: revised_prompt
+              - text: "field of the image generation call:"
+            - generic [ref=e840]:
+              - generic [ref=e841]:
+                - generic [ref=e842]: Revised prompt response
+                - button "json" [ref=e844] [cursor=pointer]:
+                  - generic [ref=e845]: json
+                  - img [ref=e847]
+                - button [ref=e849] [cursor=pointer]:
+                  - img [ref=e853]
+              - code [ref=e858]:
+                - code [ref=e859]: 1 2 3 4 5 6 7
+                - generic [ref=e860]: "{"
+                - generic [ref=e861]: "\"id\": \"ig_123\","
+                - generic [ref=e862]: "\"type\": \"image_generation_call\","
+                - generic [ref=e863]: "\"status\": \"completed\","
+                - generic [ref=e864]: "\"revised_prompt\": \"A gray tabby cat hugging an otter. The otter is wearing an orange scarf. Both animals are cute and friendly, depicted in a warm, heartwarming style.\","
+                - generic [ref=e865]: "\"result\": \"...\""
+                - text: "}"
+            - heading "Edit Images Copy link to edit images" [level=2] [ref=e866]:
+              - generic [ref=e867]: Edit Images
+              - button "Copy link to edit images" [ref=e868] [cursor=pointer]:
+                - img [ref=e869]
+            - paragraph [ref=e871]:
+              - text: The
+              - link "image edits" [ref=e872] [cursor=pointer]:
+                - /url: /api/docs/api-reference/images/createEdit
+              - text: "endpoint lets you:"
+            - list [ref=e873]:
+              - listitem [ref=e874]: Edit existing images
+              - listitem [ref=e875]: Generate new images using other images as a reference
+              - listitem [ref=e876]: Edit parts of an image by uploading an image and mask that identifies the areas to replace
+            - heading "Create a new image using image references Copy link to create a new image using image references" [level=3] [ref=e877]:
+              - generic [ref=e878]: Create a new image using image references
+              - button "Copy link to create a new image using image references" [ref=e879] [cursor=pointer]:
+                - img [ref=e880]
+            - paragraph [ref=e882]: You can use one or more images as a reference to generate a new image.
+            - paragraph [ref=e883]: In this example, we’ll use 4 input images to generate a new image of a gift basket containing the items in the reference images.
+            - generic [ref=e885]:
+              - generic [ref=e886]:
+                - link "Body Lotion" [ref=e887] [cursor=pointer]:
+                  - /url: https://cdn.openai.com/API/docs/images/body-lotion.png
+                  - img "Body Lotion" [ref=e888]
+                - link "Soap" [ref=e889] [cursor=pointer]:
+                  - /url: https://cdn.openai.com/API/docs/images/soap.png
+                  - img "Soap" [ref=e890]
+                - link "Incense Kit" [ref=e891] [cursor=pointer]:
+                  - /url: https://cdn.openai.com/API/docs/images/incense-kit.png
+                  - img "Incense Kit" [ref=e892]
+                - link "Bath Bomb" [ref=e893] [cursor=pointer]:
+                  - /url: https://cdn.openai.com/API/docs/images/bath-bomb.png
+                  - img "Bath Bomb" [ref=e894]
+              - img "Bath Gift Set" [ref=e896]
+            - generic [ref=e897]:
+              - group "Content switcher" [ref=e900]:
+                - radio "Responses API" [checked] [ref=e901] [cursor=pointer]
+                - radio "Image API" [ref=e902] [cursor=pointer]
+              - generic [ref=e904]:
+                - paragraph [ref=e905]: "With the Responses API, you can provide input images in 3 different ways:"
+                - list [ref=e906]:
+                  - listitem [ref=e907]: By providing a fully qualified URL
+                  - listitem [ref=e908]: By providing an image as a Base64-encoded data URL
+                  - listitem [ref=e909]:
+                    - text: By providing a file ID (created with the
+                    - link "Files API" [ref=e910] [cursor=pointer]:
+                      - /url: /api/docs/api-reference/files
+                    - text: )
+                - heading "Create a File" [level=4] [ref=e911]
+                - generic [ref=e913]:
+                  - generic [ref=e914]:
+                    - generic [ref=e915]: Create a File
+                    - button "python" [ref=e917] [cursor=pointer]:
+                      - generic [ref=e918]: python
+                      - img [ref=e920]
+                    - button [ref=e922] [cursor=pointer]:
+                      - img [ref=e926]
+                  - code [ref=e931]:
+                    - code [ref=e932]: 1 2 3 4 5 6 7 8 9 10
+                    - generic [ref=e933]: from openai import OpenAI
+                    - text: client = OpenAI()
+                    - generic [ref=e934]: "def create_file(file_path):"
+                    - generic [ref=e935]: "with open(file_path, \"rb\") as file_content:"
+                    - text: result = client.files.create( file=file_content,
+                    - generic [ref=e936]: purpose="vision",
+                    - text: )
+                    - generic [ref=e937]: return result.id
+                - heading "Create a base64 encoded image" [level=4] [ref=e938]
+                - generic [ref=e940]:
+                  - generic [ref=e941]:
+                    - generic [ref=e942]: Create a base64 encoded image
+                    - button "python" [ref=e944] [cursor=pointer]:
+                      - generic [ref=e945]: python
+                      - img [ref=e947]
+                    - button [ref=e949] [cursor=pointer]:
+                      - img [ref=e953]
+                  - code [ref=e958]:
+                    - code [ref=e959]: 1 2 3 4 5 6
+                    - generic [ref=e960]: import base64
+                    - generic [ref=e961]: "def encode_image(file_path):"
+                    - generic [ref=e962]: "with open(file_path, \"rb\") as f:"
+                    - generic [ref=e963]: base64_image = base64.b64encode(f.read()).decode("utf-8")
+                    - generic [ref=e964]: return base64_image
+                - generic [ref=e966]:
+                  - generic [ref=e967]:
+                    - generic [ref=e968]: Edit an image
+                    - button "python" [ref=e970] [cursor=pointer]:
+                      - generic [ref=e971]: python
+                      - img [ref=e973]
+                    - button [ref=e975] [cursor=pointer]:
+                      - img [ref=e979]
+                  - code [ref=e984]:
+                    - code [ref=e985]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66
+                    - generic [ref=e986]: from openai import OpenAI
+                    - generic [ref=e987]: import base64
+                    - text: client = OpenAI()
+                    - generic [ref=e988]: "def encode_image(file_path):"
+                    - generic [ref=e989]: "with open(file_path, \"rb\") as image_file:"
+                    - generic [ref=e990]: return base64.b64encode(image_file.read()).decode("utf-8")
+                    - generic [ref=e991]: "def create_file(file_path):"
+                    - generic [ref=e992]: "with open(file_path, \"rb\") as file_content:"
+                    - generic [ref=e993]: result = client.files.create(file=file_content, purpose="vision")
+                    - generic [ref=e994]: return result.id
+                    - generic [ref=e995]: prompt = """Generate a photorealistic image of a gift basket on a white background
+                    - text: labeled 'Relax & Unwind' with a ribbon and handwriting-like font,
+                    - generic [ref=e996]: containing all the items in the reference pictures."""
+                    - generic [ref=e997]: base64_image1 = encode_image("body-lotion.png")
+                    - generic [ref=e998]: base64_image2 = encode_image("soap.png")
+                    - generic [ref=e999]: file_id1 = create_file("bath-bomb.png")
+                    - generic [ref=e1000]: file_id2 = create_file("incense-kit.png")
+                    - text: response = client.responses.create(
+                    - generic [ref=e1001]: model="gpt-5.5",
+                    - generic [ref=e1002]: input=[
+                    - text: "{"
+                    - generic [ref=e1003]: "\"role\": \"user\","
+                    - generic [ref=e1004]: "\"content\": ["
+                    - generic [ref=e1005]: "{\"type\": \"input_text\", \"text\": prompt},"
+                    - text: "{"
+                    - generic [ref=e1006]: "\"type\": \"input_image\","
+                    - generic [ref=e1007]: "\"image_url\": f\"data:image/png;base64,{base64_image1}\","
+                    - text: "}, {"
+                    - generic [ref=e1008]: "\"type\": \"input_image\","
+                    - generic [ref=e1009]: "\"image_url\": f\"data:image/png;base64,{base64_image2}\","
+                    - text: "}, {"
+                    - generic [ref=e1010]: "\"type\": \"input_image\","
+                    - generic [ref=e1011]: "\"file_id\": file_id1,"
+                    - text: "}, {"
+                    - generic [ref=e1012]: "\"type\": \"input_image\","
+                    - generic [ref=e1013]: "\"file_id\": file_id2,"
+                    - text: "} ], } ],"
+                    - generic [ref=e1014]: "tools=[{\"type\": \"image_generation\"}],"
+                    - text: ) image_generation_calls = [ output
+                    - generic [ref=e1015]: for output in response.output
+                    - generic [ref=e1016]: if output.type == "image_generation_call"
+                    - text: "]"
+                    - generic [ref=e1017]: image_data = [output.result for output in image_generation_calls]
+                    - generic [ref=e1018]: "if image_data:"
+                    - generic [ref=e1019]: image_base64 = image_data[0]
+                    - generic [ref=e1020]: "with open(\"gift-basket.png\", \"wb\") as f:"
+                    - text: f.write(base64.b64decode(image_base64))
+                    - generic [ref=e1021]: "else:"
+                    - generic [ref=e1022]: print(response.output_text)
+            - heading "Edit an image using a mask Copy link to edit an image using a mask" [level=3] [ref=e1023]:
+              - generic [ref=e1024]: Edit an image using a mask
+              - button "Copy link to edit an image using a mask" [ref=e1025] [cursor=pointer]:
+                - img [ref=e1026]
+            - paragraph [ref=e1028]: You can provide a mask to indicate which part of the image should be edited.
+            - paragraph [ref=e1029]: When using a mask with GPT Image, additional instructions are sent to the model to help guide the editing process accordingly.
+            - generic [ref=e1031]:
+              - img [ref=e1033]
+              - paragraph [ref=e1039]: Masking with GPT Image is entirely prompt-based. The model uses the mask as guidance, but may not follow its exact shape with complete precision.
+            - paragraph [ref=e1040]: If you provide multiple input images, the mask will be applied to the first image.
+            - generic [ref=e1041]:
+              - group "Content switcher" [ref=e1044]:
+                - radio "Responses API" [checked] [ref=e1045] [cursor=pointer]
+                - radio "Image API" [ref=e1046] [cursor=pointer]
+              - generic [ref=e1050]:
+                - generic [ref=e1051]:
+                  - generic [ref=e1052]: Edit an image with a mask
+                  - button "python" [ref=e1054] [cursor=pointer]:
+                    - generic [ref=e1055]: python
+                    - img [ref=e1057]
+                  - button [ref=e1059] [cursor=pointer]:
+                    - img [ref=e1063]
+                - code [ref=e1068]:
+                  - code [ref=e1069]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51
+                  - generic [ref=e1070]: from openai import OpenAI
+                  - generic [ref=e1071]: import base64
+                  - text: client = OpenAI()
+                  - generic [ref=e1072]: "def create_file(file_path):"
+                  - generic [ref=e1073]: "with open(file_path, \"rb\") as file_content:"
+                  - generic [ref=e1074]: result = client.files.create(file=file_content, purpose="vision")
+                  - generic [ref=e1075]: return result.id
+                  - generic [ref=e1076]: fileId = create_file("sunlit_lounge.png")
+                  - generic [ref=e1077]: maskId = create_file("mask.png")
+                  - text: response = client.responses.create(
+                  - generic [ref=e1078]: model="gpt-5.5",
+                  - generic [ref=e1079]: input=[
+                  - text: "{"
+                  - generic [ref=e1080]: "\"role\": \"user\","
+                  - generic [ref=e1081]: "\"content\": ["
+                  - text: "{"
+                  - generic [ref=e1082]: "\"type\": \"input_text\","
+                  - generic [ref=e1083]: "\"text\": \"generate an image of the same sunlit indoor lounge area with a pool but the pool should contain a flamingo\","
+                  - text: "}, {"
+                  - generic [ref=e1084]: "\"type\": \"input_image\","
+                  - generic [ref=e1085]: "\"file_id\": fileId,"
+                  - text: "} ], }, ], tools=[ {"
+                  - generic [ref=e1086]: "\"type\": \"image_generation\","
+                  - generic [ref=e1087]: "\"quality\": \"high\","
+                  - generic [ref=e1088]: "\"input_image_mask\": {"
+                  - generic [ref=e1089]: "\"file_id\": maskId,"
+                  - text: "} }, ], ) image_data = [ output.result"
+                  - generic [ref=e1090]: for output in response.output
+                  - generic [ref=e1091]: if output.type == "image_generation_call"
+                  - text: "]"
+                  - generic [ref=e1092]: "if image_data:"
+                  - generic [ref=e1093]: image_base64 = image_data[0]
+                  - generic [ref=e1094]: "with open(\"lounge.png\", \"wb\") as f:"
+                  - text: f.write(base64.b64decode(image_base64))
+            - table [ref=e1097]:
+              - rowgroup [ref=e1098]:
+                - row "Image Mask Output" [ref=e1099]:
+                  - columnheader "Image" [ref=e1100]
+                  - columnheader "Mask" [ref=e1101]
+                  - columnheader "Output" [ref=e1102]
+              - rowgroup [ref=e1103]:
+                - row "A pink room with a pool A mask in part of the pool The original pool with an inflatable flamingo replacing the mask" [ref=e1104]:
+                  - cell "A pink room with a pool" [ref=e1105]:
+                    - img "A pink room with a pool" [ref=e1106]
+                  - cell "A mask in part of the pool" [ref=e1107]:
+                    - img "A mask in part of the pool" [ref=e1108]
+                  - cell "The original pool with an inflatable flamingo replacing the mask" [ref=e1109]:
+                    - img "The original pool with an inflatable flamingo replacing the mask" [ref=e1110]
+            - paragraph [ref=e1112]: "Prompt: a sunlit indoor lounge area with a pool containing a flamingo"
+            - heading "Mask requirements Copy link to mask requirements" [level=4] [ref=e1113]:
+              - generic [ref=e1114]: Mask requirements
+              - button "Copy link to mask requirements" [ref=e1115] [cursor=pointer]:
+                - img [ref=e1116]
+            - paragraph [ref=e1118]: The image to edit and mask must be of the same format and size (less than 50MB in size).
+            - paragraph [ref=e1119]: The mask image must also contain an alpha channel. If you’re using an image editing tool to create the mask, make sure to save the mask with an alpha channel.
+            - paragraph [ref=e1120]: You can modify a black and white image programmatically to add an alpha channel.
+            - generic [ref=e1122]:
+              - generic [ref=e1123]:
+                - generic [ref=e1124]: Add an alpha channel to a black and white mask
+                - button "python" [ref=e1126] [cursor=pointer]:
+                  - generic [ref=e1127]: python
+                  - img [ref=e1129]
+                - button [ref=e1131] [cursor=pointer]:
+                  - img [ref=e1135]
+              - code [ref=e1140]:
+                - code [ref=e1141]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+                - generic [ref=e1142]: from PIL import Image
+                - generic [ref=e1143]: from io import BytesIO
+                - generic [ref=e1144]: "# 1. Load your black & white mask as a grayscale image"
+                - generic [ref=e1145]: mask = Image.open("mask.png").convert("L")
+                - generic [ref=e1146]: "# 2. Convert it to RGBA so it has space for an alpha channel"
+                - generic [ref=e1147]: mask_rgba = mask.convert("RGBA")
+                - generic [ref=e1148]: "# 3. Then use the mask itself to fill that alpha channel"
+                - text: mask_rgba.putalpha(mask)
+                - generic [ref=e1149]: "# 4. Convert the mask into bytes"
+                - text: buf = BytesIO()
+                - generic [ref=e1150]: mask_rgba.save(buf, format="PNG")
+                - text: mask_bytes = buf.getvalue()
+                - generic [ref=e1151]: "# 5. Save the resulting file"
+                - generic [ref=e1152]: img_path_mask_alpha = "mask_alpha.png"
+                - generic [ref=e1153]: "with open(img_path_mask_alpha, \"wb\") as f:"
+                - text: f.write(mask_bytes)
+            - heading "Image input fidelity Copy link to image input fidelity" [level=3] [ref=e1154]:
+              - generic [ref=e1155]: Image input fidelity
+              - button "Copy link to image input fidelity" [ref=e1156] [cursor=pointer]:
+                - img [ref=e1157]
+            - paragraph [ref=e1159]:
+              - text: The
+              - code [ref=e1160]: input_fidelity
+              - text: parameter controls how strongly a model preserves details from input images during edits and reference-image workflows. For
+              - code [ref=e1161]: gpt-image-2
+              - text: ", omit this parameter; the API doesn’t allow changing it because the model processes every image input at high fidelity automatically."
+            - generic [ref=e1163]:
+              - img [ref=e1165]
+              - paragraph [ref=e1171]:
+                - text: Because
+                - code [ref=e1172]: gpt-image-2
+                - text: always processes image inputs at high fidelity, image input tokens can be higher for edit requests that include reference images. To understand the cost implications, refer to the
+                - link "vision costs" [ref=e1173] [cursor=pointer]:
+                  - /url: /api/docs/guides/images-vision?api-mode=responses#calculating-costs
+                - text: section.
+            - heading "Customize Image Output Copy link to customize image output" [level=2] [ref=e1174]:
+              - generic [ref=e1175]: Customize Image Output
+              - button "Copy link to customize image output" [ref=e1176] [cursor=pointer]:
+                - img [ref=e1177]
+            - paragraph [ref=e1179]: "You can configure the following output options:"
+            - list [ref=e1180]:
+              - listitem [ref=e1181]:
+                - strong [ref=e1182]: Size
+                - text: ": Image dimensions (for example,"
+                - code [ref=e1183]: 1024x1024
+                - text: ","
+                - code [ref=e1184]: 1024x1536
+                - text: )
+              - listitem [ref=e1185]:
+                - strong [ref=e1186]: Quality
+                - text: ": Rendering quality (for example,"
+                - code [ref=e1187]: low
+                - text: ","
+                - code [ref=e1188]: medium
+                - text: ","
+                - code [ref=e1189]: high
+                - text: )
+              - listitem [ref=e1190]:
+                - strong [ref=e1191]: Format
+                - text: ": File output format"
+              - listitem [ref=e1192]:
+                - strong [ref=e1193]: Compression
+                - text: ": Compression level (0-100%) for JPEG and WebP formats"
+              - listitem [ref=e1194]:
+                - strong [ref=e1195]: Background
+                - text: ": Opaque or automatic"
+            - paragraph [ref=e1196]:
+              - code [ref=e1197]: size
+              - text: ","
+              - code [ref=e1198]: quality
+              - text: ", and"
+              - code [ref=e1199]: background
+              - text: support the
+              - code [ref=e1200]: auto
+              - text: option, where the model will automatically select the best option based on the prompt.
+            - generic [ref=e1202]:
+              - img [ref=e1204]
+              - paragraph [ref=e1210]:
+                - code [ref=e1211]: gpt-image-2
+                - text: doesn’t currently support transparent backgrounds. Requests with
+                - code [ref=e1212]: "background: \"transparent\""
+                - text: aren’t supported for this model.
+            - heading "Size and quality options Copy link to size and quality options" [level=3] [ref=e1213]:
+              - generic [ref=e1214]: Size and quality options
+              - button "Copy link to size and quality options" [ref=e1215] [cursor=pointer]:
+                - img [ref=e1216]
+            - paragraph [ref=e1218]:
+              - code [ref=e1219]: gpt-image-2
+              - text: accepts any resolution in the
+              - code [ref=e1220]: size
+              - text: parameter when it satisfies the constraints below. Square images are typically fastest to generate.
+            - table [ref=e1221]:
+              - rowgroup [ref=e1222]:
+                - row "Popular sizes 1024x1024 (square) 1536x1024 (landscape) 1024x1536 (portrait) 2048x2048 (2K square) 2048x1152 (2K landscape) 3840x2160 (4K landscape) 2160x3840 (4K portrait) auto (default)" [ref=e1223]:
+                  - cell "Popular sizes" [ref=e1224]
+                  - cell "1024x1024 (square) 1536x1024 (landscape) 1024x1536 (portrait) 2048x2048 (2K square) 2048x1152 (2K landscape) 3840x2160 (4K landscape) 2160x3840 (4K portrait) auto (default)" [ref=e1225]:
+                    - list [ref=e1226]:
+                      - listitem [ref=e1227]:
+                        - paragraph [ref=e1228]:
+                          - code [ref=e1229]: 1024x1024
+                          - text: (square)
+                      - listitem [ref=e1230]:
+                        - paragraph [ref=e1231]:
+                          - code [ref=e1232]: 1536x1024
+                          - text: (landscape)
+                      - listitem [ref=e1233]:
+                        - paragraph [ref=e1234]:
+                          - code [ref=e1235]: 1024x1536
+                          - text: (portrait)
+                      - listitem [ref=e1236]:
+                        - paragraph [ref=e1237]:
+                          - code [ref=e1238]: 2048x2048
+                          - text: (2K square)
+                      - listitem [ref=e1239]:
+                        - paragraph [ref=e1240]:
+                          - code [ref=e1241]: 2048x1152
+                          - text: (2K landscape)
+                      - listitem [ref=e1242]:
+                        - paragraph [ref=e1243]:
+                          - code [ref=e1244]: 3840x2160
+                          - text: (4K landscape)
+                      - listitem [ref=e1245]:
+                        - paragraph [ref=e1246]:
+                          - code [ref=e1247]: 2160x3840
+                          - text: (4K portrait)
+                      - listitem [ref=e1248]:
+                        - paragraph [ref=e1249]:
+                          - code [ref=e1250]: auto
+                          - text: (default)
+                - row "Size constraints Maximum edge length must be less than or equal to 3840px Both edges must be multiples of 16px Long edge to short edge ratio must not exceed 3:1 Total pixels must be at least 655,360 and no more than 8,294,400" [ref=e1251]:
+                  - cell "Size constraints" [ref=e1252]
+                  - cell "Maximum edge length must be less than or equal to 3840px Both edges must be multiples of 16px Long edge to short edge ratio must not exceed 3:1 Total pixels must be at least 655,360 and no more than 8,294,400" [ref=e1253]:
+                    - list [ref=e1254]:
+                      - listitem [ref=e1255]:
+                        - paragraph [ref=e1256]:
+                          - text: Maximum edge length must be less than or equal to
+                          - code [ref=e1257]: 3840px
+                      - listitem [ref=e1258]:
+                        - paragraph [ref=e1259]:
+                          - text: Both edges must be multiples of
+                          - code [ref=e1260]: 16px
+                      - listitem [ref=e1261]:
+                        - paragraph [ref=e1262]:
+                          - text: Long edge to short edge ratio must not exceed
+                          - code [ref=e1263]: 3:1
+                      - listitem [ref=e1264]:
+                        - paragraph [ref=e1265]:
+                          - text: Total pixels must be at least
+                          - code [ref=e1266]: 655,360
+                          - text: and no more than
+                          - code [ref=e1267]: 8,294,400
+                - row "Quality options low medium high auto (default)" [ref=e1268]:
+                  - cell "Quality options" [ref=e1269]
+                  - cell "low medium high auto (default)" [ref=e1270]:
+                    - list [ref=e1271]:
+                      - listitem [ref=e1272]:
+                        - code [ref=e1273]: low
+                      - listitem [ref=e1274]:
+                        - code [ref=e1275]: medium
+                      - listitem [ref=e1276]:
+                        - code [ref=e1277]: high
+                      - listitem [ref=e1278]:
+                        - paragraph [ref=e1279]:
+                          - code [ref=e1280]: auto
+                          - text: (default)
+            - generic [ref=e1282]:
+              - img [ref=e1284]
+              - paragraph [ref=e1290]:
+                - text: Use
+                - code [ref=e1291]: "quality: \"low\""
+                - text: for fast drafts, thumbnails, and quick iterations. It is the fastest option and works well for many common use cases before you move to
+                - code [ref=e1292]: medium
+                - text: or
+                - code [ref=e1293]: high
+                - text: for final assets.
+            - generic [ref=e1295]:
+              - img [ref=e1297]
+              - paragraph [ref=e1303]:
+                - text: Outputs that contain more than
+                - code [ref=e1304]: 2560x1440
+                - text: (
+                - code [ref=e1305]: 3,686,400
+                - text: ) total pixels, typically referred to as 2K, are considered experimental.
+            - heading "Output format Copy link to output format" [level=3] [ref=e1306]:
+              - generic [ref=e1307]: Output format
+              - button "Copy link to output format" [ref=e1308] [cursor=pointer]:
+                - img [ref=e1309]
+            - paragraph [ref=e1311]:
+              - text: The Image API returns base64-encoded image data. The default format is
+              - code [ref=e1312]: png
+              - text: ", but you can also request"
+              - code [ref=e1313]: jpeg
+              - text: or
+              - code [ref=e1314]: webp
+              - text: .
+            - paragraph [ref=e1315]:
+              - text: If using
+              - code [ref=e1316]: jpeg
+              - text: or
+              - code [ref=e1317]: webp
+              - text: ", you can also specify the"
+              - code [ref=e1318]: output_compression
+              - text: parameter to control the compression level (0-100%). For example,
+              - code [ref=e1319]: output_compression=50
+              - text: will compress the image by 50%.
+            - generic [ref=e1321]:
+              - img [ref=e1323]
+              - paragraph [ref=e1329]:
+                - text: Using
+                - code [ref=e1330]: jpeg
+                - text: is faster than
+                - code [ref=e1331]: png
+                - text: ", so you should prioritize this format if latency is a concern."
+            - heading "Limitations Copy link to limitations" [level=2] [ref=e1332]:
+              - generic [ref=e1333]: Limitations
+              - button "Copy link to limitations" [ref=e1334] [cursor=pointer]:
+                - img [ref=e1335]
+            - paragraph [ref=e1337]:
+              - text: GPT Image models (
+              - code [ref=e1338]: gpt-image-2
+              - text: ","
+              - code [ref=e1339]: gpt-image-1.5
+              - text: ","
+              - code [ref=e1340]: gpt-image-1
+              - text: ", and"
+              - code [ref=e1341]: gpt-image-1-mini
+              - text: ") are powerful and versatile image generation models, but they still have some limitations to be aware of:"
+            - list [ref=e1342]:
+              - listitem [ref=e1343]:
+                - strong [ref=e1344]: "Latency:"
+                - text: Complex prompts may take up to 2 minutes to process.
+              - listitem [ref=e1345]:
+                - strong [ref=e1346]: "Text Rendering:"
+                - text: Although significantly improved, the model can still struggle with precise text placement and clarity.
+              - listitem [ref=e1347]:
+                - strong [ref=e1348]: "Consistency:"
+                - text: While capable of producing consistent imagery, the model may occasionally struggle to maintain visual consistency for recurring characters or brand elements across multiple generations.
+              - listitem [ref=e1349]:
+                - strong [ref=e1350]: "Composition Control:"
+                - text: Despite improved instruction following, the model may have difficulty placing elements precisely in structured or layout-sensitive compositions.
+            - heading "Content Moderation Copy link to content moderation" [level=3] [ref=e1351]:
+              - generic [ref=e1352]: Content Moderation
+              - button "Copy link to content moderation" [ref=e1353] [cursor=pointer]:
+                - img [ref=e1354]
+            - paragraph [ref=e1356]:
+              - text: All prompts and generated images are filtered in accordance with our
+              - link "content policy" [ref=e1357] [cursor=pointer]:
+                - /url: https://openai.com/policies/usage-policies/
+              - text: .
+            - paragraph [ref=e1358]:
+              - text: For image generation using GPT Image models (
+              - code [ref=e1359]: gpt-image-2
+              - text: ","
+              - code [ref=e1360]: gpt-image-1.5
+              - text: ","
+              - code [ref=e1361]: gpt-image-1
+              - text: ", and"
+              - code [ref=e1362]: gpt-image-1-mini
+              - text: ), you can control moderation strictness with the
+              - code [ref=e1363]: moderation
+              - text: "parameter. This parameter supports two values:"
+            - list [ref=e1364]:
+              - listitem [ref=e1365]:
+                - code [ref=e1366]: auto
+                - text: "(default): Standard filtering that seeks to limit creating certain categories of potentially age-inappropriate content."
+              - listitem [ref=e1367]:
+                - code [ref=e1368]: low
+                - text: ": Less restrictive filtering."
+            - heading "Handling blocked requests and other errors Copy link to handling blocked requests and other errors" [level=3] [ref=e1369]:
+              - generic [ref=e1370]: Handling blocked requests and other errors
+              - button "Copy link to handling blocked requests and other errors" [ref=e1371] [cursor=pointer]:
+                - img [ref=e1372]
+            - paragraph [ref=e1374]:
+              - text: "Handle image generation failures the same way you handle other API errors: check the HTTP status or SDK exception type, log the request ID, and refer to the"
+              - link "error codes guide" [ref=e1375] [cursor=pointer]:
+                - /url: /api/docs/guides/error-codes
+              - text: for authentication, quota, rate-limit, and server failures. Retries are appropriate for transient failures like
+              - code [ref=e1376]: "429"
+              - text: and
+              - code [ref=e1377]: 5xx
+              - text: ", but not for image generation user errors that require changing the request."
+            - paragraph [ref=e1378]:
+              - text: Some image generation failures are user-correctable and may return
+              - code [ref=e1379]: error.type = "image_generation_user_error"
+              - text: . Don’t automatically retry these errors without modifying the prompt or input images. For programmatic handling, use
+              - code [ref=e1380]: error.code
+              - text: as the stable discriminator.
+            - paragraph [ref=e1381]:
+              - text: When
+              - code [ref=e1382]: error.code = "moderation_blocked"
+              - text: ", the error may also include an optional"
+              - code [ref=e1383]: error.moderation_details
+              - text: "object:"
+            - generic [ref=e1386]:
+              - button [ref=e1388] [cursor=pointer]:
+                - img [ref=e1392]
+              - code [ref=e1395]:
+                - code [ref=e1396]: 1 2 3 4 5 6 7 8 9 10
+                - generic [ref=e1397]: "{"
+                - generic [ref=e1398]: "\"error\": {"
+                - generic [ref=e1399]: "\"type\": \"image_generation_user_error\","
+                - generic [ref=e1400]: "\"code\": \"moderation_blocked\","
+                - generic [ref=e1401]: "\"moderation_details\": {"
+                - generic [ref=e1402]: "\"moderation_stage\": \"input\","
+                - generic [ref=e1403]: "\"categories\": [\"harassment\"]"
+                - text: "} } }"
+            - paragraph [ref=e1404]:
+              - text: The
+              - code [ref=e1405]: moderation_details
+              - text: object provides coarse debugging context without exposing internal classifier labels or scores.
+            - paragraph [ref=e1406]:
+              - code [ref=e1407]: moderation_stage
+              - text: "can be:"
+            - list [ref=e1408]:
+              - listitem [ref=e1409]:
+                - code [ref=e1410]: input
+                - text: ": The block came from the prompt or request inputs."
+              - listitem [ref=e1411]:
+                - code [ref=e1412]: output
+                - text: ": The block came from a generated image or downstream output moderation stage."
+              - listitem [ref=e1413]:
+                - code [ref=e1414]: unknown
+                - text: ": A rare fallback when provenance is hard to determine."
+            - paragraph [ref=e1415]:
+              - code [ref=e1416]: categories
+              - text: contains coarse public labels. For example, you might see values like
+              - code [ref=e1417]: harassment
+              - text: ","
+              - code [ref=e1418]: self-harm
+              - text: ","
+              - code [ref=e1419]: sexual
+              - text: ", or"
+              - code [ref=e1420]: violence
+              - text: .
+            - paragraph [ref=e1421]:
+              - text: For most apps, keep the primary end-user message generic. Use
+              - code [ref=e1422]: moderation_details
+              - text: for developer logs, support workflows, analytics, and light remediation hints.
+            - paragraph [ref=e1423]:
+              - text: For example, if
+              - code [ref=e1424]: harassment
+              - text: appears, suggest removing abusive or targeting language. If the block happened at the
+              - code [ref=e1425]: input
+              - text: stage, guide the user to revise the prompt. If it happened at the
+              - code [ref=e1426]: output
+              - text: stage, treat it as a generated result safety block and distinguish it in your logs. Always branch on
+              - code [ref=e1427]: error.code = "moderation_blocked"
+              - text: first, and treat
+              - code [ref=e1428]: moderation_details
+              - text: as optional extra context.
+            - generic [ref=e1430]:
+              - generic [ref=e1431]:
+                - generic [ref=e1432]: Handle moderation-blocked image generation errors
+                - button "javascript" [ref=e1434] [cursor=pointer]:
+                  - generic [ref=e1435]: javascript
+                  - img [ref=e1437]
+                - button [ref=e1439] [cursor=pointer]:
+                  - img [ref=e1443]
+              - code [ref=e1448]:
+                - code [ref=e1449]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40
+                - generic [ref=e1450]: import OpenAI from "openai";
+                - generic [ref=e1451]: const openai = new OpenAI();
+                - generic [ref=e1452]: "try {"
+                - generic [ref=e1453]: // The same error handling pattern applies to image generation requests,
+                - generic [ref=e1454]: // image edits, and Responses API tool calls that generate images.
+                - generic [ref=e1455]: "await openai.images.generate({"
+                - generic [ref=e1456]: "model: \"gpt-image-2\","
+                - generic [ref=e1457]: "prompt: \"Create a poster humiliating my coworker with insulting captions\","
+                - text: "});"
+                - generic [ref=e1458]: "} catch (error) {"
+                - generic [ref=e1459]: "if (error?.code !== \"moderation_blocked\") {"
+                - generic [ref=e1460]: throw error;
+                - text: "}"
+                - generic [ref=e1461]: const moderationDetails = error?.moderation_details;
+                - generic [ref=e1462]: const categories = moderationDetails?.categories ?? [];
+                - generic [ref=e1463]: const stage = moderationDetails?.moderation_stage;
+                - generic [ref=e1464]: let hint =
+                - generic [ref=e1465]: "\"This request could not be completed because it did not meet safety requirements.\";"
+                - generic [ref=e1466]: "if (categories.includes(\"harassment\")) {"
+                - text: hint =
+                - generic [ref=e1467]: "\"Try removing abusive or targeting language and focus on neutral visual details instead.\";"
+                - generic [ref=e1468]: "} else if (stage === \"input\") {"
+                - generic [ref=e1469]: hint = "Try revising the prompt or input images and submit the request again.";
+                - generic [ref=e1470]: "} else if (stage === \"output\") {"
+                - generic [ref=e1471]: hint = "The generated result was blocked by a safety check. Try changing the prompt and generating again.";
+                - text: "}"
+                - generic [ref=e1472]: "console.error(\"Image generation blocked\", {"
+                - generic [ref=e1473]: "request_id: error?.request_id,"
+                - generic [ref=e1474]: "code: error?.code,"
+                - generic [ref=e1475]: "moderation_details: moderationDetails,"
+                - text: "});"
+                - generic [ref=e1476]: console.log(hint);
+                - text: "}"
+            - heading "Supported models Copy link to supported models" [level=3] [ref=e1477]:
+              - generic [ref=e1478]: Supported models
+              - button "Copy link to supported models" [ref=e1479] [cursor=pointer]:
+                - img [ref=e1480]
+            - paragraph [ref=e1482]:
+              - text: When using image generation in the Responses API,
+              - code [ref=e1483]: gpt-5
+              - text: and newer models should support the image generation tool.
+              - link "Check the model detail page for your model" [ref=e1484] [cursor=pointer]:
+                - /url: /api/docs/models
+              - text: to confirm if your desired model can use the image generation tool.
+            - heading "Cost and latency Copy link to cost and latency" [level=2] [ref=e1485]:
+              - generic [ref=e1486]: Cost and latency
+              - button "Copy link to cost and latency" [ref=e1487] [cursor=pointer]:
+                - img [ref=e1488]
+            - heading "gpt-image-2 output tokens Copy link to gpt image 2 output tokens" [level=3] [ref=e1490]:
+              - generic [ref=e1491]:
+                - code [ref=e1492]: gpt-image-2
+                - text: output tokens
+              - button "Copy link to gpt image 2 output tokens" [ref=e1493] [cursor=pointer]:
+                - img [ref=e1494]
+            - paragraph [ref=e1496]:
+              - text: For
+              - code [ref=e1497]: gpt-image-2
+              - text: ", use the calculator to estimate output tokens from the requested"
+              - code [ref=e1498]: quality
+              - text: and
+              - code [ref=e1499]: size
+              - text: ":"
+            - generic [ref=e1502]:
+              - generic [ref=e1503]:
+                - generic [ref=e1504]: Quality
+                - group "Quality setting" [ref=e1505]:
+                  - radio "Low" [checked] [ref=e1506] [cursor=pointer]
+                  - radio "Medium" [ref=e1507] [cursor=pointer]
+                  - radio "High" [ref=e1508] [cursor=pointer]
+              - generic [ref=e1509]:
+                - generic [ref=e1510]: Width
+                - spinbutton "Width" [ref=e1511]: "1024"
+              - generic [ref=e1512]:
+                - generic [ref=e1513]: Height
+                - spinbutton "Height" [ref=e1514]: "1024"
+              - generic [ref=e1515]:
+                - generic [ref=e1516]: Output tokens
+                - generic [ref=e1517]: "196"
+            - heading "Models prior to gpt-image-2 Copy link to models prior to gpt image 2" [level=3] [ref=e1518]:
+              - generic [ref=e1519]:
+                - text: Models prior to
+                - code [ref=e1520]: gpt-image-2
+              - button "Copy link to models prior to gpt image 2" [ref=e1521] [cursor=pointer]:
+                - img [ref=e1522]
+            - paragraph [ref=e1524]:
+              - text: GPT Image models prior to
+              - code [ref=e1525]: gpt-image-2
+              - text: generate images by first producing specialized image tokens. Both latency and eventual cost are proportional to the number of tokens required to render an image—larger image sizes and higher quality settings result in more tokens.
+            - paragraph [ref=e1526]: "The number of tokens generated depends on image dimensions and quality:"
+            - table [ref=e1528]:
+              - rowgroup [ref=e1529]:
+                - row "Quality Square (1024×1024) Portrait (1024×1536) Landscape (1536×1024)" [ref=e1530]:
+                  - columnheader "Quality" [ref=e1531]
+                  - columnheader "Square (1024×1024)" [ref=e1532]
+                  - columnheader "Portrait (1024×1536)" [ref=e1533]
+                  - columnheader "Landscape (1536×1024)" [ref=e1534]
+              - rowgroup [ref=e1535]:
+                - row "Low 272 tokens 408 tokens 400 tokens" [ref=e1536]:
+                  - cell "Low" [ref=e1537]
+                  - cell "272 tokens" [ref=e1538]
+                  - cell "408 tokens" [ref=e1539]
+                  - cell "400 tokens" [ref=e1540]
+                - row "Medium 1056 tokens 1584 tokens 1568 tokens" [ref=e1541]:
+                  - cell "Medium" [ref=e1542]
+                  - cell "1056 tokens" [ref=e1543]
+                  - cell "1584 tokens" [ref=e1544]
+                  - cell "1568 tokens" [ref=e1545]
+                - row "High 4160 tokens 6240 tokens 6208 tokens" [ref=e1546]:
+                  - cell "High" [ref=e1547]
+                  - cell "4160 tokens" [ref=e1548]
+                  - cell "6240 tokens" [ref=e1549]
+                  - cell "6208 tokens" [ref=e1550]
+            - paragraph [ref=e1551]:
+              - text: Note that you will also need to account for
+              - link "input tokens" [ref=e1552] [cursor=pointer]:
+                - /url: /api/docs/guides/images-vision?api-mode=responses#calculating-costs
+              - text: ": text tokens for the prompt and image tokens for the input images if editing images. Because"
+              - code [ref=e1553]: gpt-image-2
+              - text: always processes image inputs at high fidelity, edit requests that include reference images can use more input tokens.
+            - paragraph [ref=e1554]:
+              - text: Refer to the
+              - link "pricing page" [ref=e1555] [cursor=pointer]:
+                - /url: /api/docs/pricing#image-generation
+              - text: for current text and image token prices, and use the
+              - link "Calculating costs" [ref=e1556] [cursor=pointer]:
+                - /url: "#calculating-costs"
+              - text: section below to estimate request costs.
+            - paragraph [ref=e1557]: "The final cost is the sum of:"
+            - list [ref=e1558]:
+              - listitem [ref=e1559]: input text tokens
+              - listitem [ref=e1560]: input image tokens if using the edits endpoint
+              - listitem [ref=e1561]: image output tokens
+            - heading "Calculating costs Copy link to calculating costs" [level=3] [ref=e1562]:
+              - generic [ref=e1563]: Calculating costs
+              - button "Copy link to calculating costs" [ref=e1564] [cursor=pointer]:
+                - img [ref=e1565]
+            - paragraph [ref=e1567]:
+              - text: Use the pricing calculator below to estimate request costs for GPT Image models.
+              - code [ref=e1568]: gpt-image-2
+              - text: supports thousands of valid resolutions; the table below lists the same sizes used for previous GPT Image models for comparison. For GPT Image 1.5, GPT Image 1, and GPT Image 1 Mini, the legacy per-image output pricing table is also listed below. You should still account for text and image input tokens when estimating the total cost of a request.
+            - generic [ref=e1570]:
+              - img [ref=e1572]
+              - paragraph [ref=e1578]: A larger non-square resolution can sometimes produce fewer output tokens than a smaller or square resolution at the same quality setting.
+            - table [ref=e1579]:
+              - rowgroup [ref=e1580]:
+                - row "Model Quality 1024 x 1024 1024 x 1536 1536 x 1024" [ref=e1581]:
+                  - columnheader "Model" [ref=e1582]
+                  - columnheader "Quality" [ref=e1583]:
+                    - paragraph [ref=e1584]: Quality
+                  - columnheader "1024 x 1024" [ref=e1585]
+                  - columnheader "1024 x 1536" [ref=e1586]
+                  - columnheader "1536 x 1024" [ref=e1587]
+              - rowgroup [ref=e1588]:
+                - row "GPT Image 2 Additional sizes available Low $0.006 $0.005 $0.005" [ref=e1589]:
+                  - cell "GPT Image 2 Additional sizes available" [ref=e1590]:
+                    - paragraph [ref=e1591]: GPT Image 2
+                    - text: Additional sizes available
+                  - cell "Low" [ref=e1592]
+                  - cell "$0.006" [ref=e1593]
+                  - cell "$0.005" [ref=e1594]
+                  - cell "$0.005" [ref=e1595]
+                - row "Medium $0.053 $0.041 $0.041" [ref=e1596]:
+                  - cell "Medium" [ref=e1597]
+                  - cell "$0.053" [ref=e1598]
+                  - cell "$0.041" [ref=e1599]
+                  - cell "$0.041" [ref=e1600]
+                - row "High $0.211 $0.165 $0.165" [ref=e1601]:
+                  - cell "High" [ref=e1602]
+                  - cell "$0.211" [ref=e1603]
+                  - cell "$0.165" [ref=e1604]
+                  - cell "$0.165" [ref=e1605]
+                - row "GPT Image 1.5 Low $0.009 $0.013 $0.013" [ref=e1606]:
+                  - cell "GPT Image 1.5" [ref=e1607]:
+                    - paragraph [ref=e1608]: GPT Image 1.5
+                  - cell "Low" [ref=e1609]
+                  - cell "$0.009" [ref=e1610]
+                  - cell "$0.013" [ref=e1611]
+                  - cell "$0.013" [ref=e1612]
+                - row "Medium $0.034 $0.05 $0.05" [ref=e1613]:
+                  - cell "Medium" [ref=e1614]
+                  - cell "$0.034" [ref=e1615]
+                  - cell "$0.05" [ref=e1616]
+                  - cell "$0.05" [ref=e1617]
+                - row "High $0.133 $0.2 $0.2" [ref=e1618]:
+                  - cell "High" [ref=e1619]
+                  - cell "$0.133" [ref=e1620]
+                  - cell "$0.2" [ref=e1621]
+                  - cell "$0.2" [ref=e1622]
+                - row "GPT Image 1 Low $0.011 $0.016 $0.016" [ref=e1623]:
+                  - cell "GPT Image 1" [ref=e1624]:
+                    - paragraph [ref=e1625]: GPT Image 1
+                  - cell "Low" [ref=e1626]
+                  - cell "$0.011" [ref=e1627]
+                  - cell "$0.016" [ref=e1628]
+                  - cell "$0.016" [ref=e1629]
+                - row "Medium $0.042 $0.063 $0.063" [ref=e1630]:
+                  - cell "Medium" [ref=e1631]
+                  - cell "$0.042" [ref=e1632]
+                  - cell "$0.063" [ref=e1633]
+                  - cell "$0.063" [ref=e1634]
+                - row "High $0.167 $0.25 $0.25" [ref=e1635]:
+                  - cell "High" [ref=e1636]
+                  - cell "$0.167" [ref=e1637]
+                  - cell "$0.25" [ref=e1638]
+                  - cell "$0.25" [ref=e1639]
+                - row "GPT Image 1 Mini Low $0.005 $0.006 $0.006" [ref=e1640]:
+                  - cell "GPT Image 1 Mini" [ref=e1641]:
+                    - paragraph [ref=e1642]: GPT Image 1 Mini
+                  - cell "Low" [ref=e1643]
+                  - cell "$0.005" [ref=e1644]
+                  - cell "$0.006" [ref=e1645]
+                  - cell "$0.006" [ref=e1646]
+                - row "Medium $0.011 $0.015 $0.015" [ref=e1647]:
+                  - cell "Medium" [ref=e1648]
+                  - cell "$0.011" [ref=e1649]
+                  - cell "$0.015" [ref=e1650]
+                  - cell "$0.015" [ref=e1651]
+                - row "High $0.036 $0.052 $0.052" [ref=e1652]:
+                  - cell "High" [ref=e1653]
+                  - cell "$0.036" [ref=e1654]
+                  - cell "$0.052" [ref=e1655]
+                  - cell "$0.052" [ref=e1656]
+            - heading "Partial images cost Copy link to partial images cost" [level=3] [ref=e1657]:
+              - generic [ref=e1658]: Partial images cost
+              - button "Copy link to partial images cost" [ref=e1659] [cursor=pointer]:
+                - img [ref=e1660]
+            - paragraph [ref=e1662]:
+              - text: If you want to
+              - link "stream image generation" [ref=e1663] [cursor=pointer]:
+                - /url: "#streaming"
+              - text: using the
+              - code [ref=e1664]: partial_images
+              - text: parameter, each partial image will incur an additional 100 image output tokens.
+  - generic:
+    - button "Ask AI" [ref=e1666] [cursor=pointer]:
+      - generic [ref=e1667]: Ask AI
+    - dialog "Docs agent" [ref=e1668]:
+      - banner [ref=e1669]:
+        - heading "Docs agent" [level=2] [ref=e1670]
+        - generic [ref=e1671]:
+          - button "Start a new docs agent thread" [ref=e1672] [cursor=pointer]:
+            - img [ref=e1673]
+          - button "Close docs agent" [ref=e1675] [cursor=pointer]:
+            - img [ref=e1676]
+      - paragraph [ref=e1680]: Loading docs agent...

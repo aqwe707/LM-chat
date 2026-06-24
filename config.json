@@ -1,0 +1,14 @@
+{
+  "port": 8080,
+  "passcode": "123456",
+  "lmstudio": {
+    "host": "localhost",
+    "port": 1234
+  },
+  "chat": {
+    "systemPrompt": "You are a helpful assistant. Respond concisely.",
+    "temperature": 0.7,
+    "maxTokens": 65536,
+    "maxHistory": 20
+  }
+}

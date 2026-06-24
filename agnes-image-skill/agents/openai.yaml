@@ -1,0 +1,7 @@
+interface:
+  display_name: 'Agnes Image Generator'
+  short_description: 'Generate and edit images with Agnes Image 2.1 Flash'
+  icon_small: './assets/icon-small.png'
+  icon_large: './assets/icon-large.png'
+  brand_color: '#6366F1'
+  default_prompt: 'Use -image to generate an image of a futuristic cityscape at sunset, 1024x768'

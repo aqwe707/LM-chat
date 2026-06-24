@@ -1,0 +1,1126 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "OpenAI Developers" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "OpenAI Developers" [ref=e5]
+      - navigation [ref=e6]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: /
+        - link "API" [ref=e10] [cursor=pointer]:
+          - /url: /api
+          - text: API
+          - img [ref=e11]
+        - link "Codex" [ref=e14] [cursor=pointer]:
+          - /url: /codex
+          - text: Codex
+          - img [ref=e15]
+        - link "ChatGPT" [ref=e18] [cursor=pointer]:
+          - /url: /chatgpt
+          - text: ChatGPT
+          - img [ref=e19]
+        - link "Resources" [ref=e22] [cursor=pointer]:
+          - /url: /learn
+          - text: Resources
+          - img [ref=e23]
+      - generic [ref=e25]:
+        - button "Start searching" [ref=e26] [cursor=pointer]:
+          - generic [ref=e27]: Start searching
+          - img [ref=e28]
+        - link "API Dashboard" [ref=e33] [cursor=pointer]:
+          - /url: https://platform.openai.com/login
+          - generic [ref=e34]:
+            - generic [ref=e35]: API Dashboard
+            - img [ref=e36]
+        - button "Toggle light and dark theme" [ref=e38] [cursor=pointer]:
+          - img [ref=e39]
+  - generic [ref=e42]:
+    - navigation [ref=e44]:
+      - generic [ref=e45]:
+        - heading "Get started" [level=3] [ref=e46]
+        - list [ref=e47]:
+          - listitem [ref=e48]:
+            - link "Overview" [ref=e49] [cursor=pointer]:
+              - /url: /api/docs
+              - generic [ref=e50]: Overview
+          - listitem [ref=e51]:
+            - link "Quickstart" [ref=e52] [cursor=pointer]:
+              - /url: /api/docs/quickstart
+              - generic [ref=e53]: Quickstart
+          - listitem [ref=e54]:
+            - link "Models" [ref=e55] [cursor=pointer]:
+              - /url: /api/docs/models
+              - generic [ref=e56]: Models
+          - listitem [ref=e57]:
+            - link "Pricing" [ref=e58] [cursor=pointer]:
+              - /url: /api/docs/pricing
+              - generic [ref=e59]: Pricing
+          - listitem [ref=e60]:
+            - group [ref=e61]:
+              - generic "SDKs and CLI" [ref=e62] [cursor=pointer]:
+                - link "SDKs and CLI" [ref=e63]:
+                  - /url: /api/docs/libraries
+                  - generic [ref=e64]: SDKs and CLI
+                - img [ref=e65]
+          - listitem [ref=e67]:
+            - 'link "Latest: GPT-5.5" [ref=e68] [cursor=pointer]':
+              - /url: /api/docs/guides/latest-model
+              - generic [ref=e69]: "Latest: GPT-5.5"
+          - listitem [ref=e70]:
+            - link "Prompt guidance" [ref=e71] [cursor=pointer]:
+              - /url: /api/docs/guides/prompt-guidance
+              - generic [ref=e72]: Prompt guidance
+      - generic [ref=e73]:
+        - heading "Core concepts" [level=3] [ref=e74]
+        - list [ref=e75]:
+          - listitem [ref=e76]:
+            - link "Text generation" [ref=e77] [cursor=pointer]:
+              - /url: /api/docs/guides/text
+              - generic [ref=e78]: Text generation
+          - listitem [ref=e79]:
+            - link "Code generation" [ref=e80] [cursor=pointer]:
+              - /url: /api/docs/guides/code-generation
+              - generic [ref=e81]: Code generation
+          - listitem [ref=e82]:
+            - link "Images and vision" [ref=e83] [cursor=pointer]:
+              - /url: /api/docs/guides/images-vision
+              - generic [ref=e84]: Images and vision
+          - listitem [ref=e85]:
+            - link "Audio and speech" [ref=e86] [cursor=pointer]:
+              - /url: /api/docs/guides/audio
+              - generic [ref=e87]: Audio and speech
+          - listitem [ref=e88]:
+            - link "Structured output" [ref=e89] [cursor=pointer]:
+              - /url: /api/docs/guides/structured-outputs
+              - generic [ref=e90]: Structured output
+          - listitem [ref=e91]:
+            - link "Function calling" [ref=e92] [cursor=pointer]:
+              - /url: /api/docs/guides/function-calling
+              - generic [ref=e93]: Function calling
+          - listitem [ref=e94]:
+            - link "Responses API" [ref=e95] [cursor=pointer]:
+              - /url: /api/docs/guides/migrate-to-responses
+              - generic [ref=e96]: Responses API
+          - listitem [ref=e97]:
+            - link "Using tools" [ref=e98] [cursor=pointer]:
+              - /url: /api/docs/guides/tools
+              - generic [ref=e99]: Using tools
+      - generic [ref=e100]:
+        - heading "Agents SDK" [level=3] [ref=e101]
+        - list [ref=e102]:
+          - listitem [ref=e103]:
+            - link "Overview" [ref=e104] [cursor=pointer]:
+              - /url: /api/docs/guides/agents
+              - generic [ref=e105]: Overview
+          - listitem [ref=e106]:
+            - link "Quickstart" [ref=e107] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/quickstart
+              - generic [ref=e108]: Quickstart
+          - listitem [ref=e109]:
+            - link "Agent definitions" [ref=e110] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/define-agents
+              - generic [ref=e111]: Agent definitions
+          - listitem [ref=e112]:
+            - link "Models and providers" [ref=e113] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/models
+              - generic [ref=e114]: Models and providers
+          - listitem [ref=e115]:
+            - link "Running agents" [ref=e116] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/running-agents
+              - generic [ref=e117]: Running agents
+          - listitem [ref=e118]:
+            - link "Sandbox agents" [ref=e119] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/sandboxes
+              - generic [ref=e120]: Sandbox agents
+          - listitem [ref=e121]:
+            - link "Orchestration" [ref=e122] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/orchestration
+              - generic [ref=e123]: Orchestration
+          - listitem [ref=e124]:
+            - link "Guardrails" [ref=e125] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/guardrails-approvals
+              - generic [ref=e126]: Guardrails
+          - listitem [ref=e127]:
+            - link "Results and state" [ref=e128] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/results
+              - generic [ref=e129]: Results and state
+          - listitem [ref=e130]:
+            - link "Integrations and observability" [ref=e131] [cursor=pointer]:
+              - /url: /api/docs/guides/agents/integrations-observability
+              - generic [ref=e132]: Integrations and observability
+          - listitem [ref=e133]:
+            - link "Evaluate agent workflows" [ref=e134] [cursor=pointer]:
+              - /url: /api/docs/guides/agent-evals
+              - generic [ref=e135]: Evaluate agent workflows
+          - listitem [ref=e136]:
+            - link "Voice agents" [ref=e137] [cursor=pointer]:
+              - /url: /api/docs/guides/voice-agents
+              - generic [ref=e138]: Voice agents
+          - listitem [ref=e139]:
+            - group [ref=e140]:
+              - generic "ChatKit" [ref=e141] [cursor=pointer]:
+                - generic [ref=e142]: ChatKit
+                - img [ref=e143]
+      - generic [ref=e145]:
+        - heading "Tools" [level=3] [ref=e146]
+        - list [ref=e147]:
+          - listitem [ref=e148]:
+            - link "Web search" [ref=e149] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-web-search
+              - generic [ref=e150]: Web search
+          - listitem [ref=e151]:
+            - group [ref=e152]:
+              - generic "MCP and Connectors" [ref=e153] [cursor=pointer]:
+                - link "MCP and Connectors" [ref=e154]:
+                  - /url: /api/docs/guides/tools-connectors-mcp
+                  - generic [ref=e155]: MCP and Connectors
+                - img [ref=e156]
+          - listitem [ref=e158]:
+            - link "Skills" [ref=e159] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-skills
+              - generic [ref=e160]: Skills
+          - listitem [ref=e161]:
+            - link "Shell" [ref=e162] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-shell
+              - generic [ref=e163]: Shell
+          - listitem [ref=e164]:
+            - link "Computer use" [ref=e165] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-computer-use
+              - generic [ref=e166]: Computer use
+          - listitem [ref=e167]:
+            - group [ref=e168]:
+              - generic "File search and retrieval" [ref=e169] [cursor=pointer]:
+                - generic [ref=e170]: File search and retrieval
+                - img [ref=e171]
+          - listitem [ref=e173]:
+            - link "Tool search" [ref=e174] [cursor=pointer]:
+              - /url: /api/docs/guides/tools-tool-search
+              - generic [ref=e175]: Tool search
+          - listitem [ref=e176]:
+            - group [ref=e177]:
+              - generic "More tools" [ref=e178] [cursor=pointer]:
+                - generic [ref=e179]: More tools
+                - img [ref=e180]
+      - generic [ref=e182]:
+        - heading "Run and scale" [level=3] [ref=e183]
+        - list [ref=e184]:
+          - listitem [ref=e185]:
+            - link "Conversation state" [ref=e186] [cursor=pointer]:
+              - /url: /api/docs/guides/conversation-state
+              - generic [ref=e187]: Conversation state
+          - listitem [ref=e188]:
+            - link "Background mode" [ref=e189] [cursor=pointer]:
+              - /url: /api/docs/guides/background
+              - generic [ref=e190]: Background mode
+          - listitem [ref=e191]:
+            - link "Streaming" [ref=e192] [cursor=pointer]:
+              - /url: /api/docs/guides/streaming-responses
+              - generic [ref=e193]: Streaming
+          - listitem [ref=e194]:
+            - link "WebSocket mode" [ref=e195] [cursor=pointer]:
+              - /url: /api/docs/guides/websocket-mode
+              - generic [ref=e196]: WebSocket mode
+          - listitem [ref=e197]:
+            - link "Webhooks" [ref=e198] [cursor=pointer]:
+              - /url: /api/docs/guides/webhooks
+              - generic [ref=e199]: Webhooks
+          - listitem [ref=e200]:
+            - link "File inputs" [ref=e201] [cursor=pointer]:
+              - /url: /api/docs/guides/file-inputs
+              - generic [ref=e202]: File inputs
+          - listitem [ref=e203]:
+            - group [ref=e204]:
+              - generic "Context management" [ref=e205] [cursor=pointer]:
+                - generic [ref=e206]: Context management
+                - img [ref=e207]
+          - listitem [ref=e209]:
+            - group [ref=e210]:
+              - generic "Prompting" [ref=e211] [cursor=pointer]:
+                - generic [ref=e212]: Prompting
+                - img [ref=e213]
+          - listitem [ref=e215]:
+            - group [ref=e216]:
+              - generic "Reasoning" [ref=e217] [cursor=pointer]:
+                - generic [ref=e218]: Reasoning
+                - img [ref=e219]
+      - generic [ref=e221]:
+        - heading "Evaluation" [level=3] [ref=e222]
+        - list [ref=e223]:
+          - listitem [ref=e224]:
+            - link "Red teaming" [ref=e225] [cursor=pointer]:
+              - /url: /api/docs/guides/red-teaming
+              - generic [ref=e226]: Red teaming
+      - generic [ref=e227]:
+        - heading "Realtime and audio" [level=3] [ref=e228]
+        - list [ref=e229]:
+          - listitem [ref=e230]:
+            - link "Overview" [ref=e231] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime
+              - generic [ref=e232]: Overview
+          - listitem [ref=e233]:
+            - link "Voice agents" [ref=e234] [cursor=pointer]:
+              - /url: /api/docs/guides/voice-agents
+              - generic [ref=e235]: Voice agents
+          - listitem [ref=e236]:
+            - link "Live translation" [ref=e237] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime-translation
+              - generic [ref=e238]: Live translation
+          - listitem [ref=e239]:
+            - group [ref=e240]:
+              - generic "Transcription" [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]: Transcription
+                - img [ref=e243]
+          - listitem [ref=e245]:
+            - link "Speech generation" [ref=e246] [cursor=pointer]:
+              - /url: /api/docs/guides/text-to-speech
+              - generic [ref=e247]: Speech generation
+          - listitem [ref=e248]:
+            - link "Realtime prompting guide" [ref=e249] [cursor=pointer]:
+              - /url: /api/docs/guides/realtime-models-prompting
+              - generic [ref=e250]: Realtime prompting guide
+          - listitem [ref=e251]:
+            - group [ref=e252]:
+              - generic "Connection methods" [ref=e253] [cursor=pointer]:
+                - generic [ref=e254]: Connection methods
+                - img [ref=e255]
+          - listitem [ref=e257]:
+            - group [ref=e258]:
+              - generic "Realtime sessions" [ref=e259] [cursor=pointer]:
+                - generic [ref=e260]: Realtime sessions
+                - img [ref=e261]
+      - generic [ref=e263]:
+        - heading "Specialized models" [level=3] [ref=e264]
+        - list [ref=e265]:
+          - listitem [ref=e266]:
+            - link "Image generation" [ref=e267] [cursor=pointer]:
+              - /url: /api/docs/guides/image-generation
+              - generic [ref=e268]: Image generation
+          - listitem [ref=e269]:
+            - link "Video generation" [ref=e270] [cursor=pointer]:
+              - /url: /api/docs/guides/video-generation
+              - generic [ref=e271]: Video generation
+          - listitem [ref=e272]:
+            - link "Deep research" [ref=e273] [cursor=pointer]:
+              - /url: /api/docs/guides/deep-research
+              - generic [ref=e274]: Deep research
+          - listitem [ref=e275]:
+            - link "Embeddings" [ref=e276] [cursor=pointer]:
+              - /url: /api/docs/guides/embeddings
+              - generic [ref=e277]: Embeddings
+          - listitem [ref=e278]:
+            - link "Moderation" [ref=e279] [cursor=pointer]:
+              - /url: /api/docs/guides/moderation
+              - generic [ref=e280]: Moderation
+      - generic [ref=e281]:
+        - heading "Going live" [level=3] [ref=e282]
+        - list [ref=e283]:
+          - listitem [ref=e284]:
+            - link "Production best practices" [ref=e285] [cursor=pointer]:
+              - /url: /api/docs/guides/production-best-practices
+              - generic [ref=e286]: Production best practices
+          - listitem [ref=e287]:
+            - group [ref=e288]:
+              - generic "Workload identity federation" [ref=e289] [cursor=pointer]:
+                - link "Workload identity federation" [ref=e290]:
+                  - /url: /api/docs/guides/workload-identity-federation
+                  - generic [ref=e291]: Workload identity federation
+                - img [ref=e292]
+          - listitem [ref=e294]:
+            - link "Deployment checklist" [ref=e295] [cursor=pointer]:
+              - /url: /api/docs/guides/deployment-checklist
+              - generic [ref=e296]: Deployment checklist
+          - listitem [ref=e297]:
+            - link "Amazon Bedrock" [ref=e298] [cursor=pointer]:
+              - /url: /api/docs/guides/amazon-bedrock
+              - generic [ref=e299]: Amazon Bedrock
+          - listitem [ref=e300]:
+            - group [ref=e301]:
+              - generic "Latency optimization" [ref=e302] [cursor=pointer]:
+                - generic [ref=e303]: Latency optimization
+                - img [ref=e304]
+          - listitem [ref=e306]:
+            - group [ref=e307]:
+              - generic "Cost optimization" [ref=e308] [cursor=pointer]:
+                - generic [ref=e309]: Cost optimization
+                - img [ref=e310]
+          - listitem [ref=e312]:
+            - link "Accuracy optimization" [ref=e313] [cursor=pointer]:
+              - /url: /api/docs/guides/optimizing-llm-accuracy
+              - generic [ref=e314]: Accuracy optimization
+          - listitem [ref=e315]:
+            - group [ref=e316]:
+              - generic "Safety" [ref=e317] [cursor=pointer]:
+                - generic [ref=e318]: Safety
+                - img [ref=e319]
+      - generic [ref=e321]:
+        - heading "Legacy APIs" [level=3] [ref=e322]
+        - list [ref=e323]:
+          - listitem [ref=e324]:
+            - group [ref=e325]:
+              - generic "Agent Builder" [ref=e326] [cursor=pointer]:
+                - generic [ref=e327]: Agent Builder
+                - img [ref=e328]
+          - listitem [ref=e330]:
+            - group [ref=e331]:
+              - generic "Evals" [ref=e332] [cursor=pointer]:
+                - generic [ref=e333]: Evals
+                - img [ref=e334]
+          - listitem [ref=e336]:
+            - group [ref=e337]:
+              - generic "Fine-tuning" [ref=e338] [cursor=pointer]:
+                - generic [ref=e339]: Fine-tuning
+                - img [ref=e340]
+          - listitem [ref=e342]:
+            - group [ref=e343]:
+              - generic "Assistants API" [ref=e344] [cursor=pointer]:
+                - generic [ref=e345]: Assistants API
+                - img [ref=e346]
+      - generic [ref=e348]:
+        - heading "Resources" [level=3] [ref=e349]
+        - list [ref=e350]:
+          - listitem [ref=e351]:
+            - link "Terms and policies" [ref=e352] [cursor=pointer]:
+              - /url: https://openai.com/policies
+              - generic [ref=e353]: Terms and policies
+              - img [ref=e354]
+          - listitem [ref=e356]:
+            - link "Changelog" [ref=e357] [cursor=pointer]:
+              - /url: /api/docs/changelog
+              - generic [ref=e358]: Changelog
+          - listitem [ref=e359]:
+            - link "Your data" [ref=e360] [cursor=pointer]:
+              - /url: /api/docs/guides/your-data
+              - generic [ref=e361]: Your data
+          - listitem [ref=e362]:
+            - link "Permissions" [ref=e363] [cursor=pointer]:
+              - /url: /api/docs/guides/rbac
+              - generic [ref=e364]: Permissions
+          - listitem [ref=e365]:
+            - link "Rate limits" [ref=e366] [cursor=pointer]:
+              - /url: /api/docs/guides/rate-limits
+              - generic [ref=e367]: Rate limits
+          - listitem [ref=e368]:
+            - link "IP egress ranges" [ref=e369] [cursor=pointer]:
+              - /url: /api/docs/guides/ip-addresses
+              - generic [ref=e370]: IP egress ranges
+          - listitem [ref=e371]:
+            - link "Admin APIs" [ref=e372] [cursor=pointer]:
+              - /url: /api/docs/guides/admin-apis
+              - generic [ref=e373]: Admin APIs
+          - listitem [ref=e374]:
+            - link "Deprecations" [ref=e375] [cursor=pointer]:
+              - /url: /api/docs/deprecations
+              - generic [ref=e376]: Deprecations
+          - listitem [ref=e377]:
+            - link "MCP for deep research" [ref=e378] [cursor=pointer]:
+              - /url: /api/docs/mcp
+              - generic [ref=e379]: MCP for deep research
+          - listitem [ref=e380]:
+            - link "Developer mode" [ref=e381] [cursor=pointer]:
+              - /url: /api/docs/guides/developer-mode
+              - generic [ref=e382]: Developer mode
+          - listitem [ref=e383]:
+            - group [ref=e384]:
+              - generic "ChatGPT Actions" [ref=e385] [cursor=pointer]:
+                - generic [ref=e386]: ChatGPT Actions
+                - img [ref=e387]
+    - main [ref=e389]:
+      - generic [ref=e391]:
+        - generic [ref=e392]:
+          - button "Responses" [ref=e398] [cursor=pointer]:
+            - generic [ref=e399]: Responses
+            - img [ref=e401]
+          - navigation [ref=e404]:
+            - list [ref=e408]:
+              - listitem [ref=e409]:
+                - link "Overview" [ref=e410] [cursor=pointer]:
+                  - /url: "#overview"
+              - listitem [ref=e411]:
+                - link "Generate or edit images" [ref=e412] [cursor=pointer]:
+                  - /url: "#generate-or-edit-images"
+              - listitem [ref=e413]:
+                - link "Analyze images" [ref=e414] [cursor=pointer]:
+                  - /url: "#analyze-images"
+              - listitem [ref=e415]:
+                - link "Calculating costs" [ref=e416] [cursor=pointer]:
+                  - /url: "#calculating-costs"
+              - listitem [ref=e417]:
+                - link "Limitations" [ref=e418] [cursor=pointer]:
+                  - /url: "#limitations"
+          - button "Copy Page" [ref=e420] [cursor=pointer]:
+            - img [ref=e422]
+            - generic [ref=e424]: Copy Page
+        - generic [ref=e425]:
+          - generic [ref=e427]:
+            - heading "Images and vision" [level=1] [ref=e428]
+            - paragraph [ref=e429]: Learn how to understand or generate images.
+            - button "Copy Page" [ref=e432] [cursor=pointer]:
+              - img [ref=e434]
+              - generic [ref=e436]: Copy Page
+          - article [ref=e437]:
+            - heading "Overview Copy link to overview" [level=2] [ref=e438]:
+              - generic [ref=e439]: Overview
+              - button "Copy link to overview" [ref=e440] [cursor=pointer]:
+                - img [ref=e441]
+            - generic [ref=e444]:
+              - link "Create images Create images Use GPT Image models to generate or edit images." [ref=e445] [cursor=pointer]:
+                - /url: /api/docs/guides/image-generation
+                - generic [ref=e446]:
+                  - img "Create images" [ref=e448]
+                  - generic [ref=e450]:
+                    - generic [ref=e451]: Create images
+                    - generic [ref=e452]: Use GPT Image models to generate or edit images.
+              - link "Process image inputs Process image inputs Use our models' vision capabilities to analyze images." [ref=e453] [cursor=pointer]:
+                - /url: "#analyze-images"
+                - generic [ref=e454]:
+                  - img "Process image inputs" [ref=e456]
+                  - generic [ref=e458]:
+                    - generic [ref=e459]: Process image inputs
+                    - generic [ref=e460]: Use our models' vision capabilities to analyze images.
+            - paragraph [ref=e461]: In this guide, you will learn about building applications involving images with the OpenAI API. If you know what you want to build, find your use case below to get started. If you’re not sure where to start, continue reading to get an overview.
+            - heading "A tour of image-related use cases Copy link to a tour of image related use cases" [level=3] [ref=e462]:
+              - generic [ref=e463]: A tour of image-related use cases
+              - button "Copy link to a tour of image related use cases" [ref=e464] [cursor=pointer]:
+                - img [ref=e465]
+            - paragraph [ref=e467]:
+              - text: Recent language models can process image inputs and analyze them—a capability known as
+              - strong [ref=e468]: vision
+              - text: . GPT Image models can use text and image inputs to create new images or edit existing ones.
+            - paragraph [ref=e469]: The OpenAI API offers several endpoints to process images as input or generate them as output, enabling you to build powerful multimodal applications.
+            - table [ref=e471]:
+              - rowgroup [ref=e472]:
+                - row "API Supported use cases" [ref=e473]:
+                  - columnheader "API" [ref=e474]
+                  - columnheader "Supported use cases" [ref=e475]
+              - rowgroup [ref=e476]:
+                - row "Responses API Analyze images and use them as input and/or generate images as output" [ref=e477]:
+                  - cell "Responses API" [ref=e478]:
+                    - link "Responses API" [ref=e479] [cursor=pointer]:
+                      - /url: /api/docs/api-reference/responses
+                  - cell "Analyze images and use them as input and/or generate images as output" [ref=e480]
+                - row "Images API Generate images as output, optionally using images as input" [ref=e481]:
+                  - cell "Images API" [ref=e482]:
+                    - link "Images API" [ref=e483] [cursor=pointer]:
+                      - /url: /api/docs/api-reference/images
+                  - cell "Generate images as output, optionally using images as input" [ref=e484]
+                - row "Chat Completions API Analyze images and use them as input to generate text or audio" [ref=e485]:
+                  - cell "Chat Completions API" [ref=e486]:
+                    - link "Chat Completions API" [ref=e487] [cursor=pointer]:
+                      - /url: /api/docs/api-reference/chat
+                  - cell "Analyze images and use them as input to generate text or audio" [ref=e488]
+            - paragraph [ref=e489]:
+              - text: To learn more about the input and output modalities supported by our models, refer to our
+              - link "models page" [ref=e490] [cursor=pointer]:
+                - /url: /api/docs/models
+              - text: .
+            - heading "Generate or edit images Copy link to generate or edit images" [level=2] [ref=e491]:
+              - generic [ref=e492]: Generate or edit images
+              - button "Copy link to generate or edit images" [ref=e493] [cursor=pointer]:
+                - img [ref=e494]
+            - paragraph [ref=e496]: You can generate or edit images using the Image API or the Responses API.
+            - paragraph [ref=e497]:
+              - text: The state-of-the-art image generation model,
+              - code [ref=e498]: gpt-image-2
+              - text: ", can understand text and images and use broad world knowledge to generate images with strong instruction following and contextual awareness."
+            - generic [ref=e501]:
+              - generic [ref=e502]:
+                - generic [ref=e503]: Generate images with Responses
+                - button "python" [ref=e505] [cursor=pointer]:
+                  - generic [ref=e506]: python
+                  - img [ref=e508]
+                - button [ref=e510] [cursor=pointer]:
+                  - img [ref=e514]
+              - code [ref=e519]:
+                - code [ref=e520]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22
+                - generic [ref=e521]: from openai import OpenAI
+                - generic [ref=e522]: import base64
+                - text: client = OpenAI() response = client.responses.create(
+                - generic [ref=e523]: model="gpt-5.5",
+                - generic [ref=e524]: input="Generate an image of gray tabby cat hugging an otter with an orange scarf",
+                - generic [ref=e525]: "tools=[{\"type\": \"image_generation\"}],"
+                - text: )
+                - generic [ref=e526]: "# Save the image to a file"
+                - text: image_data = [ output.result
+                - generic [ref=e527]: for output in response.output
+                - generic [ref=e528]: if output.type == "image_generation_call"
+                - text: "]"
+                - generic [ref=e529]: "if image_data:"
+                - generic [ref=e530]: image_base64 = image_data[0]
+                - generic [ref=e531]: "with open(\"cat_and_otter.png\", \"wb\") as f:"
+                - text: f.write(base64.b64decode(image_base64))
+            - generic [ref=e533]:
+              - img [ref=e535]
+              - paragraph [ref=e541]:
+                - text: You can learn more about image generation in our
+                - link "Image generation" [ref=e542] [cursor=pointer]:
+                  - /url: /api/docs/guides/image-generation
+                - text: guide.
+            - heading "Using world knowledge for image generation Copy link to using world knowledge for image generation" [level=3] [ref=e543]:
+              - generic [ref=e544]: Using world knowledge for image generation
+              - button "Copy link to using world knowledge for image generation" [ref=e545] [cursor=pointer]:
+                - img [ref=e546]
+            - paragraph [ref=e548]: GPT Image models can use visual understanding of the world to generate lifelike images including real-life details without a reference.
+            - paragraph [ref=e549]: For example, if you prompt GPT Image to generate an image of a glass cabinet with the most popular semi-precious stones, the model knows enough to select gemstones like amethyst, rose quartz, jade, etc, and depict them in a realistic way.
+            - heading "Analyze images Copy link to analyze images" [level=2] [ref=e550]:
+              - generic [ref=e551]: Analyze images
+              - button "Copy link to analyze images" [ref=e552] [cursor=pointer]:
+                - img [ref=e553]
+            - paragraph [ref=e555]:
+              - strong [ref=e556]: Vision
+              - text: is the ability for a model to “see” and understand images. If there is text in an image, the model can also understand the text. It can understand most visual elements, including objects, shapes, colors, and textures, even if there are some
+              - link "limitations" [ref=e557] [cursor=pointer]:
+                - /url: "#limitations"
+              - text: .
+            - heading "Giving a model images as input Copy link to giving a model images as input" [level=3] [ref=e558]:
+              - generic [ref=e559]: Giving a model images as input
+              - button "Copy link to giving a model images as input" [ref=e560] [cursor=pointer]:
+                - img [ref=e561]
+            - generic [ref=e563]:
+              - paragraph [ref=e564]: "You can provide images as input to generation requests in multiple ways:"
+              - list [ref=e565]:
+                - listitem [ref=e566]: By providing a fully qualified URL to an image file
+                - listitem [ref=e567]: By providing an image as a Base64-encoded data URL
+                - listitem [ref=e568]:
+                  - text: By providing a file ID (created with the
+                  - link "Files API" [ref=e569] [cursor=pointer]:
+                    - /url: /api/docs/api-reference/files
+                  - text: )
+              - paragraph [ref=e570]:
+                - text: You can provide multiple images as input in a single request by including multiple images in the
+                - code [ref=e571]: content
+                - text: array, but keep in mind that
+                - link "images count as tokens" [ref=e572] [cursor=pointer]:
+                  - /url: "#calculating-costs"
+                - text: and will be billed accordingly.
+              - generic [ref=e573]:
+                - group "Content switcher" [ref=e576]:
+                  - radio "Passing a URL" [checked] [ref=e577] [cursor=pointer]
+                  - radio "Passing a Base64 encoded image" [ref=e578] [cursor=pointer]
+                  - radio "Passing a file ID" [ref=e579] [cursor=pointer]
+                - generic [ref=e583]:
+                  - generic [ref=e584]:
+                    - generic [ref=e585]: Analyze the content of an image
+                    - button "python" [ref=e587] [cursor=pointer]:
+                      - generic [ref=e588]: python
+                      - img [ref=e590]
+                    - button [ref=e592] [cursor=pointer]:
+                      - img [ref=e596]
+                  - code [ref=e601]:
+                    - code [ref=e602]: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+                    - generic [ref=e603]: from openai import OpenAI
+                    - text: client = OpenAI() response = client.responses.create(
+                    - generic [ref=e604]: model="gpt-5.5",
+                    - generic [ref=e605]: "input=[{"
+                    - generic [ref=e606]: "\"role\": \"user\","
+                    - generic [ref=e607]: "\"content\": ["
+                    - generic [ref=e608]: "{\"type\": \"input_text\", \"text\": \"what's in this image?\"},"
+                    - text: "{"
+                    - generic [ref=e609]: "\"type\": \"input_image\","
+                    - generic [ref=e610]: "\"image_url\": \"https://api.nga.gov/iiif/a2e6da57-3cd1-4235-b20e-95dcaefed6c8/full/!800,800/0/default.jpg\","
+                    - text: "}, ], }], )"
+                    - generic [ref=e611]: print(response.output_text)
+            - heading "Image input requirements Copy link to image input requirements" [level=3] [ref=e612]:
+              - generic [ref=e613]: Image input requirements
+              - button "Copy link to image input requirements" [ref=e614] [cursor=pointer]:
+                - img [ref=e615]
+            - paragraph [ref=e617]: Input images must meet the following requirements to be used in the API.
+            - table [ref=e618]:
+              - rowgroup [ref=e619]:
+                - row "Supported file types PNG (.png) - JPEG (.jpeg and .jpg) - WEBP (.webp) - Non-animated GIF (.gif)" [ref=e620]:
+                  - cell "Supported file types" [ref=e621]
+                  - cell "PNG (.png) - JPEG (.jpeg and .jpg) - WEBP (.webp) - Non-animated GIF (.gif)" [ref=e622]:
+                    - list [ref=e623]:
+                      - listitem [ref=e624]:
+                        - text: PNG (
+                        - code [ref=e625]: .png
+                        - text: ) - JPEG (
+                        - code [ref=e626]: .jpeg
+                        - text: and
+                        - code [ref=e627]: .jpg
+                        - text: ) - WEBP (
+                        - code [ref=e628]: .webp
+                        - text: ) - Non-animated GIF (
+                        - code [ref=e629]: .gif
+                        - text: )
+                - row "Size limits Up to 512 MB total payload size per request - Up to 1500 individual image inputs per request" [ref=e630]:
+                  - cell "Size limits" [ref=e631]
+                  - cell "Up to 512 MB total payload size per request - Up to 1500 individual image inputs per request" [ref=e632]:
+                    - list [ref=e633]:
+                      - listitem [ref=e634]: Up to 512 MB total payload size per request - Up to 1500 individual image inputs per request
+                - row "Other requirements No watermarks or logos - No NSFW content - Clear enough for a human to understand" [ref=e635]:
+                  - cell "Other requirements" [ref=e636]
+                  - cell "No watermarks or logos - No NSFW content - Clear enough for a human to understand" [ref=e637]:
+                    - list [ref=e638]:
+                      - listitem [ref=e639]: No watermarks or logos - No NSFW content - Clear enough for a human to understand
+            - heading "Choose an image detail level Copy link to choose an image detail level" [level=3] [ref=e640]:
+              - generic [ref=e641]: Choose an image detail level
+              - button "Copy link to choose an image detail level" [ref=e642] [cursor=pointer]:
+                - img [ref=e643]
+            - paragraph [ref=e645]:
+              - text: The
+              - code [ref=e646]: detail
+              - text: parameter tells the model what level of detail to use when processing and understanding the image (
+              - code [ref=e647]: low
+              - text: ","
+              - code [ref=e648]: high
+              - text: ","
+              - code [ref=e649]: original
+              - text: ", or"
+              - code [ref=e650]: auto
+              - text: ). If you skip the parameter, the model will use
+              - code [ref=e651]: auto
+              - text: . This behavior is the same in both the Responses API and the Chat Completions API. On
+              - code [ref=e652]: gpt-5.5
+              - text: ","
+              - code [ref=e653]: auto
+              - text: and the default omitted behavior are equivalent to
+              - code [ref=e654]: original
+              - text: .
+            - generic [ref=e658]:
+              - button [ref=e660] [cursor=pointer]:
+                - img [ref=e664]
+              - code [ref=e667]:
+                - code [ref=e668]: 1 2 3 4 5
+                - generic [ref=e669]: "{"
+                - generic [ref=e670]: "\"type\": \"input_image\","
+                - generic [ref=e671]: "\"image_url\": \"https://api.nga.gov/iiif/a2e6da57-3cd1-4235-b20e-95dcaefed6c8/full/!800,800/0/default.jpg\","
+                - generic [ref=e672]: "\"detail\": \"original\""
+                - text: "}"
+            - paragraph [ref=e673]: "Use the following guidance to choose a detail level:"
+            - table [ref=e675]:
+              - rowgroup [ref=e676]:
+                - row "Detail level Best for" [ref=e677]:
+                  - columnheader "Detail level" [ref=e678]
+                  - columnheader "Best for" [ref=e679]
+              - rowgroup [ref=e680]:
+                - row "low Fast, low-cost understanding when fine visual detail is not important. The model receives a low-resolution 512px x 512px version of the image." [ref=e681]:
+                  - cell "low" [ref=e682]:
+                    - code [ref=e683]: low
+                  - cell "Fast, low-cost understanding when fine visual detail is not important. The model receives a low-resolution 512px x 512px version of the image." [ref=e684]
+                - row "high Standard high-fidelity image understanding." [ref=e685]:
+                  - cell "high" [ref=e686]:
+                    - code [ref=e687]: high
+                  - cell "Standard high-fidelity image understanding." [ref=e688]
+                - row "original Large, dense, spatially sensitive, or computer-use images. Available on gpt-5.4 and future models." [ref=e689]:
+                  - cell "original" [ref=e690]:
+                    - code [ref=e691]: original
+                  - cell "Large, dense, spatially sensitive, or computer-use images. Available on gpt-5.4 and future models." [ref=e692]:
+                    - text: Large, dense, spatially sensitive, or computer-use images. Available on
+                    - code [ref=e693]: gpt-5.4
+                    - text: and future models.
+                - row "auto Automatic detail selection. On gpt-5.5, auto and the omitted/default behavior are equivalent to original." [ref=e694]:
+                  - cell "auto" [ref=e695]:
+                    - code [ref=e696]: auto
+                  - cell "Automatic detail selection. On gpt-5.5, auto and the omitted/default behavior are equivalent to original." [ref=e697]:
+                    - text: Automatic detail selection. On
+                    - code [ref=e698]: gpt-5.5
+                    - text: ","
+                    - code [ref=e699]: auto
+                    - text: and the omitted/default behavior are equivalent to
+                    - code [ref=e700]: original
+                    - text: .
+            - paragraph [ref=e701]:
+              - text: For computer use, localization, and click-accuracy use cases on
+              - code [ref=e702]: gpt-5.4
+              - text: and future models, we recommend
+              - code [ref=e703]: "\"detail\": \"original\""
+              - text: . See the
+              - link "Computer use guide" [ref=e704] [cursor=pointer]:
+                - /url: /api/docs/guides/tools-computer-use
+              - text: for more detail.
+            - generic [ref=e706]:
+              - img [ref=e708]
+              - paragraph [ref=e714]:
+                - text: Read more about how models resize images in the
+                - link "Model sizing behavior" [ref=e715] [cursor=pointer]:
+                  - /url: "#model-sizing-behavior"
+                - text: section, and about token costs in the
+                - link "Calculating costs" [ref=e716] [cursor=pointer]:
+                  - /url: "#calculating-costs"
+                - text: section below.
+            - heading "Model sizing behavior Copy link to model sizing behavior" [level=3] [ref=e717]:
+              - generic [ref=e718]: Model sizing behavior
+              - button "Copy link to model sizing behavior" [ref=e719] [cursor=pointer]:
+                - img [ref=e720]
+            - paragraph [ref=e722]: "Different models use different resizing rules before image tokenization:"
+            - table [ref=e723]:
+              - rowgroup [ref=e724]:
+                - row "Model family Supported detail levels Patch and resizing behavior" [ref=e725]:
+                  - columnheader "Model family" [ref=e726]
+                  - columnheader "Supported detail levels" [ref=e727]
+                  - columnheader "Patch and resizing behavior" [ref=e728]
+                - row "gpt-5.5 low, high, original, auto high allows up to 2,500 patches or a 2048-pixel maximum dimension. original allows up to 10,000 patches or a 6000-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints for the selected detail level. auto and omitted detail use the same sizing behavior as original. Full resizing details below." [ref=e729]:
+                  - cell "gpt-5.5" [ref=e730]:
+                    - code [ref=e731]: gpt-5.5
+                  - cell "low, high, original, auto" [ref=e732]:
+                    - paragraph [ref=e733]:
+                      - code [ref=e734]: low
+                      - text: ","
+                      - code [ref=e735]: high
+                      - text: ","
+                      - code [ref=e736]: original
+                      - text: ","
+                      - code [ref=e737]: auto
+                  - cell "high allows up to 2,500 patches or a 2048-pixel maximum dimension. original allows up to 10,000 patches or a 6000-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints for the selected detail level. auto and omitted detail use the same sizing behavior as original. Full resizing details below." [ref=e738]:
+                    - paragraph [ref=e739]:
+                      - code [ref=e740]: high
+                      - text: allows up to 2,500 patches or a 2048-pixel maximum dimension.
+                      - code [ref=e741]: original
+                      - text: allows up to 10,000 patches or a 6000-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints for the selected detail level.
+                      - code [ref=e742]: auto
+                      - text: and omitted
+                      - code [ref=e743]: detail
+                      - text: use the same sizing behavior as
+                      - code [ref=e744]: original
+                      - text: .
+                      - link "Full resizing details below." [ref=e745] [cursor=pointer]:
+                        - /url: "#patch-based-image-tokenization"
+                - row "gpt-5.4 low, high, original, auto high allows up to 2,500 patches or a 2048-pixel maximum dimension. original allows up to 10,000 patches or a 6000-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints for the selected detail level. auto and omitted detail use the same sizing behavior as high.Full resizing details below." [ref=e746]:
+                  - cell "gpt-5.4" [ref=e747]:
+                    - code [ref=e748]: gpt-5.4
+                  - cell "low, high, original, auto" [ref=e749]:
+                    - paragraph [ref=e750]:
+                      - code [ref=e751]: low
+                      - text: ","
+                      - code [ref=e752]: high
+                      - text: ","
+                      - code [ref=e753]: original
+                      - text: ","
+                      - code [ref=e754]: auto
+                  - cell "high allows up to 2,500 patches or a 2048-pixel maximum dimension. original allows up to 10,000 patches or a 6000-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints for the selected detail level. auto and omitted detail use the same sizing behavior as high.Full resizing details below." [ref=e755]:
+                    - paragraph [ref=e756]:
+                      - code [ref=e757]: high
+                      - text: allows up to 2,500 patches or a 2048-pixel maximum dimension.
+                      - code [ref=e758]: original
+                      - text: allows up to 10,000 patches or a 6000-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints for the selected detail level.
+                      - code [ref=e759]: auto
+                      - text: and omitted
+                      - code [ref=e760]: detail
+                      - text: use the same sizing behavior as
+                      - code [ref=e761]: high
+                      - text: .
+                      - link "Full resizing details below." [ref=e762] [cursor=pointer]:
+                        - /url: "#patch-based-image-tokenization"
+                - row "gpt-5.4-mini, gpt-5.4-nano, gpt-5-mini, gpt-5-nano, gpt-5.2, gpt-5.3-codex, gpt-5-codex-mini, gpt-5.1-codex-mini, gpt-5.2-codex, gpt-5.2-chat-latest, o4-mini, and the gpt-4.1-mini and gpt-4.1-nano 2025-04-14 snapshot variants low, high, auto high allows up to 1,536 patches or a 2048-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints. Full resizing details below." [ref=e763]:
+                  - cell "gpt-5.4-mini, gpt-5.4-nano, gpt-5-mini, gpt-5-nano, gpt-5.2, gpt-5.3-codex, gpt-5-codex-mini, gpt-5.1-codex-mini, gpt-5.2-codex, gpt-5.2-chat-latest, o4-mini, and the gpt-4.1-mini and gpt-4.1-nano 2025-04-14 snapshot variants" [ref=e764]:
+                    - paragraph [ref=e765]:
+                      - code [ref=e766]: gpt-5.4-mini
+                      - text: ","
+                      - code [ref=e767]: gpt-5.4-nano
+                      - text: ","
+                      - code [ref=e768]: gpt-5-mini
+                      - text: ","
+                      - code [ref=e769]: gpt-5-nano
+                      - text: ","
+                      - code [ref=e770]: gpt-5.2
+                      - text: ","
+                      - code [ref=e771]: gpt-5.3-codex
+                      - text: ","
+                      - code [ref=e772]: gpt-5-codex-mini
+                      - text: ","
+                      - code [ref=e773]: gpt-5.1-codex-mini
+                      - text: ","
+                      - code [ref=e774]: gpt-5.2-codex
+                      - text: ","
+                      - code [ref=e775]: gpt-5.2-chat-latest
+                      - text: ","
+                      - code [ref=e776]: o4-mini
+                      - text: ", and the"
+                      - code [ref=e777]: gpt-4.1-mini
+                      - text: and
+                      - code [ref=e778]: gpt-4.1-nano
+                      - text: 2025-04-14 snapshot variants
+                  - cell "low, high, auto" [ref=e779]:
+                    - paragraph [ref=e780]:
+                      - code [ref=e781]: low
+                      - text: ","
+                      - code [ref=e782]: high
+                      - text: ","
+                      - code [ref=e783]: auto
+                  - cell "high allows up to 1,536 patches or a 2048-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints. Full resizing details below." [ref=e784]:
+                    - paragraph [ref=e785]:
+                      - code [ref=e786]: high
+                      - text: allows up to 1,536 patches or a 2048-pixel maximum dimension. If either limit is exceeded, we resize the image while preserving aspect ratio to fit within the lesser of those two constraints.
+                      - link "Full resizing details below." [ref=e787] [cursor=pointer]:
+                        - /url: "#patch-based-image-tokenization"
+                - row "GPT-4o, GPT-4.1, GPT-4o-mini, computer-use-preview, and o-series models except o4-mini low, high, auto Use tile-based resizing behavior. See the detailed behavior below" [ref=e788]:
+                  - cell "GPT-4o, GPT-4.1, GPT-4o-mini, computer-use-preview, and o-series models except o4-mini" [ref=e789]:
+                    - paragraph [ref=e790]:
+                      - code [ref=e791]: GPT-4o
+                      - text: ","
+                      - code [ref=e792]: GPT-4.1
+                      - text: ","
+                      - code [ref=e793]: GPT-4o-mini
+                      - text: ","
+                      - code [ref=e794]: computer-use-preview
+                      - text: ", and o-series models except"
+                      - code [ref=e795]: o4-mini
+                  - cell "low, high, auto" [ref=e796]:
+                    - paragraph [ref=e797]:
+                      - code [ref=e798]: low
+                      - text: ","
+                      - code [ref=e799]: high
+                      - text: ","
+                      - code [ref=e800]: auto
+                  - cell "Use tile-based resizing behavior. See the detailed behavior below" [ref=e801]:
+                    - paragraph [ref=e802]: Use tile-based resizing behavior. See
+                    - link "the detailed behavior below" [ref=e803] [cursor=pointer]:
+                      - /url: "#gpt-4o-gpt-41-gpt-4o-mini-cua-and-o-series-except-o4-mini"
+                      - paragraph [ref=e804]: the detailed behavior below
+            - heading "Calculating costs Copy link to calculating costs" [level=2] [ref=e805]:
+              - generic [ref=e806]: Calculating costs
+              - button "Copy link to calculating costs" [ref=e807] [cursor=pointer]:
+                - img [ref=e808]
+            - paragraph [ref=e810]:
+              - text: Image inputs are metered and charged in token units similar to text inputs. How images are converted to text token inputs varies based on the model. You can find a vision pricing calculator in the FAQ section of the
+              - link "pricing page" [ref=e811] [cursor=pointer]:
+                - /url: https://openai.com/api/pricing/
+              - text: .
+            - heading "Patch-based image tokenization Copy link to patch based image tokenization" [level=3] [ref=e812]:
+              - generic [ref=e813]: Patch-based image tokenization
+              - button "Copy link to patch based image tokenization" [ref=e814] [cursor=pointer]:
+                - img [ref=e815]
+            - paragraph [ref=e817]: "Some models tokenize images by covering them with 32px x 32px patches. Each model defines a maximum patch budget. The token cost of an image is determined as follows:"
+            - paragraph [ref=e818]: A. Compute how many 32px x 32px patches are needed to cover the original image. A patch may extend beyond the image boundary.
+            - generic [ref=e821]:
+              - button [ref=e823] [cursor=pointer]:
+                - img [ref=e827]
+              - code [ref=e830]:
+                - generic [ref=e831]: original_patch_count = ceil(width/32)×ceil(height/32)
+            - paragraph [ref=e832]: B. If the original image would exceed the model’s patch budget, scale it down proportionally until it fits within that budget. Then adjust the scale so the final resized image stays within budget after converting to integer pixel dimensions and computing patch coverage.
+            - generic [ref=e835]:
+              - button [ref=e837] [cursor=pointer]:
+                - img [ref=e841]
+              - code [ref=e844]:
+                - generic [ref=e845]: shrink_factor = sqrt((32^2 * patch_budget) / (width * height))
+                - generic [ref=e846]: adjusted_shrink_factor = shrink_factor * min(
+                - generic [ref=e847]: floor(width * shrink_factor / 32) / (width * shrink_factor / 32),
+                - generic [ref=e848]: floor(height * shrink_factor / 32) / (height * shrink_factor / 32)
+                - text: )
+            - paragraph [ref=e849]: C. Convert the adjusted scale into integer pixel dimensions, then compute the number of patches needed to cover the resized image. This resized patch count is the image-token count before applying the model multiplier, and it is capped by the model’s patch budget.
+            - generic [ref=e852]:
+              - button [ref=e854] [cursor=pointer]:
+                - img [ref=e858]
+              - code [ref=e861]:
+                - generic [ref=e862]: resized_patch_count = ceil(resized_width/32)×ceil(resized_height/32)
+            - paragraph [ref=e863]: "D. Apply a multiplier based on the model to get the total tokens:"
+            - table [ref=e865]:
+              - rowgroup [ref=e866]:
+                - row "Model Multiplier" [ref=e867]:
+                  - columnheader "Model" [ref=e868]
+                  - columnheader "Multiplier" [ref=e869]
+              - rowgroup [ref=e870]:
+                - row "gpt-5.4-mini 1.62" [ref=e871]:
+                  - cell "gpt-5.4-mini" [ref=e872]:
+                    - code [ref=e873]: gpt-5.4-mini
+                  - cell "1.62" [ref=e874]
+                - row "gpt-5.4-nano 2.46" [ref=e875]:
+                  - cell "gpt-5.4-nano" [ref=e876]:
+                    - code [ref=e877]: gpt-5.4-nano
+                  - cell "2.46" [ref=e878]
+                - row "gpt-5-mini 1.62" [ref=e879]:
+                  - cell "gpt-5-mini" [ref=e880]:
+                    - code [ref=e881]: gpt-5-mini
+                  - cell "1.62" [ref=e882]
+                - row "gpt-5-nano 2.46" [ref=e883]:
+                  - cell "gpt-5-nano" [ref=e884]:
+                    - code [ref=e885]: gpt-5-nano
+                  - cell "2.46" [ref=e886]
+                - row "gpt-4.1-mini* 1.62" [ref=e887]:
+                  - cell "gpt-4.1-mini*" [ref=e888]:
+                    - code [ref=e889]: gpt-4.1-mini*
+                  - cell "1.62" [ref=e890]
+                - row "gpt-4.1-nano* 2.46" [ref=e891]:
+                  - cell "gpt-4.1-nano*" [ref=e892]:
+                    - code [ref=e893]: gpt-4.1-nano*
+                  - cell "2.46" [ref=e894]
+                - row "o4-mini 1.72" [ref=e895]:
+                  - cell "o4-mini" [ref=e896]:
+                    - code [ref=e897]: o4-mini
+                  - cell "1.72" [ref=e898]
+            - paragraph [ref=e899]:
+              - emphasis [ref=e900]:
+                - text: For
+                - code [ref=e901]: gpt-4.1-mini
+                - text: and
+                - code [ref=e902]: gpt-4.1-nano
+                - text: ", this applies to the 2025-04-14 snapshot variants."
+            - paragraph [ref=e903]:
+              - strong [ref=e904]: Cost calculation examples for a model with a 1,536-patch budget
+            - list [ref=e905]:
+              - listitem [ref=e906]:
+                - text: A 1024 x 1024 image has a post-resize patch count of
+                - strong [ref=e907]: "1024"
+                - list [ref=e908]:
+                  - listitem [ref=e909]:
+                    - text: A.
+                    - code [ref=e910]: original_patch_count = ceil(1024 / 32) * ceil(1024 / 32) = 32 * 32 = 1024
+                  - listitem [ref=e911]:
+                    - text: B.
+                    - code [ref=e912]: "1024"
+                    - text: is below the
+                    - code [ref=e913]: 1,536
+                    - text: patch budget, so no resize is needed.
+                  - listitem [ref=e914]:
+                    - text: C.
+                    - code [ref=e915]: resized_patch_count = 1024
+                  - listitem [ref=e916]:
+                    - text: "Resized patch count before the model multiplier:"
+                    - code [ref=e917]: "1024"
+                  - listitem [ref=e918]: Multiply by the model’s token multiplier to get the billed token units.
+              - listitem [ref=e919]:
+                - text: A 1800 x 2400 image has a post-resize patch count of
+                - strong [ref=e920]: "1452"
+                - list [ref=e921]:
+                  - listitem [ref=e922]:
+                    - text: A.
+                    - code [ref=e923]: original_patch_count = ceil(1800 / 32) * ceil(2400 / 32) = 57 * 75 = 4275
+                  - listitem [ref=e924]:
+                    - text: B.
+                    - code [ref=e925]: "4275"
+                    - text: exceeds the
+                    - code [ref=e926]: 1,536
+                    - text: patch budget, so we first compute
+                    - code [ref=e927]: shrink_factor = sqrt((32^2 * 1536) / (1800 * 2400)) = 0.603
+                    - text: .
+                  - listitem [ref=e928]:
+                    - text: "We then adjust that scale so the final integer pixel dimensions stay within budget after patch counting:"
+                    - code [ref=e929]: adjusted_shrink_factor = 0.603 * min(floor(1800 * 0.603 / 32) / (1800 * 0.603 / 32), floor(2400 * 0.603 / 32) / (2400 * 0.603 / 32)) = 0.586
+                    - text: .
+                  - listitem [ref=e930]:
+                    - text: "Resized image in integer pixels:"
+                    - code [ref=e931]: 1056 x 1408
+                  - listitem [ref=e932]:
+                    - text: C.
+                    - code [ref=e933]: resized_patch_count = ceil(1056 / 32) * ceil(1408 / 32) = 33 * 44 = 1452
+                  - listitem [ref=e934]:
+                    - text: "Resized patch count before the model multiplier:"
+                    - code [ref=e935]: "1452"
+                  - listitem [ref=e936]: Multiply by the model’s token multiplier to get the billed token units.
+            - heading "Tile-based image tokenization Copy link to tile based image tokenization" [level=3] [ref=e937]:
+              - generic [ref=e938]: Tile-based image tokenization
+              - button "Copy link to tile based image tokenization" [ref=e939] [cursor=pointer]:
+                - img [ref=e940]
+            - heading "GPT-4o, GPT-4.1, GPT-4o-mini, CUA, and o-series (except o4-mini) Copy link to gpt 4o gpt 41 gpt 4o mini cua and o series except o4 mini" [level=4] [ref=e942]:
+              - generic [ref=e943]: GPT-4o, GPT-4.1, GPT-4o-mini, CUA, and o-series (except o4-mini)
+              - button "Copy link to gpt 4o gpt 41 gpt 4o mini cua and o series except o4 mini" [ref=e944] [cursor=pointer]:
+                - img [ref=e945]
+            - paragraph [ref=e947]: "The token cost of an image is determined by two factors: size and detail."
+            - paragraph [ref=e948]:
+              - text: Any image with
+              - code [ref=e949]: "\"detail\": \"low\""
+              - text: costs a set, base number of tokens. This amount varies by model. To calculate the cost of an image with
+              - code [ref=e950]: "\"detail\": \"high\""
+              - text: ", we do the following:"
+            - list [ref=e951]:
+              - listitem [ref=e952]: Scale to fit in a 2048px x 2048px square, maintaining original aspect ratio
+              - listitem [ref=e953]: Scale so that the image’s shortest side is 768px long
+              - listitem [ref=e954]: Count the number of 512px squares in the image. Each square costs a set amount of tokens, shown below.
+              - listitem [ref=e955]: Add the base tokens to the total
+            - table [ref=e957]:
+              - rowgroup [ref=e958]:
+                - row "Model Base tokens Tile tokens" [ref=e959]:
+                  - columnheader "Model" [ref=e960]
+                  - columnheader "Base tokens" [ref=e961]
+                  - columnheader "Tile tokens" [ref=e962]
+              - rowgroup [ref=e963]:
+                - row "gpt-5, gpt-5-chat-latest 70 140" [ref=e964]:
+                  - cell "gpt-5, gpt-5-chat-latest" [ref=e965]
+                  - cell "70" [ref=e966]
+                  - cell "140" [ref=e967]
+                - row "4o, 4.1, 4.5 85 170" [ref=e968]:
+                  - cell "4o, 4.1, 4.5" [ref=e969]
+                  - cell "85" [ref=e970]
+                  - cell "170" [ref=e971]
+                - row "4o-mini 2833 5667" [ref=e972]:
+                  - cell "4o-mini" [ref=e973]
+                  - cell "2833" [ref=e974]
+                  - cell "5667" [ref=e975]
+                - row "o1, o1-pro, o3 75 150" [ref=e976]:
+                  - cell "o1, o1-pro, o3" [ref=e977]
+                  - cell "75" [ref=e978]
+                  - cell "150" [ref=e979]
+                - row "computer-use-preview 65 129" [ref=e980]:
+                  - cell "computer-use-preview" [ref=e981]
+                  - cell "65" [ref=e982]
+                  - cell "129" [ref=e983]
+            - heading "GPT Image 1 Copy link to gpt image 1" [level=3] [ref=e984]:
+              - generic [ref=e985]: GPT Image 1
+              - button "Copy link to gpt image 1" [ref=e986] [cursor=pointer]:
+                - img [ref=e987]
+            - paragraph [ref=e989]:
+              - text: For GPT Image 1, we calculate the cost of an image input the same way as described above, except that we scale down the image so that the shortest side is 512px instead of 768px. The price depends on the dimensions of the image and the
+              - link "input fidelity" [ref=e990] [cursor=pointer]:
+                - /url: /api/docs/guides/image-generation?image-generation-model=gpt-image-1#input-fidelity
+              - text: .
+            - paragraph [ref=e991]: When input fidelity is set to low, the base cost is 65 image tokens, and each tile costs 129 image tokens. When using high input fidelity, we add a set number of tokens based on the image’s aspect ratio in addition to the image tokens described above.
+            - list [ref=e992]:
+              - listitem [ref=e993]: If your image is square, we add 4160 extra input image tokens.
+              - listitem [ref=e994]: If it is closer to portrait or landscape, we add 6240 extra tokens.
+            - paragraph [ref=e995]:
+              - text: To see pricing for image input tokens, refer to our
+              - link "pricing page" [ref=e996] [cursor=pointer]:
+                - /url: /api/docs/pricing#latest-models
+              - text: .
+            - heading "Limitations Copy link to limitations" [level=2] [ref=e997]:
+              - generic [ref=e998]: Limitations
+              - button "Copy link to limitations" [ref=e999] [cursor=pointer]:
+                - img [ref=e1000]
+            - paragraph [ref=e1002]: "While models with vision capabilities are powerful and can be used in many situations, it’s important to understand the limitations of these models. Here are some known limitations:"
+            - list [ref=e1003]:
+              - listitem [ref=e1004]:
+                - strong [ref=e1005]: Medical images
+                - text: ": The model is not suitable for interpreting specialized medical images like CT scans and shouldn’t be used for medical advice."
+              - listitem [ref=e1006]:
+                - strong [ref=e1007]: Non-English
+                - text: ": The model may not perform optimally when handling images with text of non-Latin alphabets, such as Japanese or Korean."
+              - listitem [ref=e1008]:
+                - strong [ref=e1009]: Small text
+                - text: ": Enlarge text within the image to improve readability. When available, using"
+                - code [ref=e1010]: "\"detail\": \"original\""
+                - text: can also help performance.
+              - listitem [ref=e1011]:
+                - strong [ref=e1012]: Rotation
+                - text: ": The model may misinterpret rotated or upside-down text and images."
+              - listitem [ref=e1013]:
+                - strong [ref=e1014]: Visual elements
+                - text: ": The model may struggle to understand graphs or text where colors or styles—like solid, dashed, or dotted lines—vary."
+              - listitem [ref=e1015]:
+                - strong [ref=e1016]: Spatial reasoning
+                - text: ": The model struggles with tasks requiring precise spatial localization, such as identifying chess positions."
+              - listitem [ref=e1017]:
+                - strong [ref=e1018]: Accuracy
+                - text: ": The model may generate incorrect descriptions or captions in certain scenarios."
+              - listitem [ref=e1019]:
+                - strong [ref=e1020]: Image shape
+                - text: ": The model struggles with panoramic and fisheye images."
+              - listitem [ref=e1021]:
+                - strong [ref=e1022]: Metadata and resizing
+                - text: ": The model doesn’t process original file names or metadata. Depending on image size and"
+                - code [ref=e1023]: detail
+                - text: level, images may be resized before analysis, affecting their original dimensions.
+              - listitem [ref=e1024]:
+                - strong [ref=e1025]: Counting
+                - text: ": The model may give approximate counts for objects in images."
+              - listitem [ref=e1026]:
+                - strong [ref=e1027]: CAPTCHAS
+                - text: ": For safety reasons, our system blocks the submission of CAPTCHAs."
+            - separator [ref=e1028]
+            - paragraph [ref=e1029]: We process images at the token level, so each image we process counts towards your tokens per minute (TPM) limit.
+            - paragraph [ref=e1030]:
+              - text: For the most precise and up-to-date estimates for image processing, please use our image pricing calculator available
+              - link "here" [ref=e1031] [cursor=pointer]:
+                - /url: https://openai.com/api/pricing/
+              - text: .
+  - generic:
+    - button "Ask AI" [ref=e1033] [cursor=pointer]:
+      - generic [ref=e1034]: Ask AI
+    - dialog "Docs agent" [ref=e1035]:
+      - banner [ref=e1036]:
+        - heading "Docs agent" [level=2] [ref=e1037]
+        - generic [ref=e1038]:
+          - button "Start a new docs agent thread" [ref=e1039] [cursor=pointer]:
+            - img [ref=e1040]
+          - button "Close docs agent" [ref=e1042] [cursor=pointer]:
+            - img [ref=e1043]
+      - paragraph [ref=e1047]: Loading docs agent...

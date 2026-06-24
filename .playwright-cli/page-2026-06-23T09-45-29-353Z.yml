@@ -1,0 +1,54 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - button "跳至内容" [ref=e3] [cursor=pointer]:
+      - generic [ref=e5]: 跳至内容
+    - button "辅助功能反馈" [ref=e6] [cursor=pointer]:
+      - generic [ref=e8]: 辅助功能反馈
+    - generic [ref=e9]:
+      - link "返回到必应搜索" [ref=e10] [cursor=pointer]:
+        - /url: /?FORM=Z9FD1
+        - heading "返回到必应搜索" [level=1] [ref=e11]
+      - search [ref=e12]:
+        - button "搜索" [ref=e15] [cursor=pointer]
+        - searchbox "在此处输入你的搜索 — 输入时会显示搜索建议" [ref=e16]: agnes-image-21-flash model openai documentation
+        - button "使用图像搜索" [ref=e19] [cursor=pointer]
+    - complementary "帐户奖励和偏好设置" [ref=e21]:
+      - button "Microsoft Rewards"
+      - link "登录" [ref=e22] [cursor=pointer]:
+        - /url: javascript:void(0)
+        - generic "登录" [ref=e23]
+    - navigation "主菜单" [ref=e24]:
+      - list [ref=e25]:
+        - listitem [ref=e26]:
+          - link "全部" [ref=e27] [cursor=pointer]:
+            - /url: /?scope=web&FORM=HDRSC1
+        - listitem [ref=e28]:
+          - link "搜索" [ref=e29] [cursor=pointer]:
+            - /url: /copilotsearch?q=agnes-image-21-flash+model+openai+documentation&FORM=CSSCOP
+            - img [ref=e30]
+            - text: 搜索
+        - listitem [ref=e32]:
+          - link "图片" [ref=e33] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=ad3e59c42651ea95ce7a6f0fe138178e7af21d9f668a86cc603d0e2e5486aabbJmltdHM9MTc4MjE3MjgwMA&ptn=3&ver=2&hsh=4&fclid=1e829601-af5e-6fab-1eb7-8180ae316e37&u=a1L2ltYWdlcy9zZWFyY2g_cT1hZ25lcy1pbWFnZS0yMS1mbGFzaCttb2RlbCtvcGVuYWkrZG9jdW1lbnRhdGlvbiZGT1JNPUhEUlNDMg&ntb=1
+        - listitem [ref=e34]:
+          - link "视频" [ref=e35] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=a445fe5578463c77498a0f56d6e3c835f56052f84c821e7be39671ede9a3938fJmltdHM9MTc4MjE3MjgwMA&ptn=3&ver=2&hsh=4&fclid=1e829601-af5e-6fab-1eb7-8180ae316e37&u=a1L3ZpZGVvcy9zZWFyY2g_cT1hZ25lcy1pbWFnZS0yMS1mbGFzaCttb2RlbCtvcGVuYWkrZG9jdW1lbnRhdGlvbiZGT1JNPUhEUlNDMw&ntb=1
+        - listitem [ref=e36]:
+          - link "地图" [ref=e37] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=7e991c06cc630e6aecd78cf508e545f3b995eabcdeed4e81dedded4c1cd34711JmltdHM9MTc4MjE3MjgwMA&ptn=3&ver=2&hsh=4&fclid=1e829601-af5e-6fab-1eb7-8180ae316e37&u=a1L21hcHM_cT1hZ25lcy1pbWFnZS0yMS1mbGFzaCttb2RlbCtvcGVuYWkrZG9jdW1lbnRhdGlvbiZGT1JNPUhEUlNDNA&ntb=1
+        - listitem [ref=e38]:
+          - link "资讯" [ref=e39] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=e0deedbfeda1494905afa7f470fed7574b93a456af68ac7d2bf0067e5ebec1afJmltdHM9MTc4MjE3MjgwMA&ptn=3&ver=2&hsh=4&fclid=1e829601-af5e-6fab-1eb7-8180ae316e37&u=a1L25ld3Mvc2VhcmNoP3E9YWduZXMtaW1hZ2UtMjEtZmxhc2grbW9kZWwrb3BlbmFpK2RvY3VtZW50YXRpb24mRk9STT1IRFJTQzY&ntb=1
+        - listitem [ref=e40]:
+          - button "更多" [ref=e41] [cursor=pointer]:
+            - img [ref=e43]
+            - text: 更多
+  - contentinfo [ref=e45]:
+    - generic [ref=e46]:
+      - list:
+        - listitem [ref=e47]:
+          - link "隐私" [ref=e48] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=0b5d45c1f0ee8d174c7e46e83c9e31a93c63eb616b2b8a577a341dbaa7549c4fJmltdHM9MTc4MjE3MjgwMA&ptn=3&ver=2&hsh=4&fclid=1e829601-af5e-6fab-1eb7-8180ae316e37&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSWQ9NTIxODM5&ntb=1
+        - listitem [ref=e49]:
+          - link "条款" [ref=e50] [cursor=pointer]:
+            - /url: https://www.bing.com/ck/a?!&&p=64b597faaa3f91a4cc3234e755f17c002aa601852cc116beeb3a5f6ed9440ff3JmltdHM9MTc4MjE3MjgwMA&ptn=3&ver=2&hsh=4&fclid=1e829601-af5e-6fab-1eb7-8180ae316e37&u=a1aHR0cDovL2dvLm1pY3Jvc29mdC5jb20vZndsaW5rLz9MaW5rSUQ9MjQ2MzM4&ntb=1
