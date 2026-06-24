@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#0071e3">
+<title>LM Chat</title>
+<link rel="manifest" href="/manifest.json">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f7;color:#1d1d1f;height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.logo{font-size:64px;margin-bottom:16px}
+h1{font-size:28px;font-weight:700;margin-bottom:8px}
+.subtitle{font-size:15px;color:#86868b;margin-bottom:40px}
+.card{background:#fff;border-radius:16px;padding:24px;width:85%;max-width:360px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.card label{font-size:14px;font-weight:600;color:#1d1d1f;display:block;margin-bottom:8px}
+.card input{width:100%;padding:14px 16px;border-radius:12px;border:1px solid #d1d1d6;font-size:16px;outline:none;margin-bottom:16px}
+.card input:focus{border-color:#0071e3;box-shadow:0 0 0 3px rgba(0,113,227,.15)}
+.card button{width:100%;padding:14px;border-radius:12px;border:none;background:#0071e3;color:#fff;font-size:17px;font-weight:600;cursor:pointer}
+.card button:active{background:#005BB5}
+.hint{font-size:12px;color:#86868b;margin-top:12px;text-align:center}
+.err{color:#ff3b30;font-size:13px;margin-top:8px;display:none}
+</style>
+</head>
+<body>
+<div class="logo">&#128172;</div>
+<h1>LM Chat</h1>
+<p class="subtitle">局域网 AI 聊天</p>
+<div class="card">
+  <label>服务器地址</label>
+  <input type="text" id="serverUrl" placeholder="http://192.168.1.100:8080" value="http://localhost:8080">
+  <button onclick="connect()">连接到服务器</button>
+  <div class="hint">输入你的电脑 IP 和端口，例如 http://192.168.1.100:8080</div>
+  <div class="err" id="err"></div>
+</div>
+<script>
+function connect(){
+  const url=document.getElementById('serverUrl').value.trim();
+  if(!url){document.getElementById('err').textContent='请输入服务器地址';document.getElementById('err').style.display='block';return}
+  localStorage.setItem('lm_server',url);
+  window.location.href=url+'/';
+}
+(function(){
+  const saved=localStorage.getItem('lm_server');
+  if(saved)document.getElementById('serverUrl').value=saved;
+})();
+</script>
+</body>
+</html>

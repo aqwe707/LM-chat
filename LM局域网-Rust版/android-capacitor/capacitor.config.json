@@ -1,0 +1,16 @@
+{
+  "appId": "com.lmchat.app",
+  "appName": "LM Chat",
+  "webDir": "./www",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "backgroundColor": "#0071e3",
+      "launchAutoHide": true
+    }
+  }
+}
