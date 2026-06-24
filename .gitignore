@@ -1,4 +1,4 @@
-﻿# Node modules
+# Node modules
 node_modules/
 package-lock.json
 
@@ -10,7 +10,7 @@ package-lock.json
 *.txt
 *.log
 
-# Images (keep originals if needed, but exclude duplicates)
+# Images
 *.png
 *.jpg
 *.jpeg
@@ -19,9 +19,9 @@ package-lock.json
 
 # Agnes image skill assets
 agnes-image-skill/sunset.jpg
-
-# Baidu search images
 baidu_*.png
+bing_via_chromium.png
+test_sunset.png
 
 # Code generation artifacts
 lm-chat-help.txt
@@ -37,7 +37,27 @@ desktop.ini
 *.pem
 *.key
 
-# Build artifacts (if any)
+# Build artifacts
 target/
 *.o
 *.rlib
+
+# Android build outputs
+android-capacitor/android/app/build/
+android-capacitor/android/.gradle/
+android-capacitor/android/build/
+android-capacitor/android/gradlew
+android-capacitor/android/gradlew.bat
+android-capacitor/node_modules/
+android-capacitor/package-lock.json
+android-capacitor/*.apk
+android-capacitor/build.bat
+
+# Capacitor generated files
+android-capacitor/android/app/src/main/assets/capacitor.config.json
+android-capacitor/android/app/src/main/assets/capacitor.plugins.json
+android-capacitor/android/app/src/main/assets/public/
+android-capacitor/android/app/src/main/res/xml/config.xml
+android-capacitor/android/capacitor-cordova-android-plugins/
+android-capacitor/android/capacitor.settings.gradle
+android-capacitor/android/app/capacitor.build.gradle
