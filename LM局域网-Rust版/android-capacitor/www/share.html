@@ -7,46 +7,70 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f7;color:#1d1d1f;min-height:100dvh;display:flex;flex-direction:column}
-header{background:#fff;padding:14px 16px;border-bottom:1px solid #e5e5ea;display:flex;align-items:center;gap:12px}
-header h1{font-size:17px;font-weight:700;flex:1}
-header a{color:#0071e3;text-decoration:none;font-size:14px}
-#upload-area{padding:16px;background:#fff;margin:12px;border-radius:14px}
-#upload-area label{display:block;padding:20px;border:2px dashed #d1d1d6;border-radius:12px;text-align:center;color:#86868b;font-size:15px;cursor:pointer}
+header{background:#fff;padding:12px 16px;border-bottom:1px solid #e5e5ea;display:flex;align-items:center;gap:10px}
+header h1{font-size:16px;font-weight:700;flex:1}
+header a{color:#0071e3;text-decoration:none;font-size:13px}
+#upload-area{padding:14px;background:#fff;margin:10px 12px;border-radius:12px}
+#upload-area label{display:block;padding:18px;border:2px dashed #d1d1d6;border-radius:10px;text-align:center;color:#86868b;font-size:14px;cursor:pointer}
 #upload-area input{display:none}
 #files{flex:1;padding:0 12px 12px}
-.file{display:flex;align-items:center;gap:10px;padding:12px;background:#fff;border-radius:12px;margin-bottom:8px}
-.file .icon{font-size:28px}
+.file{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#fff;border-radius:10px;margin-bottom:6px}
+.file .icon{font-size:24px}
 .file .info{flex:1;min-width:0}
-.file .name{font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.file .meta{font-size:12px;color:#86868b}
-.file button{background:none;border:none;font-size:18px;padding:6px;cursor:pointer;flex-shrink:0}
+.file .name{font-size:13px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file .meta{font-size:11px;color:#86868b}
+.file button{background:none;border:none;font-size:16px;padding:4px 6px;cursor:pointer;flex-shrink:0;border-radius:50%}
+.file button:active{background:#f5f5f7}
 .file .dl{color:#0071e3}.file .rm{color:#ff3b30}
-#empty{text-align:center;padding:40px;color:#86868b;font-size:14px}
-</style>
+#empty{text-align:center;padding:36px 10px;color:#86868b;font-size:13px}
+#imgPreview{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;cursor:pointer}#imgPreview.show{display:flex}#imgPreview img{max-width:95vw;max-height:95vh;object-fit:contain;border-radius:8px}#imgPreview .close-preview{position:absolute;top:16px;right:16px;color:#fff;font-size:28px;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center}</style>
 </head>
 <body>
-<header><h1>文件共享</h1><a href="/">← 聊天</a></header>
+<script src="native-http.js"></script>
+<header><h1>&#128230; 文件共享</h1><a href="javascript:history.back()">&#8592; 返回</a></header>
 <div id="upload-area">
-  <label>点击上传文件（最大 10GB）</label><input type="file" id="fileInput" multiple onchange="doUpload()">
+  <label>&#43; 点击上传文件（最大10GB）<input type="file" id="fileInput" multiple onchange="doUpload()"></label>
 </div>
 <div id="files"><div id="empty">暂无文件</div></div>
 <script>
+let SERVER = localStorage.getItem('lm_server') || 'http://localhost:8080';
+if (SERVER.endsWith('/')) SERVER = SERVER.slice(0, -1);
+
 async function loadFiles(){
-  const r=await fetch('/api/files');const files=await r.json();
-  const d=document.getElementById('files');
-  if(!files.length){d.innerHTML='<div id="empty">暂无文件</div>';return}
-  d.innerHTML=files.map(f=>{
-    const ext=f.name.split('.').pop().toLowerCase();
-    const iconmap={jpg:'image',jpeg:'image',png:'image',gif:'image',mp4:'video',mp3:'music',pdf:'document',zip:'archive',rar:'archive',doc:'file',docx:'file',txt:'document'};
-    const icon=iconmap[ext]||'file';
-    const size=f.size<1024?f.size+'B':f.size<1048576?(f.size/1024).toFixed(1)+'KB':(f.size/1048576).toFixed(1)+'MB';
-    return '<div class="file"><span class="icon">'+icon+'</span><div class="info"><div class="name">'+f.name+'</div><div class="meta">'+size+' · '+new Date(f.time).toLocaleString('zh-CN')+'</div></div><button class="dl" onclick="downloadFile(\''+f.name+'\')">DL</button><button class="rm" onclick="deleteFile(\''+f.name+'\')">RM</button></div>';
-  }).join('');
+  try {
+    const files = await window.api.getJSON(SERVER + '/api/files');
+    const d = document.getElementById('files');
+    if (!files.length) { d.innerHTML = '<div id="empty">暂无文件</div>'; return; }
+    d.innerHTML = files.map(f => {
+      const ext = f.name.split('.').pop().toLowerCase();
+      const icons = {jpg:'&#128247;',jpeg:'&#128247;',png:'&#128247;',gif:'&#128247;',mp4:'&#127909;',mp3:'&#127925;',pdf:'&#128196;',zip:'&#128451;',rar:'&#128451;',doc:'&#128196;',docx:'&#128196;',txt:'&#128196;'};
+      const icon = icons[ext] || '&#128196;';
+      const size = f.size<1024 ? f.size+'B' : f.size<1048576 ? (f.size/1024).toFixed(1)+'KB' : (f.size/1048576).toFixed(1)+'MB';
+      const safe = f.name.replace(/'/g, "\\'");
+      return '<div class="file"><span class="icon">' + icon + '</span><div class="info"><div class="name">' + f.name + '</div><div class="meta">' + size + ' &middot; ' + new Date(f.time).toLocaleString('zh-CN') + '</div></div><button class="dl" onclick="viewFile(\'' + safe + '\')">&#11015;</button><button class="rm" onclick="deleteFile(\'' + safe + '\')">&#10005;</button></div>';
+    }).join('');
+  } catch(e) {
+    document.getElementById('files').innerHTML = '<div style="text-align:center;padding:36px;color:#86868b">无法加载文件列表: ' + e.message + '</div>';
+  }
 }
-async function doUpload(){const inp=document.getElementById('fileInput');if(!inp.files.length)return;const fd=new FormData();for(const f of inp.files)fd.append('files',f);await fetch('/api/upload',{method:'POST',body:fd});inp.value='';loadFiles()}
-function downloadFile(name){window.open('/api/download/'+encodeURIComponent(name))}
-async function deleteFile(name){if(!confirm('Delete?'))return;await fetch('/api/files/'+encodeURIComponent(name),{method:'DELETE'});loadFiles()}
+async function doUpload(){
+  const inp = document.getElementById('fileInput');
+  if (!inp.files.length) return;
+  const fd = new FormData();
+  for (const f of inp.files) fd.append('files', f);
+  try { await fetch(SERVER + '/api/upload', { method: 'POST', body: fd }); } catch(e) {}
+  inp.value = '';
+  loadFiles();
+}
+function viewFile(name){var exts=['jpg','jpeg','png','gif','webp','bmp'];var ext=name.split('.').pop().toLowerCase();if(exts.indexOf(ext)!==-1){document.getElementById('previewImg').src=SERVER+'/api/download/'+encodeURIComponent(name);document.getElementById('imgPreview').classList.add('show');}else{downloadFile(name)}}function hidePreview(){document.getElementById('imgPreview').classList.remove('show');document.getElementById('previewImg').src='';}function downloadFile(name){
+  window.open(SERVER + '/api/download/' + encodeURIComponent(name), '_blank');
+}
+async function deleteFile(name){
+  if (!confirm('删除?')) return;
+  try { await window.api.deleteReq(SERVER + '/api/files/' + encodeURIComponent(name)); } catch(e) {}
+  loadFiles();
+}
 loadFiles();
 </script>
-</body>
+<div id="imgPreview" onclick="hidePreview()"><span class="close-preview">&times;</span><img id="previewImg" src="" alt="preview"></div></body>
 </html>

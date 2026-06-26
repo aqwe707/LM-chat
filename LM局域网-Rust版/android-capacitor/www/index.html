@@ -6,46 +6,265 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="theme-color" content="#0071e3">
-<title>LM Chat</title>
-<link rel="manifest" href="/manifest.json">
+<title>LM Chat - 连接</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f7;color:#1d1d1f;height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.logo{font-size:64px;margin-bottom:16px}
-h1{font-size:28px;font-weight:700;margin-bottom:8px}
-.subtitle{font-size:15px;color:#86868b;margin-bottom:40px}
-.card{background:#fff;border-radius:16px;padding:24px;width:85%;max-width:360px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.card label{font-size:14px;font-weight:600;color:#1d1d1f;display:block;margin-bottom:8px}
-.card input{width:100%;padding:14px 16px;border-radius:12px;border:1px solid #d1d1d6;font-size:16px;outline:none;margin-bottom:16px}
-.card input:focus{border-color:#0071e3;box-shadow:0 0 0 3px rgba(0,113,227,.15)}
-.card button{width:100%;padding:14px;border-radius:12px;border:none;background:#0071e3;color:#fff;font-size:17px;font-weight:600;cursor:pointer}
-.card button:active{background:#005BB5}
-.hint{font-size:12px;color:#86868b;margin-top:12px;text-align:center}
-.err{color:#ff3b30;font-size:13px;margin-top:8px;display:none}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f7;color:#1d1d1f;height:100dvh;display:flex;flex-direction:column;align-items:center;-webkit-tap-highlight-color:transparent}
+.header{padding:32px 20px 8px;text-align:center;width:100%}
+.header .logo{font-size:56px;margin-bottom:8px}
+.header h1{font-size:26px;font-weight:700}
+.header .sub{font-size:13px;color:#86868b;margin-top:4px}
+.card{background:#fff;border-radius:16px;padding:20px;width:88%;max-width:380px;box-shadow:0 2px 12px rgba(0,0,0,.06);margin:16px auto}
+.card label{font-size:13px;font-weight:600;display:block;margin-bottom:6px;color:#1d1d1f}
+.card .row{display:flex;gap:8px;margin-bottom:12px}
+.card .row input{flex:1;padding:12px 14px;border-radius:12px;border:1px solid #d1d1d6;font-size:15px;outline:none;min-width:0}
+.card .row input:focus{border-color:#0071e3;box-shadow:0 0 0 3px rgba(0,113,227,.12)}
+.card .row button{padding:12px 18px;border-radius:12px;border:none;background:#0071e3;color:#fff;font-size:14px;font-weight:600;white-space:nowrap;cursor:pointer}
+.card .row button:active{background:#005BB5}
+.card .row button:disabled{opacity:.4}
+.status-text{font-size:12px;color:#86868b;margin-bottom:12px;text-align:center;min-height:18px}
+.err-text{color:#ff3b30;font-size:12px;display:none;text-align:center;margin-bottom:8px}
+.quick-connect{width:88%;max-width:380px;margin:4px auto}
+.quick-connect button{width:100%;padding:14px;border-radius:14px;border:2px dashed #0071e3;background:transparent;color:#0071e3;font-size:16px;font-weight:600;cursor:pointer}
+.quick-connect button:active{background:rgba(0,113,227,.06)}
+.quick-connect button:disabled{opacity:.3;border-color:#c7c7cc;color:#c7c7cc}
+#discover-section{width:88%;max-width:380px;margin:12px auto 0;display:none}
+#discover-section h3{font-size:13px;font-weight:600;color:#86868b;margin-bottom:8px}
+#discover-list{display:flex;flex-direction:column;gap:6px}
+.discover-item{background:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.discover-item:active{background:#f5f5f7}
+.discover-item .d-icon{font-size:20px}
+.discover-item .d-info{flex:1;min-width:0}
+.discover-item .d-ip{font-size:14px;font-weight:600}
+.discover-item .d-name{font-size:11px;color:#86868b}
+.discover-item .d-check{color:#30d158;font-size:16px}
+.discover-error{text-align:center;padding:20px;color:#86868b;font-size:13px}
+#scan-status{font-size:11px;color:#86868b;text-align:center;padding:8px 0;display:none}
 </style>
 </head>
 <body>
-<div class="logo">&#128172;</div>
-<h1>LM Chat</h1>
-<p class="subtitle">局域网 AI 聊天</p>
+<script src="native-http.js"></script>
+<div class="header">
+  <div class="logo">&#128172;</div>
+  <h1>LM Chat</h1>
+  <div class="sub">局域网 AI 聊天助手</div>
+</div>
+
 <div class="card">
   <label>服务器地址</label>
-  <input type="text" id="serverUrl" placeholder="http://192.168.1.100:8080" value="http://localhost:8080">
-  <button onclick="connect()">连接到服务器</button>
-  <div class="hint">输入你的电脑 IP 和端口，例如 http://192.168.1.100:8080</div>
-  <div class="err" id="err"></div>
+  <div class="row">
+    <input type="text" id="serverUrl" placeholder="例如 192.168.1.100:8080" autocomplete="off">
+    <button id="connectBtn" onclick="doConnect()">连接</button>
+  </div>
+  <div class="status-text" id="statusText">输入电脑的 IP 地址和端口</div>
+  <div class="err-text" id="errText"></div>
 </div>
+
+<div class="quick-connect">
+  <button id="scanBtn" onclick="startScan()">&#128269; 扫描局域网设备</button>
+</div>
+
+<div id="discover-section">
+  <h3 id="discover-title">扫描中...</h3>
+  <div id="discover-list"></div>
+</div>
+
+<div id="scan-status"></div>
+
 <script>
-function connect(){
-  const url=document.getElementById('serverUrl').value.trim();
-  if(!url){document.getElementById('err').textContent='请输入服务器地址';document.getElementById('err').style.display='block';return}
-  localStorage.setItem('lm_server',url);
-  window.location.href=url+'/';
-}
+const DEFAULT_PORT = 8080;
+let scanAbort = false;
+
 (function(){
-  const saved=localStorage.getItem('lm_server');
-  if(saved)document.getElementById('serverUrl').value=saved;
+  const saved = localStorage.getItem('lm_server');
+  if (saved) {
+    const clean = saved.replace(/^https?:\/\//, '');
+    document.getElementById('serverUrl').value = clean;
+  }
 })();
+
+async function doConnect() {
+  const raw = document.getElementById('serverUrl').value.trim().replace(/^https?:\/\//, '');
+  if (!raw) { showErr('请输入服务器地址'); return; }
+  let host = raw;
+  let port = DEFAULT_PORT;
+  if (raw.includes(':')) {
+    const parts = raw.split(':');
+    host = parts[0];
+    port = parseInt(parts[1]) || DEFAULT_PORT;
+  }
+  const url = 'http://' + host + ':' + port;
+  setStatus('正在连接 ' + url + '...');
+  const ok = await testServer(url);
+  if (ok) {
+    localStorage.setItem('lm_server', url);
+    setStatus('连接成功！');
+    enterChat(url);
+  } else {
+    showErr('无法连接到 ' + url + '，请检查地址和端口');
+    setStatus('');
+  }
+}
+
+async function testServer(url) {
+  if (typeof window.api !== 'undefined' && window.api.getJSON) {
+    try {
+      const data = await window.api.getJSON(url + '/api/sessions', 5000);
+      if (data !== null && data !== undefined) return true;
+    } catch(e) {}
+  }
+  try {
+    const c = new AbortController();
+    const t = setTimeout(() => c.abort(), 5000);
+    const r = await fetch(url + '/api/sessions', { signal: c.signal });
+    clearTimeout(t);
+    return r.ok;
+  } catch(e) { return false; }
+}
+
+function enterChat(url) {
+  window.location.href = 'chat.html?server=' + encodeURIComponent(url);
+}
+
+async function startScan() {
+  scanAbort = false;
+  document.getElementById('scanBtn').disabled = true;
+  document.getElementById('scanBtn').textContent = '扫描中...';
+  document.getElementById('discover-section').style.display = 'block';
+  document.getElementById('discover-title').textContent = '正在扫描局域网...';
+  document.getElementById('discover-list').innerHTML = '';
+  document.getElementById('scan-status').style.display = 'block';
+  document.getElementById('scan-status').textContent = '扫描中，请稍候...';
+
+  const localIps = await getLocalIPs();
+  const subnets = generateSubnets(localIps);
+
+  let found = false;
+  for (const subnet of subnets) {
+    if (scanAbort) break;
+    const server = await scanSubnet(subnet, DEFAULT_PORT);
+    if (server) {
+      addDiscoverItem(server);
+      found = true;
+      break;
+    }
+  }
+
+  if (!found) {
+    document.getElementById('discover-list').innerHTML = '<div class="discover-error">未找到 LM Chat 服务器<br><span style="font-size:11px">确保电脑和手机在同一个 WiFi 下，且已运行 lm-chat.exe</span></div>';
+    document.getElementById('discover-title').textContent = '扫描完成';
+  } else {
+    document.getElementById('discover-title').textContent = '找到服务器！';
+  }
+
+  document.getElementById('scan-status').textContent = '扫描完成';
+  document.getElementById('scanBtn').disabled = false;
+  document.getElementById('scanBtn').textContent = '&#128269; 重新扫描';
+}
+
+async function getLocalIPs() {
+  const ips = [];
+  try {
+    const pc = new RTCPeerConnection({ iceServers: [] });
+    pc.createDataChannel('');
+    const p = new Promise(resolve => {
+      pc.onicecandidate = e => {
+        if (e.candidate) {
+          const match = e.candidate.candidate.match(/(\d+\.\d+\.\d+\.\d+)/);
+          if (match && ips.indexOf(match[1]) === -1) ips.push(match[1]);
+        } else { resolve(); }
+      };
+    });
+    await pc.createOffer().then(o => pc.setLocalDescription(o));
+    await Promise.race([p, new Promise(r => setTimeout(r, 2000))]);
+    pc.close();
+  } catch(e) {}
+  return ips;
+}
+
+function generateSubnets(localIps) {
+  const targets = [];
+  const seen = new Set();
+  const common = ['192.168.1','192.168.0','192.168.2','10.0.0','172.16.0','192.168.10','192.168.100'];
+  for (const ip of localIps) {
+    const parts = ip.split('.');
+    if (parts.length === 4) {
+      const subnet = parts[0] + '.' + parts[1] + '.' + parts[2];
+      if (!seen.has(subnet)) { seen.add(subnet); targets.unshift(subnet); }
+    }
+  }
+  for (const s of common) {
+    if (!seen.has(s)) targets.push(s);
+  }
+  return targets;
+}
+
+async function scanSubnet(subnet, port) {
+  let checked = 0;
+  const BATCH = 20;
+  const TIMEOUT_MS = 1000;
+
+  async function tryIp(ip) {
+    if (scanAbort) return null;
+    const url2 = 'http://' + ip + ':' + port;
+    // Try fetch() first - async, fast timeout, works with http:// origin
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(function() { controller.abort(); }, 1000);
+      const r = await fetch(url2 + '/api/sessions', { signal: controller.signal });
+      clearTimeout(timer);
+      if (r.ok) return { ip: ip, port: port, url: url2, name: 'LM Chat Server' };
+    } catch(e) {}
+    // Fallback: bridge (for edge cases where fetch fails)
+    if (typeof window.api !== 'undefined' && window.api.getJSON) {
+      try {
+        const data = await window.api.getJSON(url2 + '/api/sessions', 2000);
+        if (data && typeof data === 'object' && !data.error) return { ip: ip, port: port, url: url2, name: 'LM Chat Server' };
+      } catch(e) {}
+    }
+    return null;
+  }
+
+  for (let start = 1; start <= 254; start += BATCH) {
+    if (scanAbort) return null;
+    const end = Math.min(start + BATCH, 255);
+    const batch = [];
+    for (let i = start; i < end; i++) {
+      batch.push(tryIp(subnet + '.' + i));
+    }
+    const results = await Promise.all(batch);
+    checked += batch.length;
+    var el = document.getElementById('scan-status');
+    if (el) el.textContent = '扫描中 ' + subnet + '.' + checked + ' ...';
+    for (var j = 0; j < results.length; j++) {
+      if (results[j]) return results[j];
+    }
+  }
+  return null;
+}
+
+function addDiscoverItem(server) {
+  const list = document.getElementById('discover-list');
+  const el = document.createElement('div');
+  el.className = 'discover-item';
+  el.onclick = function() {
+    localStorage.setItem('lm_server', server.url);
+    enterChat(server.url);
+  };
+  el.innerHTML = '<div class="d-icon">&#128187;</div><div class="d-info"><div class="d-ip">' + server.ip + ':' + server.port + '</div><div class="d-name">' + server.name + '</div></div><div class="d-check">&#10003;</div>';
+  list.appendChild(el);
+}
+
+function setStatus(t) { document.getElementById('statusText').textContent = t; }
+function showErr(t) {
+  const el = document.getElementById('errText');
+  el.textContent = t; el.style.display = 'block';
+  setTimeout(() => el.style.display = 'none', 4000);
+}
+
+document.getElementById('serverUrl').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') doConnect();
+});
 </script>
 </body>
 </html>

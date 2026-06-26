@@ -1,4 +1,4 @@
-# Node modules
+﻿# Node modules
 node_modules/
 package-lock.json
 
@@ -61,3 +61,19 @@ android-capacitor/android/app/src/main/res/xml/config.xml
 android-capacitor/android/capacitor-cordova-android-plugins/
 android-capacitor/android/capacitor.settings.gradle
 android-capacitor/android/app/capacitor.build.gradle
+
+
+# Temporary debug/fix scripts
+LM局域网-Rust版/fix-*.js
+LM局域网-Rust版/debug-*.js
+LM局域网-Rust版/search-*.js
+LM局域网-Rust版/test-*.js
+LM局域网-Rust版/write-*.js
+LM局域网-Rust版/check-*.js
+LM局域网-Rust版/.playwright-cli/
+
+# Chat history logs
+LM局域网-Rust版/聊天记录/
+
+# Shared files
+LM局域网-Rust版/共享文件/

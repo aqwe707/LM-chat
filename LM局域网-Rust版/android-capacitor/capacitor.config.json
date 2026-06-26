@@ -1,9 +1,9 @@
-{
+﻿{
   "appId": "com.lmchat.app",
   "appName": "LM Chat",
   "webDir": "./www",
   "server": {
-    "androidScheme": "https",
+    "androidScheme": "http",
     "cleartext": true
   },
   "plugins": {

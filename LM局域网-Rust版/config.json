@@ -1,5 +1,5 @@
 {
-  "port": 8080,
+  "port": 8081,
   "passcode": "",
   "lmstudio": {
     "host": "localhost",
@@ -11,5 +11,5 @@
     "maxTokens": 65536,
     "maxHistory": 20
   },
-  "note": "请将 passcode 字段设置为你自己的访问密码，留空则不需要密码"
+  "note": "passcode设为空字符串则无需密码"
 }

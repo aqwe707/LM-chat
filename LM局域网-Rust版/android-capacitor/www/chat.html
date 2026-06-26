@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="LM Chat">
+<title>LM Chat</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f5f7;color:#1d1d1f;height:100dvh;display:flex;flex-direction:column;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+
+/* --- Lock Screen --- */
+#lock{position:fixed;inset:0;background:#f5f5f7;z-index:99;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+#lock .lock-icon{font-size:48px}
+#lock h2{font-size:22px;font-weight:700}
+#lock input{width:220px;padding:14px;border-radius:12px;border:1px solid #d1d1d6;font-size:17px;text-align:center;outline:none}
+#lock input:focus{border-color:#0071e3}
+#lock button{padding:12px 48px;border-radius:24px;border:none;background:#0071e3;color:#fff;font-size:16px;font-weight:600;cursor:pointer}
+#lock button:active{background:#005BB5}
+#lock .err{color:#ff3b30;font-size:13px;display:none}
+#lock .disconnect{font-size:12px;color:#86868b;cursor:pointer;text-decoration:underline;margin-top:8px}
+
+/* --- Top Bar --- */
+#bar{display:none;background:rgba(245,245,247,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid #e5e5ea;padding:8px 12px;align-items:center;gap:6px;flex-wrap:wrap}
+#bar .bar-left{display:flex;gap:6px;align-items:center}
+#bar .bar-right{margin-left:auto;display:flex;gap:6px;align-items:center}
+#bar button,#bar a{padding:7px 12px;border-radius:18px;border:none;font-size:12px;font-weight:600;white-space:nowrap;text-decoration:none;cursor:pointer}
+#bar .btn-primary{background:#0071e3;color:#fff}
+#bar .btn-secondary{background:#e8e8ed;color:#1d1d1f}
+#bar .btn-outline{background:none;color:#0071e3;border:1px solid #0071e3}
+#bar .btn-danger{background:#ff3b30;color:#fff}
+#bar .server-indicator{font-size:11px;color:#86868b;padding:4px 8px;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* --- Messages --- */
+#msgs{flex:1;overflow-y:auto;padding:12px;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+.msg{margin-bottom:8px;clear:both}
+.msg .bubble{max-width:82%;padding:10px 14px;border-radius:18px;font-size:15px;line-height:1.5;word-break:break-word}
+.msg.user{text-align:right}
+.msg.user .bubble{display:inline-block;background:#0071e3;color:#fff;border-bottom-right-radius:4px;text-align:left}
+.msg.bot .bubble{display:inline-block;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.06);border-bottom-left-radius:4px}
+.msg .bubble img{max-width:180px;max-height:180px;border-radius:10px;margin:4px 0;display:block}
+.msg.system{text-align:center}
+.msg.system .bubble{background:none;color:#86868b;font-size:12px;padding:6px}
+.typing{display:flex;gap:4px;padding:4px 0}
+.typing span{width:7px;height:7px;border-radius:50%;background:#c7c7cc;animation:dot 1.2s infinite}
+.typing span:nth-child(2){animation-delay:.2s}
+.typing span:nth-child(3){animation-delay:.4s}
+@keyframes dot{0%,60%,100%{opacity:.3}30%{opacity:1}}
+
+/* --- Input Area --- */
+#foot{display:none;padding:8px 12px 12px;background:#f5f5f7;border-top:1px solid #e5e5ea}
+#preview{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+#preview .thumb{width:48px;height:48px;border-radius:8px;overflow:hidden;position:relative}
+#preview .thumb img{width:100%;height:100%;object-fit:cover}
+#preview .thumb .x{position:absolute;top:1px;right:1px;width:16px;height:16px;background:rgba(0,0,0,.5);color:#fff;border-radius:50%;font-size:10px;display:flex;align-items:center;justify-content:center;cursor:pointer}
+#foot .input-row{display:flex;gap:6px;align-items:flex-end}
+#foot .btns{display:flex;gap:2px}
+#foot .btns .btn-icon{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:#0071e3;cursor:pointer;overflow:hidden;position:relative;border:none;background:none}
+#foot .btns .btn-icon:active{background:rgba(0,0,0,.06)}
+#foot .btns .btn-icon input[type=file]{position:absolute;inset:0;opacity:0;font-size:0;cursor:pointer}
+#foot textarea{flex:1;border:none;background:none;font-size:16px;padding:8px 0;outline:none;resize:none;font-family:inherit;line-height:1.4;max-height:100px;min-height:24px}
+#foot .send-btn{width:40px;height:40px;border-radius:50%;border:none;background:#0071e3;color:#fff;font-size:18px;flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center}
+#foot .send-btn:active{background:#005BB5}
+#foot .send-btn:disabled{background:#c7c7cc}
+
+/* --- Sidebar --- */
+#sidebar{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.3);display:none}
+#sidebar .panel{position:absolute;top:0;left:0;bottom:0;width:290px;max-width:82vw;background:#fff;display:flex;flex-direction:column;box-shadow:2px 0 12px rgba(0,0,0,.08)}
+#sidebar .ph{padding:14px 16px;border-bottom:1px solid #e5e5ea;display:flex;align-items:center;justify-content:space-between}
+#sidebar .ph h3{font-size:15px;font-weight:700}
+#sidebar .ph button{background:none;border:none;font-size:18px;color:#86868b;cursor:pointer;padding:4px}
+#sidebar .list{flex:1;overflow-y:auto;padding:6px}
+#sidebar .item{padding:10px 12px;border-radius:10px;cursor:pointer;margin-bottom:2px;position:relative}
+#sidebar .item:active{background:#f5f5f7}
+#sidebar .item.active{background:#e8f0fe}
+#sidebar .item .name{font-size:13px;font-weight:500;padding-right:24px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#sidebar .item .preview{font-size:11px;color:#86868b;margin-top:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#sidebar .item .del{position:absolute;right:10px;top:10px;color:#ff3b30;font-size:12px;opacity:.4;cursor:pointer;padding:2px}
+#sidebar .item:hover .del{opacity:1}
+#sidebar .add{padding:10px;text-align:center;color:#0071e3;font-size:13px;font-weight:600;cursor:pointer;border-top:1px solid #e5e5ea}
+#sidebar .add:active{background:#f5f5f7}
+
+/* --- Settings --- */
+#settings-overlay{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.3);display:none;align-items:center;justify-content:center}
+#settings-overlay.show{display:flex}
+#settings-box{background:#fff;border-radius:16px;padding:20px;width:90%;max-width:400px;max-height:80vh;overflow-y:auto}
+#settings-box h3{font-size:16px;font-weight:700;margin-bottom:10px}
+#settings-box label{display:block;font-size:12px;color:#86868b;margin-bottom:4px}
+#settings-box textarea{width:100%;height:100px;padding:10px;border-radius:10px;border:1px solid #d1d1d6;font-size:13px;font-family:inherit;outline:none;resize:vertical;margin-bottom:10px}
+#settings-box textarea:focus{border-color:#0071e3}
+#settings-box .sid{font-size:10px;color:#86868b;margin-bottom:6px}
+#settings-box .btn-row{display:flex;gap:8px}
+#settings-box button{padding:8px 18px;border-radius:18px;border:none;font-size:13px;font-weight:600;cursor:pointer}
+#settings-box .btn-save{background:#0071e3;color:#fff}
+#settings-box .btn-cancel{background:#e8e8ed;color:#1d1d1f}
+
+/* --- Tabs --- */
+#tabs{display:none;background:#fff;border-bottom:1px solid #e5e5ea}
+#tabs .tab-row{display:flex}
+#tabs .tab{flex:1;padding:8px;text-align:center;font-size:13px;font-weight:500;cursor:pointer;border-bottom:2px solid transparent;color:#86868b}
+#tabs .tab.active{color:#0071e3;border-bottom-color:#0071e3}
+
+/* --- File Share Tab --- */
+#share-tab{display:none;flex-direction:column;flex:1;overflow:hidden}
+#share-tab .share-header{padding:10px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #e5e5ea}
+#share-tab .share-header .sh-title{font-size:14px;font-weight:600;flex:1}
+#share-tab .upload-btn{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:16px;border:1px dashed #0071e3;color:#0071e3;font-size:12px;font-weight:500;cursor:pointer}
+#share-tab .upload-btn:active{background:rgba(0,113,227,.06)}
+#share-tab .upload-btn input[type=file]{display:none}
+#share-files{flex:1;overflow-y:auto;padding:10px 14px}
+.share-item{display:flex;align-items:center;gap:8px;padding:8px 10px;background:#fff;border-radius:10px;margin-bottom:4px}
+.share-item .si-icon{font-size:20px}
+.share-item .si-info{flex:1;min-width:0}
+.share-item .si-name{font-size:13px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.share-item .si-meta{font-size:10px;color:#86868b}
+.share-item .si-actions{display:flex;gap:4px}
+.share-item .si-actions button{background:none;border:none;font-size:14px;cursor:pointer;padding:4px;border-radius:50%}
+.share-item .si-actions button:active{background:#f5f5f7}
+.share-item .si-view{color:#30d158;margin-right:4px}.share-item .si-dl{color:#0071e3}
+.share-item .si-rm{color:#ff3b30}
+.share-empty{text-align:center;padding:30px 10px;color:#86868b;font-size:13px}
+/* Image preview overlay */
+#imgPreview{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;cursor:pointer}
+#imgPreview.show{display:flex}
+#imgPreview img{max-width:95vw;max-height:95vh;object-fit:contain;border-radius:8px}
+#imgPreview .close-preview{position:absolute;top:16px;right:16px;color:#fff;font-size:28px;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center}
+
+</style>
+<script src="native-http.js"></script>
+</head>
+<body>
+
+<!-- Lock Screen -->
+<div id="lock">
+  <div class="lock-icon">&#128274;</div>
+  <h2 id="lockTitle">LM Chat</h2>
+  <input id="pwd" type="password" placeholder="输入访问密码" autocomplete="off">
+  <button onclick="doUnlock()">解锁</button>
+  <div class="err" id="lockErr">密码错误，请重试</div>
+  <div class="disconnect" onclick="disconnect()">断开连接，换一个服务器</div>
+</div>
+
+<!-- Top Bar -->
+<div id="bar">
+  <div class="bar-left">
+    <button class="btn-secondary" onclick="toggleSidebar()">&#9776; 会话</button>
+    <button class="btn-outline" onclick="newChat()">+ 新建</button>
+  </div>
+  <div class="bar-right">
+    <button class="btn-secondary" onclick="showSettings()">&#9881;</button>
+    <span class="server-indicator" id="serverIndicator"></span>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div id="tabs">
+  <div class="tab-row">
+    <div class="tab active" id="tabChat" onclick="switchTab('chat')">&#128172; 聊天</div>
+    <div class="tab" id="tabShare" onclick="switchTab('share')">&#128230; 文件</div>
+  </div>
+</div>
+
+<!-- Chat Messages -->
+<div id="msgs"></div>
+
+<!-- File Share Tab -->
+<div id="share-tab">
+  <div class="share-header">
+    <span class="sh-title">&#128230; 文件共享</span>
+    <label class="upload-btn" id="uploadBtn">
+      <span>+</span> 上传
+      <input type="file" id="fileInput" multiple onchange="doUpload()">
+    </label>
+  </div>
+  <div id="share-files"></div>
+</div>
+
+<!-- Input Area -->
+<div id="foot">
+  <div id="preview"></div>
+  <div class="input-row">
+    <div class="btns">
+      <label class="btn-icon">&#128247;<input type="file" accept="image/*" onchange="addFiles(this)"></label>
+      <label class="btn-icon">&#128206;<input type="file" accept="*/*" onchange="addFiles(this)"></label>
+    </div>
+    <textarea id="input" rows="1" placeholder="输入消息... (Ctrl+Enter 发送)" onkeydown="onInputKey(event)"></textarea>
+    <button class="send-btn" onclick="doSend()">&#10148;</button>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar" onclick="if(event.target===this)toggleSidebar()">
+  <div class="panel">
+    <div class="ph"><h3>&#128172; 会话列表</h3><button onclick="toggleSidebar()">&#10005;</button></div>
+    <div class="list" id="sessionList"></div>
+    <div class="add" onclick="newChat();toggleSidebar()">+ 新建会话</div>
+  </div>
+</div>
+
+<!-- Settings -->
+<div id="settings-overlay" onclick="if(event.target===this)hideSettings()">
+  <div id="settings-box">
+    <h3>&#9881; 系统提示词</h3>
+    <div class="sid" id="sidDisplay">会话ID: -</div>
+    <label>每个会话独立设置，不影响其他对话</label>
+    <textarea id="sysPrompt"></textarea>
+    <div class="btn-row">
+      <button class="btn-save" onclick="saveSettings()">保存</button>
+      <button class="btn-cancel" onclick="hideSettings()">取消</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ====== Configuration ======
+let SERVER = '';
+let PASS = '';
+let SID = '';
+let images = [];
+let sessions = [];
+let currentMsgs = [];
+let currentTab = 'chat';
+
+const DEFAULT_PROMPT = '你是一个有用的AI助手，请用中文回答。回答简洁准确。';
+function getPrompt(sid) { return localStorage.getItem('lm_prompt_' + sid) || DEFAULT_PROMPT; }
+
+// ====== Init ======
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  SERVER = params.get('server') || localStorage.getItem('lm_server') || 'http://localhost:8080';
+  if (SERVER.endsWith('/')) SERVER = SERVER.slice(0, -1);
+  document.getElementById('serverIndicator').textContent = SERVER.replace('http://', '');
+  localStorage.setItem('lm_server', SERVER);
+  document.getElementById('lockTitle').textContent = 'LM Chat - ' + SERVER.replace('http://', '');
+  initApp();
+})();
+
+async function initApp() {
+  await loadSessions();
+  SID = localStorage.getItem('lm_sid');
+  if (!SID || !sessions.find(s => s.id === SID)) { SID = genId(); saveSid(); }
+  currentMsgs = await loadMsgs(SID);
+  // Auto-unlock if saved password
+  const savedPwd = localStorage.getItem('lm_pass');
+  if (savedPwd) {
+    document.getElementById('pwd').value = savedPwd;
+    doUnlock();
+  }
+}
+
+// ====== Auth ======
+async function doUnlock() {
+  const p = document.getElementById('pwd').value.trim();
+  // Allow empty password
+  try {
+    const data = await window.api.postJSON(SERVER + '/api/verify', { passcode: p });
+    if (data && data.ok) {
+      PASS = p;
+      localStorage.setItem('lm_pass', p);
+      document.getElementById('lock').style.display = 'none';
+      document.getElementById('bar').style.display = 'flex';
+      document.getElementById('tabs').style.display = 'block';
+      document.getElementById('foot').style.display = 'block';
+      currentMsgs.forEach(m => renderMsg(m.role, m.content, m.images));
+      if (!currentMsgs.length) addMsg('system', '新对话');
+      loadFiles();
+    } else {
+      document.getElementById('lockErr').style.display = 'block';
+    }
+  } catch(e) {
+    document.getElementById('lockErr').textContent = '网络错误: ' + e.message;
+    document.getElementById('lockErr').style.display = 'block';
+  }
+}
+
+function disconnect() {
+  localStorage.removeItem('lm_pass');
+  localStorage.removeItem('lm_server');
+  window.location.href = 'index.html';
+}
+
+// ====== Utilities ======
+function genId() { return 's' + Date.now() + '_' + Math.random().toString(36).slice(2,6); }
+function saveSid() { localStorage.setItem('lm_sid', SID); }
+function fmt(t) { return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/\n/g,'<br>'); }
+
+// ====== Session Management ======
+async function loadSessions() {
+  try {
+    sessions = await window.api.getJSON(SERVER + '/api/sessions');
+  } catch(e) { sessions = []; }
+}
+
+async function loadMsgs(sid) {
+  try {
+    const s = await window.api.getJSON(SERVER + '/api/sessions/' + sid);
+    return (s && s.messages) || [];
+  } catch(e) { return []; }
+}
+
+function renderSessionList() {
+  const list = document.getElementById('sessionList');
+  list.innerHTML = sessions.map(s => {
+    const safeId = s.id.replace(/'/g, "\\'");
+    return '<div class="item' + (s.id === SID ? ' active' : '') + '" onclick="switchSession(\'' + safeId + '\')">' +
+      '<span class="del" onclick="event.stopPropagation();deleteSession(\'' + safeId + '\')">&#10005;</span>' +
+      '<div class="name">' + (s.name || '新对话') + '</div>' +
+      '<div class="preview">' + (s.preview || '暂无消息') + '</div></div>';
+  }).join('') || '<div style="color:#86868b;padding:20px;text-align:center">暂无会话</div>';
+}
+
+function toggleSidebar() {
+  const sb = document.getElementById('sidebar');
+  if (sb.style.display === 'block') { sb.style.display = 'none'; return; }
+  sb.style.display = 'block';
+  renderSessionList();
+}
+
+async function switchSession(sid) {
+  if (sid === SID) { toggleSidebar(); return; }
+  SID = sid; saveSid();
+  currentMsgs = await loadMsgs(SID);
+  document.getElementById('msgs').innerHTML = '';
+  currentMsgs.forEach(m => renderMsg(m.role, m.content, m.images));
+  toggleSidebar();
+}
+
+async function deleteSession(sid) {
+  if (!confirm('确定删除此会话？')) return;
+  await fetch(SERVER + '/api/sessions/' + sid, { method: 'DELETE' });
+  sessions = sessions.filter(s => s.id !== sid);
+  if (sid === SID) { newChat(); return; }
+  renderSessionList();
+}
+
+function newChat() {
+  SID = genId(); saveSid();
+  currentMsgs = [];
+  document.getElementById('msgs').innerHTML = '';
+  addMsg('system', '新对话');
+  window.api.postJSON(SERVER + '/api/reset', { sessionId: SID, passcode: PASS }).catch(() => {});
+  loadSessions().then(renderSessionList);
+}
+
+// ====== Tab Switching ======
+function switchTab(tab) {
+  currentTab = tab;
+  document.getElementById('tabChat').className = 'tab' + (tab === 'chat' ? ' active' : '');
+  document.getElementById('tabShare').className = 'tab' + (tab === 'share' ? ' active' : '');
+  document.getElementById('msgs').style.display = tab === 'chat' ? 'block' : 'none';
+  document.getElementById('share-tab').style.display = tab === 'share' ? 'flex' : 'none';
+  document.getElementById('foot').style.display = tab === 'chat' ? 'block' : 'none';
+  if (tab === 'share') loadFiles();
+}
+
+// ====== Messages ======
+function addMsg(role, content, imgs) {
+  const entry = { role, content, images: imgs || null };
+  currentMsgs.push(entry);
+  renderMsg(role, content, imgs);
+}
+
+function renderMsg(role, content, imgs) {
+  const d = document.getElementById('msgs');
+  const el = document.createElement('div');
+  el.className = 'msg ' + role;
+  let html = '';
+  if (content) html += fmt(content);
+  if (imgs && imgs.length) html += imgs.map(i => '<img src="' + i + '">').join('');
+  el.innerHTML = '<div class="bubble">' + html + '</div>';
+  d.appendChild(el);
+  d.scrollTop = d.scrollHeight;
+}
+
+// ====== Chat ======
+async function doSend() {
+  const inp = document.getElementById('input');
+  const msg = inp.value.trim();
+  const imgs = [...images];
+  if (!msg && !imgs.length) return;
+
+  addMsg('user', msg || '', imgs.length ? imgs : null);
+  inp.value = '';
+  clearImages();
+
+  const loadEl = document.createElement('div');
+  loadEl.className = 'msg bot';
+  loadEl.innerHTML = '<div class="bubble"><div class="typing"><span></span><span></span><span></span></div></div>';
+  document.getElementById('msgs').appendChild(loadEl);
+  document.getElementById('msgs').scrollTop = document.getElementById('msgs').scrollHeight;
+
+  try {
+    const body = { sessionId: SID, passcode: PASS, systemPrompt: getPrompt(SID) };
+    if (msg) body.message = msg;
+    if (imgs.length) body.images = imgs;
+
+    const chatResult = await window.api.postJSON(SERVER + '/api/chat', body);
+    const reply = (chatResult && chatResult.reply) || '[无回复]';
+    loadEl.innerHTML = '<div class="bubble">' + fmt(reply) + '</div>';
+    currentMsgs.push({ role: 'bot', content: reply });
+    loadSessions();
+  } catch(e) {
+    loadEl.innerHTML = '<div class="bubble" style="color:#ff3b30">网络错误: ' + e.message + '</div>';
+  }
+}
+
+function onInputKey(e) {
+  if (e.key === 'Enter' && e.ctrlKey) { e.preventDefault(); doSend(); }
+}
+
+// Auto-resize textarea
+document.getElementById('input').addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+});
+
+// ====== File Attachments ======
+function addFiles(input) {
+  for (const f of input.files) {
+    const r = new FileReader();
+    r.onload = function(e) { images.push(e.target.result); showPreview(); };
+    r.readAsDataURL(f);
+  }
+  input.value = '';
+}
+
+function showPreview() {
+  document.getElementById('preview').innerHTML = images.map((img, i) =>
+    '<div class="thumb"><img src="' + img + '"><span class="x" onclick="removeImg(' + i + ')">&#10005;</span></div>'
+  ).join('');
+}
+
+function removeImg(i) { images.splice(i, 1); showPreview(); }
+function clearImages() { images = []; document.getElementById('preview').innerHTML = ''; }
+
+// ====== Settings ======
+let settingsSid = '';
+
+function showSettings() {
+  settingsSid = SID;
+  document.getElementById('settings-overlay').classList.add('show');
+  document.getElementById('sysPrompt').value = getPrompt(settingsSid);
+  document.getElementById('sidDisplay').textContent = '会话ID: ' + settingsSid.slice(-8);
+}
+
+function hideSettings() { document.getElementById('settings-overlay').classList.remove('show'); }
+
+function saveSettings() {
+  localStorage.setItem('lm_prompt_' + settingsSid, document.getElementById('sysPrompt').value);
+  hideSettings();
+}
+
+// ====== File Sharing ======
+// Image preview - opens images, downloads other files
+function viewFile(name) {
+  var exts = ['jpg','jpeg','png','gif','webp','bmp'];
+  var ext = name.split('.').pop().toLowerCase();
+  if (exts.indexOf(ext) !== -1) {
+    document.getElementById('previewImg').src = SERVER + '/api/download/' + encodeURIComponent(name);
+    document.getElementById('imgPreview').classList.add('show');
+  } else {
+    downloadFile(name);
+  }
+}
+function hidePreview() {
+  document.getElementById('imgPreview').classList.remove('show');
+  document.getElementById('previewImg').src = '';
+}
+
+async function loadFiles() {
+  try {
+    const files = await window.api.getJSON(SERVER + '/api/files');
+    const container = document.getElementById('share-files');
+    if (!files || !files.length) {
+      container.innerHTML = '<div class="share-empty">暂无共享文件<br><span style="font-size:11px">上传文件后，所有连接到服务器的设备都可以下载</span></div>';
+      return;
+    }
+    container.innerHTML = files.map(f => {
+      const ext = f.name.split('.').pop().toLowerCase();
+      const iconMap = { jpg:'&#128247;',jpeg:'&#128247;',png:'&#128247;',gif:'&#128247;',mp4:'&#127909;',mp3:'&#127925;',
+                        pdf:'&#128196;',zip:'&#128451;',rar:'&#128451;',doc:'&#128196;',docx:'&#128196;',txt:'&#128196;' };
+      const icon = iconMap[ext] || '&#128196;';
+      const size = f.size < 1024 ? f.size + 'B' : f.size < 1048576 ? (f.size/1024).toFixed(1) + 'KB' : (f.size/1048576).toFixed(1) + 'MB';
+      const safeName = f.name.replace(/'/g, "\\'");
+      return '<div class="share-item"><span class="si-icon">' + icon + '</span>' +
+        '<div class="si-info"><div class="si-name">' + f.name + '</div><div class="si-meta">' + size + ' &middot; ' + new Date(f.time).toLocaleString('zh-CN') + '</div></div>' +
+        '<div class="si-actions"><button class="si-view" onclick="viewFile(\'' + safeName + '\')" title="View"></button><button class="si-dl" onclick="downloadFile(\'' + safeName + '\')" title="Download">⬇</button>' +
+        '<button class="si-rm" onclick="deleteFile(\'' + safeName + '\')">&#10005;</button></div></div>';
+    }).join('');
+  } catch(e) {
+    document.getElementById('share-files').innerHTML = '<div class="share-empty">无法加载文件列表</div>';
+  }
+}
+
+async function doUpload() {
+  const inp = document.getElementById('fileInput');
+  if (!inp.files.length) return;
+  const fd = new FormData();
+  for (const f of inp.files) fd.append('files', f);
+  try {
+    await fetch(SERVER + '/api/upload', { method: 'POST', body: fd });
+  } catch(e) {}
+  inp.value = '';
+  loadFiles();
+}
+
+function downloadFile(name) {
+  window.open(SERVER + '/api/download/' + encodeURIComponent(name), '_blank');
+}
+
+async function deleteFile(name) {
+  if (!confirm('确定删除 ' + name + '？')) return;
+  try {
+    await window.api.deleteReq(SERVER + '/api/files/' + encodeURIComponent(name));
+  } catch(e) {}
+  loadFiles();
+}
+</script>
+<!-- Image Preview -->
+<div id="imgPreview" onclick="hidePreview()">
+  <span class="close-preview">&times;</span>
+  <img id="previewImg" src="" alt="preview">
+</div>
+</body>
+</html>
+
+
